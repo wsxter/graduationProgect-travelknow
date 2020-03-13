@@ -1,0 +1,75 @@
+
+body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: #375757 no-repeat;
+    background-size: cover;
+}
+.regster{
+    width: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #3e4a40;
+    margin: 2px;
+    padding: 0;
+    border: white solid 2px;
+}
+.regster img{
+    padding-left: 4px;
+    padding-top: 2px;
+
+}
+form{
+    display: inline-block;
+}
+form .login-box{
+    width: 280px;
+    float: right;
+    color: white;
+    padding-right: 5px;
+}
+form .login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: solid 6px #237332;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #237332;
+}
+.textbox i{
+    font-size: 18px;
+    width: 80px;
+    float: left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80px;
+    float: left;
+    margin: 0 10px;
+
+}
+.btu{
+    width: 100%;
+    background: none;
+    border: 2px solid #237332;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 12px 0;
+}

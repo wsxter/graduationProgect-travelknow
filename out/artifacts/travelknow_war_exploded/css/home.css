@@ -1,0 +1,109 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, li, ol, p, h1, h2, h3, h4, h5, h6, form,input,img { margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f40; text-decoration:underline;}
+body{ font-size:14px;}
+.clearfix:after{ content:""; display:block; clear:both;}
+/*CSS初始化结束*/
+.picture{
+    background:url("../../../旅游知道/travelknow/web/image/index.jpg") no-repeat;
+    background-size:cover;
+}
+.picture .Wrap{
+    height: 100px;
+    margin: 0 auto;
+
+}
+.picture .Wrap h1{
+    font-family: 幼圆;
+    font-size: 30px;
+    width: 600px;
+    height: 25px;
+    background: aqua;
+    padding: 25px;
+    float:left;
+
+}
+.Wrap ul{
+
+    width: 500px;
+    height: 30px;
+    float: right;
+    background: aliceblue;
+    margin-top:30px;
+}
+.Wrap ul li{
+    float: left;
+    line-height:32px;
+    background: #ff4400;
+}
+.Wrap ul li a{
+    width:105px;
+    height:30px;
+    font-size:16px;
+    color:#000;
+    display:block;
+    text-align:center;
+}
+.Wrap ul li a:hover{
+    background:pink; color:#fff; border-radius:4px;
+    text-decoration:none;
+}
+/*主体开始*/
+.bigtext{
+    padding-top: 150px;
+}
+.bigtext .logotest{
+
+    width: 600px;
+    height: 100px;
+    background: antiquewhite;
+
+}
+.bigtext .logotest span{
+    font-family: 华文楷体;
+    font-size: 50px;
+    margin-top: 20px;
+}
+.bigtext .logotest p{
+    font-family: 华文楷体;
+    font-size: 30px;
+    margin-left: 80px;
+}
+.bigtext .loginbutton{
+    margin-top: 20px;
+    margin-left: 120px;
+
+}
+.bigtext .loginbutton a{
+    width: 60px;
+    height: 25px;
+    font-family: 幼圆;
+    font-size:22px;
+    color:#000;
+    display: inline-block;
+    text-align:center;
+    background: #ff4400;
+    margin: 0 15px;
+    border: aliceblue solid 2px;
+}
+.bigtext .loginbutton a:hover{
+    background:pink; color:#fff;
+    border-radius:4px;
+    text-decoration:none;
+}
+.banquan{
+    background: white;
+    width: 150px;
+    margin-left: 700px;
+    margin-top: 310px;
+
+
+}
+

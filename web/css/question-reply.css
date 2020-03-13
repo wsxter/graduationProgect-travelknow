@@ -1,0 +1,88 @@
+/* CSS Document */
+html, body, ul, li, ol, p, h1, h2, h3, h4, h5, h6, form,input,img { margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f40; text-decoration:underline;}
+body{ font-size:15px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
+.clearfix:after{ content:""; display:block; clear:both;}
+.buttonstyle{
+    margin-right: 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+.circlestyle{
+    border-radius: 5px;
+    box-shadow: -2px 2px 0px #cccccc;
+}
+.backcolor{
+    background: white;
+}
+
+/*CSS初始化结束*/
+
+nav {
+    width: 1010px;
+    margin: 0px auto;
+    padding-right: 10px;
+    height: 220px;
+    border: black solid 1px;
+}
+nav .sponsor{
+    width: 260px;
+    height: 40px;
+
+    border: black solid 1px;
+
+}
+nav .sponsor .initiator{
+    line-height: 40px;
+    text-align: left;
+
+}
+
+nav h2{
+    font-size: 18px;
+    /*margin-left: 20px;*/
+    height: 32px;
+    margin-top:7px ;
+}
+nav .index-answer{
+    overflow: hidden;
+}
+nav .index-answer .index-answer-inimage{
+    float:left;
+    margin-right:2px;
+    /*margin-left: 20px;*/
+    margin-right: 20px;
+}
+nav .index-answer .index-answer-inimage img{
+}
+nav .index-answer .index-answer-introdu{
+    width: 466px;
+    height: 60px;
+    float: left;
+}
+nav .index-answer .index-answer-introdu p{
+    font-size: 15px;
+}
+nav .index-answer-foot{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+nav .index-answer-foot .ques-type{
+    float: right;
+    background: darkseagreen;
+}
+main .reply-const{
+    width: 1020px;
+    margin: 0 auto;
+}
+main .reply-const p{
+    line-height: 30px;
+}
+

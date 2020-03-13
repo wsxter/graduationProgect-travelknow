@@ -1,0 +1,115 @@
+/* CSS Document */
+html, body, ul, li, ol, p, h1, h2, h3, h4, h5, h6, form,input,img { margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f40; text-decoration:underline;}
+body{ font-size:15px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
+.clearfix:after{ content:""; display:block; clear:both;}
+.circlestyle{
+    border-radius: 5px;
+
+}
+.backcolor{
+    background: white;
+}
+
+main .business{
+    width: 980px;
+    height: 160px;
+    padding: 20px;
+
+    margin: 0px auto;
+
+}
+
+main .business .business-picture{
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 20px;
+}
+main .business .business-picture img{
+
+}
+main .business .nickname{
+    display: block;
+    font-family: "Arial Black";
+    font-size: 20px;
+    line-height: 50px;
+
+    margin-top: 60px;
+
+}
+main .topstory{
+    border-left: #cccccc solid 1px;
+    border-right: #cccccc solid 1px;
+}
+main .topstory .category{
+    width:690px;
+    height: 36px;
+
+    margin-top:10px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+main .topstory .category li{
+    display: inline-block;
+    float: left;
+
+    display: inline-block;
+}
+main .topstory .category li a{
+    width:105px;
+    height:30px;
+    font-size:16px;
+    color:#000;
+    display: inline-block;
+    text-align:center;
+
+    line-height: 30px;
+}
+main .topstory .category li a:hover{
+    color: #237332;
+    border-bottom: #237332 solid 5px;
+    text-decoration: none;
+}
+main .topstory .user-static{
+    width:270px;
+    height: 150px;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+
+    padding: 0px 10px;
+
+
+}
+main .topstory .user-static p{
+    line-height: 30px;
+}
+main .topstory .user-static .borderbottom{
+    border-bottom: #237332 solid 2px;
+}
+main .topstory .user-attend{
+    width:290px;
+    height: 70px;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+
+
+
+}
+
+main .topstory .user-attend span{
+    width: 290px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    border-bottom: #cccccc solid 2px;
+
+}
