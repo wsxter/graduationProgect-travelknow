@@ -1,7 +1,6 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.dao.UserDao;
-import cn.wsxter.domain.User;
+import cn.wsxter.domain.Customer;
 import cn.wsxter.service.Impl.UserServiceImpl;
 import cn.wsxter.service.UserService;
 import org.apache.commons.beanutils.BeanUtils;
@@ -23,9 +22,13 @@ public class LoginServlet extends HttpServlet{
         //设置编码
         req.setCharacterEncoding("utf-8");
         //获取请求参数
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        System.out.println(username + password);
+
         Map<String, String[]> map = req.getParameterMap();
         //封装user对象
-        User loginUser = new User();
+        Customer loginUser = new Customer();
         try {
             BeanUtils.populate(loginUser,map);
         } catch (IllegalAccessException e) {
@@ -35,17 +38,17 @@ public class LoginServlet extends HttpServlet{
         }
         //创建service层对象
         UserService service = new UserServiceImpl();
-        User user = service.login(loginUser);
+        Customer user = service.login(loginUser);
         //判断user
-        if (user == null){
+       if (user == null){
             //登录失败，转发failservlet
             req.getRequestDispatcher("/failServlet").forward(req,resp);
 
-        }else {
+       }else {
             //登录成功，存储数据、转发
             req.setAttribute("user",user);
             req.getRequestDispatcher("/successServlet").forward(req,resp);
-        }
+       }
     }
 
     @Override

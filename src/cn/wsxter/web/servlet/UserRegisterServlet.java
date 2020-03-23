@@ -1,6 +1,6 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.domain.User;
+import cn.wsxter.domain.Customer;
 import cn.wsxter.service.Impl.UserServiceImpl;
 import cn.wsxter.service.UserService;
 import org.apache.commons.beanutils.BeanUtils;
@@ -43,7 +43,7 @@ public class UserRegisterServlet extends HttpServlet {
         //获取用户注册信息
         Map<String, String[]> map = request.getParameterMap();
         //封装user对象
-        User user = new User();
+        Customer user = new Customer();
         try {
             BeanUtils.populate(user,map);
         } catch (IllegalAccessException e) {
@@ -53,8 +53,14 @@ public class UserRegisterServlet extends HttpServlet {
         }
         //调用service层进行查询
         UserService service = new UserServiceImpl();
-         service.addUser(user);
-        response.sendRedirect(request.getContextPath()+"/login.html");
+         boolean a = service.addUser(user);
+         if(a){
+             response.sendRedirect(request.getContextPath()+"/login.html");
+         }
+         else {
+             request.getRequestDispatcher("/registerfailServlet").forward(request,response);
+         }
+
 
     }
 

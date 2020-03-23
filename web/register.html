@@ -4,34 +4,52 @@
     <meta charset="UTF-8">
     <title>知道*注册</title>
     <link rel="stylesheet" href="css/register.css">
-    <script>
-        function run() {
-            var  formId = document.getElementById("formId")
-            formId.submit();
-        }
-    </script>
+
 </head>
 <body>
 <div class="regster">
     <img src="image/register.jpeg" width="247" height="370">
-    <form id="formId " action=""><div class="login-box">
+    <form id="formId " action="/travelknow/userRegisterServlet" method="post"><div class="login-box">
         <h1>注册</h1>
         <div class="textbox">
             <i>用户名：</i>
-            <input type="text" placeholder="Username" name="username" value="">
+            <input id="username" type="text" placeholder="Username" name="username" value="">
         </div>
         <div class="textbox">
             <i>密码：</i>
-            <input type="password" placeholder="Passeord" name="password" value="">
+            <input id="password"  type="password" placeholder="Passeord" name="password" value="">
         </div>
         <div class="textbox">
             <i>邮箱：</i>
-            <input type="email" placeholder="email" name="email" value="">
+            <input id="email"  type="email" placeholder="email" name="email" value="">
         </div>
-        <input class="btu" type="button" onclick="run()" name="" value="注册">
+        <div class="textbox">
+            <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码" style="width: 120px;"/>
+            <img src="/travelknow/checkCodeServlet" height="32px" alt="" onclick="changeCheckCode(this)">
+            <script type="text/javascript">
+                //图片点击事件
+                function changeCheckCode(img) {
+                    img.src="/travelknow/checkCodeServlet?"+new Date().getTime();
+                }
+            </script>
+
+        </div>
+        <input class="btu" type="submit"  name="" value="注册">
     </div>
     </form>
 </div>
+<script type="text/javascript">
+    $(function () {
+        $("#formId ").submit(function () {
+            var formData = $("#formId").serialize();
+            $.po
+
+        })
+    }
+
+
+</script>
+
 
 </body>
-</html>>
+</html>

@@ -20,6 +20,7 @@ body{
 .regster img{
     padding-left: 4px;
     padding-top: 2px;
+    margin: auto auto;
 
 }
 form{
@@ -44,7 +45,7 @@ form .login-box h1{
     font-size: 20px;
     padding: 8px 0;
     margin: 8px 0;
-    border-bottom: 1px solid #237332;
+    border-bottom: 1px solid #375757;
 }
 .textbox i{
     font-size: 18px;
@@ -58,9 +59,10 @@ form .login-box h1{
     background: none;
     color: white;
     font-size: 18px;
-    width: 80px;
+    width: 180px;
     float: left;
     margin: 0 10px;
+
 
 }
 .btu{

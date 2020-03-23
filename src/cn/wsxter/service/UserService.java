@@ -1,11 +1,11 @@
 package cn.wsxter.service;
 
-import cn.wsxter.domain.User;
+import cn.wsxter.domain.Customer;
 
 public interface UserService {
-    User login(User user);
+    Customer login(Customer customer);
 
-   void  addUser(User user);
+   boolean  addUser(Customer customer);
 
 
 }

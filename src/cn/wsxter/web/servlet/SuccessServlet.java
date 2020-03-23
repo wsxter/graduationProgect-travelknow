@@ -1,6 +1,6 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.domain.User;
+import cn.wsxter.domain.Customer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,15 +13,15 @@ import java.io.IOException;
 public class SuccessServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        User user = (User) request.getAttribute("user");
-        if (user != null){
+        Customer customer = (Customer) request.getAttribute("user");
+        if (customer != null){
             response.setContentType("text/html;charset=utf-8");
-            response.getWriter().write("登录成功"+user.getUsername()+",欢迎您,即将跳转到首页");
+            response.getWriter().write("登录成功"+customer.getUsername()+",欢迎您,即将跳转到首页");
         }
         String contextPath = request.getContextPath();
 
 
-        response.sendRedirect(contextPath+"/home.html");
+        response.sendRedirect(contextPath+"/index.html");
     }
 
 

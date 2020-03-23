@@ -1,28 +1,25 @@
 package cn.wsxter.dao.Impl;
 
 import cn.wsxter.dao.UserDao;
-import cn.wsxter.domain.User;
+import cn.wsxter.domain.Customer;
 import cn.wsxter.util.JDBCUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 
-import cn.wsxter.dao.UserDao;
-        import cn.wsxter.domain.User;
-        import cn.wsxter.util.JDBCUtils;
-        import org.springframework.jdbc.core.BeanPropertyRowMapper;
-        import org.springframework.jdbc.core.JdbcTemplate;
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 
 public class UserDaoImpl implements UserDao {
     private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
 
 
     @Override
-    public User findUserByUsernameAndPassword(String username, String password) {
+    public Customer findUserByUsernameAndPassword(String username, String password) {
         try {
-            String sql = "select * from user where username = ? and password = ?";
-            User user = template.queryForObject(sql, new BeanPropertyRowMapper<User>(User.class), username, password);
-            return user;
+            String sql = "select * from customer where username = ? and password = ?";
+            Customer customer = template.queryForObject(sql, new BeanPropertyRowMapper<Customer>(Customer.class), username, password);
+
+            return customer;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
@@ -31,8 +28,21 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public void addUser(User user) {
-        String sql = "insert into user values (null,?,?,?)";
-        template.update(sql,  user.getUsername(), user.getPassword(),user.getEmail());
+    public void addUser(Customer customer) {
+       String sql = "insert into customer (username,password,email,create_time) VALUES (?,?,?,?)";
+        template.update(sql,  customer.getUsername(), customer.getPassword(),customer.getEmail(),date());
+    }
+
+    @Override
+    public Customer findbyUsername(String username) {
+        try {
+            String sql = "select * from customer where username = ?";
+            Customer customer = template.queryForObject(sql, new BeanPropertyRowMapper<Customer>(Customer.class), username);
+            return customer;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+
     }
 }

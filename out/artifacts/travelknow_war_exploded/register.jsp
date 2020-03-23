@@ -12,15 +12,58 @@
     <meta charset="UTF-8">
     <title>知道*注册</title>
     <link rel="stylesheet" href="css/register.css">
-    <script>
+    <%--<script>
 
         function refreshCode() {
             var  vode = document.getElementById("vcode");
             vode.src = "${pageContext.request.contextPath}/checkCodeServlet?time="+new date().getTime();
-
         }
+        function checkusername(){
+            var username = $("#username").val();
+            var reg_username = /^\w{8,20}$/;
+            var flag = reg_username.test(username);
+            if(flag){
+                $("#username").css("border","");
 
-    </script>
+            }else{
+                $("#username").css("border","1px soild red");
+            }
+            return flag;
+        }
+        function checkpassword(){
+            var password = $("#password").val();
+            var reg_password = /^\w{8,20}$/;
+            var flag = reg_password.test(password);
+            if(flag){
+                $("#password").css("border","");
+
+            }else{
+                $("#password").css("border","1px soild red");
+            }
+            return flag;
+        }
+        function checkemail(){
+            var email = $("#email").val();
+            var reg_email = /^\w+@\w+\.\w+$/;
+            var flag = reg_email.test(email);
+            if(flag){
+                $("#email").css("border","");
+
+            }else{
+                $("#email").css("border","1px soild red");
+            }
+            return flag;
+        }
+        $(function(){
+            $("#formId ").submit(function(){
+                return checkusername() && checkpassword() && checkemail();
+            });
+            $("#username").blur(checkusername);
+            $("#password").blur(checkpassword);
+            $("#email").blur(checkemail);
+        })
+
+    </script>--%>
 </head>
 <body>
 <div class="regster">
@@ -33,16 +76,21 @@
         </div>
         <div class="textbox">
             <i>密码：</i>
-            <input type="password" placeholder="Passeord" name="password" value="">
+            <input  type="password" placeholder="Passeord" name="password" value="">
         </div>
         <div class="textbox">
             <i>邮箱：</i>
-            <input type="email" placeholder="email" name="email" value="">
+            <input  type="email" placeholder="email" name="email" value="">
         </div>
         <div class="textbox">
             <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码" style="width: 120px;"/>
-            <a href="javascript:refreshCode();">
-                <img src="${pageContext.request.contextPath}/checkCodeServlet" title="看不清点击刷新" id="vcode"/>
+            <img src="${pageContext.request.contextPath}/checkCodeServlet" height="32px" alt="" onclick="changeCheckCode(this)">
+            <script type="text/javascript">
+                //图片点击事件
+                function changeCheckCode(img) {
+                    img.src="${pageContext.request.contextPath}/checkCodeServlet?"+new Date().getTime();
+                }
+            </script>
             </a>
         </div>
         <input class="btu" type="submit"  name="" value="注册">
