@@ -15,15 +15,15 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public Customer findUserByUsernameAndPassword(String username, String password) {
+        Customer customer = null;
         try {
             String sql = "select * from customer where username = ? and password = ?";
-            Customer customer = template.queryForObject(sql, new BeanPropertyRowMapper<Customer>(Customer.class), username, password);
+            customer = template.queryForObject(sql, new BeanPropertyRowMapper<Customer>(Customer.class), username, password);
 
-            return customer;
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
         }
+        return customer;
 
     }
 

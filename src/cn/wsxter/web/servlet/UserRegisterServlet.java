@@ -1,8 +1,10 @@
 package cn.wsxter.web.servlet;
 
 import cn.wsxter.domain.Customer;
+import cn.wsxter.domain.ResultInfo;
 import cn.wsxter.service.Impl.UserServiceImpl;
 import cn.wsxter.service.UserService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.beanutils.BeanUtils;
 
 
@@ -53,13 +55,21 @@ public class UserRegisterServlet extends HttpServlet {
         }
         //调用service层进行查询
         UserService service = new UserServiceImpl();
-         boolean a = service.addUser(user);
-         if(a){
-             response.sendRedirect(request.getContextPath()+"/login.html");
+         boolean flag = service.addUser(user);
+        ResultInfo resultInfo = new ResultInfo();
+        if(flag){
+            resultInfo.setFlag(true);
          }
          else {
-             request.getRequestDispatcher("/registerfailServlet").forward(request,response);
+             resultInfo.setFlag(false);
+             resultInfo.setErrorMsg("注册失败，用户名重复");
+
          }
+        ObjectMapper Mapper = new ObjectMapper();
+        String json = Mapper.writeValueAsString(resultInfo);
+
+        response.setContentType("application/json;charset=utf-8");
+        response.getWriter().write(json);
 
 
     }

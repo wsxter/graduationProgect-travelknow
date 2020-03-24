@@ -4,7 +4,7 @@ import cn.wsxter.dao.Impl.UserDaoImpl;
 import cn.wsxter.dao.UserDao;
 import cn.wsxter.domain.Customer;
 import cn.wsxter.service.UserService;
-import org.apache.taglibs.standard.lang.jstl.NullLiteral;
+//import org.apache.taglibs.standard.lang.jstl.NullLiteral;
 
 public class UserServiceImpl implements UserService {
     private UserDao dao = new UserDaoImpl();
