@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>知道*首页</title>
     <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
 <header class="Wrap backcolor">
@@ -19,7 +20,8 @@
             <input type="text" placeholder="你的问题？" value="">
             <button >提交</button>
         </div>
-        <a class="userzone" href="#" style="width: 34px; height: 34px"><img class="usericon circlestyle" src="../img/01.jpg" width="34" height="34"></a>
+        <a class="userzone" href="#" style="width: 34px; height: 34px"><img class="usericon circlestyle" src="image/01.jpg" width="34" height="34"></a>
+
 
 
 
@@ -121,8 +123,22 @@
                 </p>
             </div>
 
+
         </aside>
+        <div id="userSpan" style="float: right">我在这</div>
     </div>
 </main>
+
+<script>
+    $(function () {
+        $.get("/travelknow/user/findUser",{},function (data) {
+            //获取登录用户数据
+            if(data.flag){
+                $("#userSpan").html(data.data);
+            }
+        },"json");
+
+    })
+</script>
 </body>
 </html>

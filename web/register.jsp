@@ -104,7 +104,7 @@
             // if(checkEmail() && checkPassword() && checkUsername()){
 
 
-            $.post("${pageContext.request.contextPath}/userRegisterServlet",$("#registerform").serialize(),function(rest){
+            $.post("${pageContext.request.contextPath}/user/register",$("#registerform").serialize(),function(rest){
                 console.log(rest);
                 if (rest.flag){
                     //注册成功
@@ -112,7 +112,7 @@
                 }else {
                     //注册失败
                     alert(rest.errorMsg);
-                    location.replace("${pageContext.request.contextPath}/register.html");
+                    location.replace("${pageContext.request.contextPath}/register.jsp");
 
                 }
 

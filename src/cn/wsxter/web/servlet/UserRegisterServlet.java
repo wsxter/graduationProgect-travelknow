@@ -23,6 +23,8 @@ public class UserRegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //设置编码
         request.setCharacterEncoding("utf-8");
+        ResultInfo resultInfo = new ResultInfo();
+        ObjectMapper Mapper = new ObjectMapper();
         //获取验证码信息
         String verifycode = request.getParameter("verifycode");
         //校验
@@ -32,14 +34,15 @@ public class UserRegisterServlet extends HttpServlet {
         if(!checkcode_server.equalsIgnoreCase(verifycode)){
             //验证码不正确
             //提示信息
-            request.setAttribute("login_msg","验证码错误！");
-            //跳转登录页面
-            request.getRequestDispatcher("/login.jsp").forward(request,response);
+            resultInfo.setFlag(false);
+            resultInfo.setErrorMsg("注册失败，验证码错误");
+            response.setContentType("application/json;charset=utf-8");
+            String json = Mapper.writeValueAsString(resultInfo);
+            response.getWriter().write(json);
 
             return;
         }
-        //检查用户名是否重复:待实现
-       // request.getParameter("username");
+
 
 
         //获取用户注册信息
@@ -56,7 +59,7 @@ public class UserRegisterServlet extends HttpServlet {
         //调用service层进行查询
         UserService service = new UserServiceImpl();
          boolean flag = service.addUser(user);
-        ResultInfo resultInfo = new ResultInfo();
+
         if(flag){
             resultInfo.setFlag(true);
          }
@@ -65,7 +68,7 @@ public class UserRegisterServlet extends HttpServlet {
              resultInfo.setErrorMsg("注册失败，用户名重复");
 
          }
-        ObjectMapper Mapper = new ObjectMapper();
+
         String json = Mapper.writeValueAsString(resultInfo);
 
         response.setContentType("application/json;charset=utf-8");

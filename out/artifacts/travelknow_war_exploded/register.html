@@ -96,7 +96,7 @@
             // if(checkEmail() && checkPassword() && checkUsername()){
 
 
-            $.post("/userRegisterServlet",$("#formId").serialize(),function(rest){
+            $.post("/user/register",$("#formId").serialize(),function(rest){
                 console.log(rest);
                 if (rest.flag){
                     //注册成功

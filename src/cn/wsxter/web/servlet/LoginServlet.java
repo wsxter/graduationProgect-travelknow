@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
@@ -31,9 +32,7 @@ public class LoginServlet extends HttpServlet{
         Customer loginUser = new Customer();
         try {
             BeanUtils.populate(loginUser,map);
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
         //创建service层对象
@@ -47,7 +46,9 @@ public class LoginServlet extends HttpServlet{
        }else {
             //登录成功，存储数据、转发
             req.setAttribute("user",user);
-            req.getRequestDispatcher("/successServlet").forward(req,resp);
+           HttpSession session = req.getSession();
+
+           req.getRequestDispatcher("/successServlet").forward(req,resp);
        }
     }
 
