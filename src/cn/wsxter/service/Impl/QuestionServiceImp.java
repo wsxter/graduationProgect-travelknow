@@ -13,7 +13,7 @@ public class QuestionServiceImp implements QuestionService {
 
 
     @Override
-    public PageBean<Question> pageQuery(int place_id, int pageSize, int currentPage) {
+    public PageBean<Question> pageQuery(int place_id, int pageSize, int currentPage,String question_name) {
         //已有 place_id 页面显示条数pagesize  当前页码currentPage
         //需要 private int totalCount;//总记录数
         //    private int totalPage;//总页数
@@ -23,7 +23,7 @@ public class QuestionServiceImp implements QuestionService {
         PageBean<Question> pb = new PageBean<Question>();
 
         //总记录数
-        int totalCount = questionDao.findTotalCount(place_id);
+        int totalCount = questionDao.findTotalCount(place_id,question_name);
         pb.setTotalCount(totalCount);
         //总页数
         pb.setTotalPage(totalCount%pageSize == 0 ? totalCount/pageSize : totalCount/pageSize + 1 );
@@ -34,7 +34,7 @@ public class QuestionServiceImp implements QuestionService {
         //数据集合
         //l=开始页数
         int start = (currentPage - 1 ) * pageSize;
-        List<Question> byPage = questionDao.findByPage(place_id, start, pageSize);
+        List<Question> byPage = questionDao.findByPage(place_id, start, pageSize,question_name);
         pb.setList(byPage);
         return pb;
 

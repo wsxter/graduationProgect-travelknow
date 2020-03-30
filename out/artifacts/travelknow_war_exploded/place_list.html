@@ -5,10 +5,11 @@
     <title>分类列表</title>
     <link href="css/place_list.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/getParameter.js"></script>
 </head>
 <body>
-<header class="Wrap backcolor">
-    <div class="header-inner">
+<header class="Wrap backcolor" id="header">
+   <!-- <div class="header-inner">
         <h1>旅游知道</h1>
 
         <ul>
@@ -21,7 +22,7 @@
             <button >提交</button>
         </div>
         <a class="userzone" href="#" style="width: 34px; height: 34px"><img class="usericon circlestyle" src="image/01.jpg" width="34" height="34"></a>
-    </div>
+    </div>-->
 </header>
 <main>
     <div class="topstory">
@@ -91,14 +92,10 @@
     </div>
 </main>
 
-
+<script src="js/include.js"></script>
 <script>
-    function load(place_id,current_page){
-        $.get("/travelknow/place_list/quesPageQuery",{place_id:place_id,current_Page:current_page},function (pb) {
-
-
-
-
+    function load(place_id,current_page,question_name){
+        $.get("/travelknow/place_list/quesPageQuery",{place_id:place_id,current_Page:current_page,question_name:question_name},function (pb) {
 
           /*  //创建分页按钮
             var page_lis = "";
@@ -118,7 +115,7 @@
             var lis = "";
             lis +='<div class="pageNum">';
             lis +='<ul id="pageLine" class="pageLine">';
-            var firstPage = ' <a href="javascript:load('+place_id+')"><li>首页</li></a>';
+            var firstPage = ' <a href="javascript:load('+place_id+',)><li>首页</li></a>';
             var beforeNum = pb.currentPage - 1;
             if (beforeNum <1){
                 beforeNum = 1
@@ -157,8 +154,9 @@
             var place_lis = "";
             for (var i = 0;i < pb.list.length;i++) {
                 var data = pb.list[i];
-                 if(data.photo != null){
-                var li = '<div class="card1 backcolor circlestyle">\n' +
+                 if(data.photo != null)
+                 {
+                 var li = '<div class="card1 backcolor circlestyle">\n' +
                     '                <a href="#"><h2><strong>' + data.question_name + '</strong></h2></a>\n' +
                     '                <a href="#"> <div class="index-answer">\n' +
                     '                    <div class="index-answer-inimage">\n' +
@@ -188,24 +186,33 @@
                         '\n' +
                         '            </div>';
                 }
-                place_lis +=li;
+                place_lis += li;
 
 
 
             }
             place_lis +=lis;
             $("#cards").html(place_lis);
+
             window.scrollTo(0,0);
 
         },"json");
     }
     $(function () {
         //切割传入的place_id
-        var search = location.search;
-        var  place_id = search.split("=")[1];
-        load(place_id);
+       /* var search = location.search;
+        var  place_id = search.split("=")[1];*/
+        var place_id = getParameter("place_id");
+        var question_name = getParameter("question_name");
+        if (question_name){
+            question_name = window.decodeURIComponent(question_name);
+        }
+        alert(question_name);
 
-    })
+        load(place_id,1,question_name);
+
+
+    });
 
 
 </script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/header.css" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<header class="Wrap backcolor">
+    <div class="header-inner">
+        <h1>旅游知道</h1>
+
+        <ul>
+            <a href="#" onclick=""><li>推荐</li></a>
+            <a href="#"><li>我的关注</li></a>
+            <a href="#"><li>美图</li></a>
+        </ul>
+        <div class="searchlable">
+            <input id="search_input" type="text" placeholder="你的问题？" value="">
+            <button id="search_button" >提交</button>
+        </div>
+        <a class="userzone" href="#" style="width: 34px; height: 34px"><img class="usericon circlestyle" src="image/01.jpg" width="34" height="34"></a>
+
+
+    </div>
+</header>
+
+<script src="js/getParameter.js"></script>
+<script>
+    $("#search_button").click(function () {
+        var question_name = $("#search_input").val();
+
+
+        var parameter = getParameter("place_id");
+
+
+        location.href ="http://localhost:8080/travelknow/place_list.html?place_id="+parameter+"&question_name="+question_name;
+
+
+    })
+</script>
+</body>
+</html>

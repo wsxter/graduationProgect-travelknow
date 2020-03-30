@@ -24,10 +24,11 @@ public class Place_listServlet extends BaseServlet {
         String currentPageStr = request.getParameter("current_Page");
         String pageSizeStr = request.getParameter("pageSize");
         String palce_idStr = request.getParameter("place_id");
+        String question_name = request.getParameter("question_name");
 
         //处理
         int place_id = 0;//分类号
-        if (palce_idStr != null&&palce_idStr.length() > 0){
+        if (palce_idStr != null&&palce_idStr.length() > 0&&"null".equals(palce_idStr)){
            place_id = Integer.parseInt(palce_idStr);
         }
         int currentPage = 0;//当前页码
@@ -42,8 +43,10 @@ public class Place_listServlet extends BaseServlet {
         }else {
             pageSize = 5;
         }
+
+
         QuestionService questionService = new QuestionServiceImp();
-        PageBean<Question> pageJson =  questionService.pageQuery(place_id, pageSize,currentPage);
+        PageBean<Question> pageJson =  questionService.pageQuery(place_id, pageSize,currentPage,question_name);
         response.setContentType("application/json;charset=utf-8");
         ObjectMapper Mapper = new ObjectMapper();
        String json = Mapper.writeValueAsString(pageJson);
