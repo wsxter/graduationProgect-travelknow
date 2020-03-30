@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>知道*首页</title>
     <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/pagination.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
@@ -12,9 +13,9 @@
         <h1>旅游知道</h1>
 
         <ul>
-            <li><a href="about.html">推荐</a></li>
-            <li><a href="about.html">关注</a></li>
-            <li><a href="news.html">等待回答</a></li>
+            <a href="#" onclick=""><li>推荐</li></a>
+            <a href="#"><li>我的关注</li></a>
+            <a href="#"><li>美图</li></a>
         </ul>
         <div class="searchlable">
             <input type="text" placeholder="你的问题？" value="">
@@ -84,9 +85,45 @@
                 </div>
 
             </div>
+            <div class="pageNum">
+                <ul id="pageLine">
+                    <li><a href="">首页</a></li>
+                    <li class="threeword"><a href="#">上一页</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(1,8)">1</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(2,8)">2</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(3,8)">3</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(4,8)">4</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(5,8)">5</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(6,8)">6</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(7,8)">7</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(8,8)">8</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(9,8)">9</a></li>
+                    <li><a href="javascript:;" onclick="getPageData(10,8)">10</a></li>
+                    <li class="threeword"><a href="javascript:;">下一页</a></li>
+                    <li class="threeword"><a href="javascript:;">末页</a></li>
+                </ul>
+            </div>
 
         </div>
         <aside>
+
+            <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
+              <!--  <div class="msg" style="color: red">热门标签</div>
+                <div class="place_lable"><a href="#">避暑山庄</a></div>
+                <div class="place_lable"><a href="#">科尔沁草原</a></div>
+                <div class="place_lable"><a href="#">葫芦岛</a></div>
+                <div class="place_lable"><a href="#">承德</a></div>
+                <div class="place_lable"><a href="#">避暑山庄</a></div>
+                <div class="place_lable"><a href="#">科尔沁草原</a></div>
+                <div class="place_lable"><a href="#">科尔沁草原</a></div>
+                <div class="place_lable"><a href="#">葫芦岛</a></div>
+                <div class="place_lable"><a href="#">承德</a></div>
+                <div class="place_lable"><a href="#">避暑山庄</a></div>
+                <div class="place_lable"><a href="#">科尔沁草原</a></div>
+                <div class="place_lable"><a href="#">葫芦岛</a></div>
+                <div class="place_lable"><a href="#">承德</a></div>
+-->
+            </div>
             <div class="globalwrite">
                 <div class="globalwrite-reply g-size backcolor circlestyle">
                     <a href="#" class="reply-link"><strong>解决问题</strong></a>
@@ -125,11 +162,20 @@
 
 
         </aside>
-        <div id="userSpan" style="float: right">我在这</div>
+
     </div>
+    <div id="userSpan" style="float: right">我在这</div>
+    <div id="exit" style="float: right"><a href="#">退出</a></div>
 </main>
 
 <script>
+    function tagSearch(){
+        $.get("")
+
+    }
+    function index_tag(){
+
+    }
     $(function () {
         $.get("/travelknow/user/findUser",{},function (data) {
             //获取登录用户数据
@@ -137,6 +183,19 @@
                 $("#userSpan").html(data.data);
             }
         },"json");
+        $("#exit").click(function () {
+            location.replace("/travelknow/user/exit");
+        })
+
+        $.get("/travelknow/category/findAll",{},function (data) {
+            var lis = '<div class="msg" style="color: red">热门标签</div>';
+            for (var i = 0 ;i <data.length; i++) {
+                var li = '<div class="place_lable"><a href="place_list.html?place_id='+data[i].place_id+'" onclick="tagSearch(data[i].place_id)" >'+data[i].place_name+'</a></div>';
+                lis += li;
+            }
+           $("#categoryId").html(lis);
+        },"json");
+
 
     })
 </script>

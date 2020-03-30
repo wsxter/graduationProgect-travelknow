@@ -24,7 +24,7 @@ import java.util.Map;
 public class UserServlet extends BaseServlet {
 
     private  UserService service = new UserServiceImpl();
-
+    //登录
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
         //设置编码
@@ -67,7 +67,7 @@ public class UserServlet extends BaseServlet {
     }
 
 
-
+    //注册
     public void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
         //设置编码
@@ -119,6 +119,7 @@ public class UserServlet extends BaseServlet {
         response.setContentType("application/json;charset=utf-8");
         response.getWriter().write(json);
     }
+    //从session获取到登录的用户，返回对应的用户名给前端
     public void findUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         Customer loginUser =(Customer) request.getSession().getAttribute("loginUser");
         ResultInfo resultInfo = new ResultInfo();
@@ -134,5 +135,9 @@ public class UserServlet extends BaseServlet {
         String json = Mapper.writeValueAsString(resultInfo);
         response.getWriter().write(json);
 
+    }
+    public void exit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        request.getSession().invalidate();//销毁session
+        response.sendRedirect(request.getContextPath()+"/login.html");//重定向
     }
 }

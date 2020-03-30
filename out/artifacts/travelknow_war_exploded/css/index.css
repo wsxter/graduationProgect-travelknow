@@ -17,7 +17,7 @@ body{ font-size:15px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
 }
 .circlestyle{
     border-radius: 5px;
-    box-shadow: -2px 2px 0px #cccccc;
+   /* box-shadow: -2px 2px 0px #cccccc;*/
 }
 .backcolor{
     background: white;
@@ -38,7 +38,7 @@ body{ font-size:15px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
     display: inline;
 }
 .Wrap ul{
-    width: 220;
+    width: 250px;
     height: 35px;
     display: inline-block;
 }
@@ -62,7 +62,7 @@ header .header-inner{
     margin: 0 auto;
 }
 .Wrap .header-inner .searchlable{
-    width: 450px;
+    width: 400px;
     height: 35px;
     display: inline-block;
     margin-left: 10px;
@@ -98,7 +98,7 @@ header .header-inner .usericon{
 }
 .topstory .cards{
     width: 694px;
-    height: 800px;
+    height: 1000px;
     float: left;;
 }
 .topstory .cards .card1{
@@ -106,7 +106,7 @@ header .header-inner .usericon{
     height: 186px;
     margin-bottom: 10px;
     padding: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .topstory .cards .card1 h2{
     font-size: 18px;
@@ -221,6 +221,18 @@ header .header-inner .usericon{
     line-height:30px;
     padding-left: 10px;
 
+}
+.topstory .hotLabe{
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 290px;
+}
+.topstory .hotLabe .place_lable{
+    display: inline-block;
+    margin: 3px;
+    padding: 5px;
+    float: left;
+    background: #cccccc;
 }
 
 

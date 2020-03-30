@@ -6,8 +6,8 @@ h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
 a{color:#333;text-decoration:none;}
-a:hover{color:#f40; text-decoration:underline;}
-body{ font-size:15px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
+a:hover{color:#f40; }
+body{ font-size:18px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
 .clearfix:after{ content:""; display:block; clear:both;}
 .buttonstyle{
     margin-right: 25px;
@@ -17,20 +17,206 @@ body{ font-size:15px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
 }
 .circlestyle{
     border-radius: 5px;
-    box-shadow: -2px 2px 0px #cccccc;
+    /* box-shadow: -2px 2px 0px #cccccc;*/
 }
 .backcolor{
     background: white;
 }
 
 /*CSS初始化结束*/
+.Wrap{
+    height: 52px;
+    margin-bottom: 10px;
+    border-bottom: #3e4a40 solid 2px;
+    padding-top: 6px;
+}
+.Wrap h1{
+    font-family: 幼圆;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    display: inline;
+}
+.Wrap ul{
+    width: 250px;
+    height: 35px;
+    display: inline-block;
+}
+.Wrap ul li{
+    height: 30px;
+    font-size: 16px;
+    padding: 0px 13.5px;
+    display: inline-block;
+    text-align: center;
+}
+.Wrap ul li a{
+    margin: 0 auto;
+}
+.Wrap ul li a:hover{
+    background:pink;  border-radius:4px;
+    text-decoration:none;
+}
+header .header-inner{
+    width: 1020px;
+    height: 50px;
+    margin: 0 auto;
+}
+.Wrap .header-inner .searchlable{
+    width: 400px;
+    height: 35px;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 100px;
+}
+.Wrap .searchlable input{
+    width: 325px;
+    height: 34px;
+    margin: 0 auto;
+    margin-left: 10px;
+    border: #3e4a40 solid 1px;
+    border-radius: 10px;
+}
+
+.Wrap .searchlable  button{
+    width: 45px;
+    height: 34px;
+    border: #3e4a40 solid 1px;
+    color: #237332;
+    border-radius: 5px;
+    box-shadow: -2px 2px 0px #cccccc;
+}
+header .header-inner .usericon{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+    float: right;
+}
+.topstory{
+    width: 1020px;
+    margin: 0px auto;
+    height: 800px;
+}
+.topstory .cards{
+    width: 694px;
+    height: 1200px;
+    float: left;
+
+}
+.topstory .cards .card1 .answer-introdu{
+    margin: 15px;
+    letter-spacing:3px;
+    text-indent:25px;
+    line-height: 30px;
+    font-family: 微软雅黑;
+
+}
+.topstory .globalwrite{
+}
+.topstory .globalwrite .g-size{
+    width: 94px;
+    height:40px;
+    display: inline-block;
+    float: right;
+}
+.topstory .globalwrite .globalwrite-question{
+    margin-right: 10px;
+}
+.topstory .globalwrite .globalwrite-reply{
+
+}
+.topstory .globalwrite .globalwrite-reply{
+    width: 94px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.topstory .globalwrite .globalwrite-idea{
+    margin-right: 10px;
+}
+.topstory .user-message{
+    width:260px;
+    height: 175px;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    padding: 0px 20px;
+
+}
+.topstory .user-message .user-collect-ques{
+    height: 40px;
+    line-height: 40px;
+    text-align: left ;
+    float: right;
+    margin-left: 20px;
+    border-bottom:rgba(2,2,3,0.06)  solid 2px;
+    width: 260px;
+
+}
+.topstory .user-message .user-attention-ques{
+    height: 40px;
+    line-height: 40px;
+    text-align: left ;
+    float: right;
+    margin-left: 20px;
+    border-bottom:rgba(2,2,3,0.06)  solid 2px;
+    width: 260px;
+
+}
+.topstory .user-message .span-text{
+    float: right;
+}
+.topstory .scenery-picture-lable{
+    width: 300px;
+    height: 400px;
+    float: right;
+    margin-top: 10px;
+
+
+}
+.topstory .scenery-picture-lable .scenery-picture {
+    width: 300px;
+    height: 400px;
+
+}
+.topstory .aboutus{
+    width: 290px;
+    height: 200px;
+    display: inline-block;
+    float: right;
+
+    margin-top: 10px;
+    line-height:30px;
+    padding-left: 10px;
+
+}
+
+
+.topstory .hotLabe{
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 290px;
+}
+.topstory .hotLabe .place_lable{
+
+    margin: 3px;
+    padding: 5px;
+    background: #cccccc;
+}
+.topstory .cards .ques-type{
+
+    float: right;
+    background: darkseagreen;
+    margin: 5px;
+}
+
 
 nav {
     width: 1010px;
-    margin: 0px auto;
-    padding-right: 10px;
-    height: 220px;
+    margin: 10px auto;
+    padding: 10px;
+    height: auto;
     border: black solid 1px;
+
 }
 nav .sponsor{
     width: 260px;
@@ -46,35 +232,23 @@ nav .sponsor .initiator{
 }
 
 nav h2{
-    font-size: 18px;
+    font-size: 22px;
     /*margin-left: 20px;*/
     height: 32px;
     margin-top:7px ;
 }
-nav .index-answer{
-    overflow: hidden;
-}
-nav .index-answer .index-answer-inimage{
-    float:left;
-    margin-right:2px;
-    /*margin-left: 20px;*/
-    margin-right: 20px;
-}
-nav .index-answer .index-answer-inimage img{
-}
-nav .index-answer .index-answer-introdu{
-    width: 466px;
+
+nav .question_content{
+    width: 650px;
     height: 60px;
-    float: left;
+
 }
-nav .index-answer .index-answer-introdu p{
-    font-size: 15px;
-}
-nav .index-answer-foot{
+
+nav .index-question-foot{
     padding-left: 20px;
     margin-top: 20px;
 }
-nav .index-answer-foot .ques-type{
+nav .index-question-foot .ques-type{
     float: right;
     background: darkseagreen;
 }
@@ -85,4 +259,8 @@ main .reply-const{
 main .reply-const p{
     line-height: 30px;
 }
+.index-answer-foot{
+    padding-left: 400px;
+    margin-bottom: 20px;
 
+}
