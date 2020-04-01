@@ -5,5 +5,5 @@ import cn.wsxter.domain.PageBean;
 
 public interface AnswerService {
 
-    PageBean<Answer> pageQuery(int place_id, int pageSize, int currentPage);
+    PageBean<Answer> pageQuery(int question_id, int pageSize, int currentPage);
 }

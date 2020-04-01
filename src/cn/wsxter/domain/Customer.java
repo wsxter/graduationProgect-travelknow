@@ -1,5 +1,7 @@
 package cn.wsxter.domain;
 
+import java.util.Date;
+
 public class Customer {
     private int user_id;
     private  String username;
@@ -7,7 +9,7 @@ public class Customer {
     private  String email;
     private  String autograph;
     private int role;
-    private  String create_time;
+    private Date create_time;
 
     public void setRole(int role) {
         this.role = role;
@@ -59,13 +61,11 @@ public class Customer {
     }
 
 
-
-
-    public String getCreate_time() {
+    public Date getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(String create_time) {
+    public void setCreate_time(Date create_time) {
         this.create_time = create_time;
     }
 

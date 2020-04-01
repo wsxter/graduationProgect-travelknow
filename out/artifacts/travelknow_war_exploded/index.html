@@ -38,6 +38,7 @@
                         <img src="image/01.jpg" width="190" height="105">
                     </div>
                     <div class="index-answer-introdu">
+                        <span style="display: inline-block"><strong>wsxter:</strong></span>
                         <p>真正要达到“学”的层级，课堂必须在第三个层级
                             “问题解决与应用”和第四个层级“思维迁移与创造”
                             中展开学习任务，学生的时间和空间就相对比较大，横坐标
@@ -175,6 +176,10 @@
             //获取登录用户数据
             if(data.flag){
                 $("#userSpan").html(data.data);
+                var  userzone = document.getElementById("userzone");
+                userzone.herf = "userzone.html";
+            }else {
+                window.location.href("ErrorMsg.html");
             }
         },"json");
         $("#exit").click(function () {

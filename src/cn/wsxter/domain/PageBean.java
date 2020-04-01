@@ -3,13 +3,22 @@ package cn.wsxter.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class  PageBean<T> {
+public class PageBean<T> {
 
     private int totalCount;//总记录数
     private int totalPage;//总页数
     private int currentPage;//当前页码
     private int pageSize;//每页显示的条数
     private List<T> list;//页面上显示的数据集合
+    private List otherlist;
+
+    public List getOtherlist() {
+        return otherlist;
+    }
+
+    public void setOtherlist(List otherlist) {
+        this.otherlist = otherlist;
+    }
 
     public int getTotalCount() {
         return totalCount;
@@ -59,6 +68,7 @@ public class  PageBean<T> {
                 ", currentPage=" + currentPage +
                 ", pageSize=" + pageSize +
                 ", list=" + list +
+                ", otherlist=" + otherlist +
                 '}';
     }
 }

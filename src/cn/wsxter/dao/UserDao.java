@@ -9,4 +9,5 @@ public interface UserDao {
 
 
     Customer findbyUsername(String username);
+    Customer findbuUserid(int userid);
 }

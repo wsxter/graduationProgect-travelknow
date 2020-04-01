@@ -1,5 +1,6 @@
 package cn.wsxter.web.servlet;
 
+import cn.wsxter.domain.ResultInfo;
 import cn.wsxter.domain.place;
 import cn.wsxter.service.CategoryService;
 import cn.wsxter.service.Impl.CategoryServiceImp;
@@ -15,8 +16,9 @@ import java.util.List;
 
 @WebServlet("/category/*")
 public class categoryServlet<list> extends BaseServlet {
+    CategoryService categoryServiceImp = new CategoryServiceImp();
     public void  findAll(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        CategoryService categoryServiceImp = new CategoryServiceImp();
+
         List<place> all = categoryServiceImp.findAll();
         ObjectMapper Mapper = new ObjectMapper();
         response.setContentType("application/json;charset:utf-8");
@@ -24,6 +26,15 @@ public class categoryServlet<list> extends BaseServlet {
 
 
     }
+    public void findOne(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String opicId = request.getParameter("opicId");
+        int opic = new Integer(opicId);
+        place place = categoryServiceImp.findOne(opic);
+
+        ObjectMapper Mapper = new ObjectMapper();
+        response.setContentType("application/json;charset:utf-8");
+        Mapper.writeValue(response.getOutputStream(),place.getPlace_name());
 
 
+    }
 }

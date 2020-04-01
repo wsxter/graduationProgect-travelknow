@@ -45,4 +45,16 @@ public class UserDaoImpl implements UserDao {
         }
 
     }
+
+    @Override
+    public Customer findbuUserid(int userid) {
+        try {
+            String sql = "select * from customer where user_id = ?";
+            Customer customer = template.queryForObject(sql, new BeanPropertyRowMapper<Customer>(Customer.class), userid);
+            return customer;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

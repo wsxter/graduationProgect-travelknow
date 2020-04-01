@@ -138,6 +138,6 @@ public class UserServlet extends BaseServlet {
     }
     public void exit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.getSession().invalidate();//销毁session
-        response.sendRedirect(request.getContextPath()+"/login.html");//重定向
+        response.sendRedirect(request.getContextPath()+"/home.html");//重定向
     }
 }

@@ -1,5 +1,7 @@
 package cn.wsxter.domain;
 
+import java.util.Date;
+
 public class Answer {
 
     private int answer_id;
@@ -8,7 +10,7 @@ public class Answer {
     private String answer_content;
     private String photo;
     private int comment_num;
-    private String create_time;
+    private Date create_time;
 
 
 
@@ -60,11 +62,11 @@ public class Answer {
         this.comment_num = comment_num;
     }
 
-    public String getCreate_time() {
+    public Date getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(String create_time) {
+    public void setCreate_time(Date create_time) {
         this.create_time = create_time;
     }
 

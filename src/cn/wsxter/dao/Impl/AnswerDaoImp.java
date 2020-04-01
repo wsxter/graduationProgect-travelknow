@@ -11,14 +11,14 @@ import java.util.List;
 public class AnswerDaoImp implements AnswerDao {
     private JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
     @Override
-    public int findTotalCount(int place_id) {
-        String sql = "select count(*) from question where opicId = ?";
-        return template.queryForObject(sql,Integer.class,place_id);
+    public int findTotalCount(int question_id) {
+        String sql = "select count(*) from answer where question_id = ?";
+        return template.queryForObject(sql,Integer.class,question_id);
     }
 
     @Override
-    public List<Answer> findByPage(int place_id, int start, int pageSize) {
-        String sql = "select * from question where opicId = ? limit ? , ?";
-        return template.query(sql,new BeanPropertyRowMapper<Answer>(Answer.class),place_id,start,pageSize);
+    public List<Answer> findByPage(int question_id, int start, int pageSize) {
+        String sql = "select * from answer where question_id = ? limit ? , ?";
+        return template.query(sql,new BeanPropertyRowMapper<Answer>(Answer.class),question_id,start,pageSize);
     }
 }

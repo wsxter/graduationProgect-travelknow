@@ -102,6 +102,12 @@ header .header-inner .usericon{
     float: left;
 
 }
+.topstory .cards .card1{
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+}
 .topstory .cards .card1 .answer-introdu{
     margin: 15px;
     letter-spacing:3px;
@@ -110,6 +116,19 @@ header .header-inner .usericon{
     font-family: 微软雅黑;
 
 }
+.topstory .cards .card1 .answer-foot{
+
+}
+.topstory .cards .card1 .answer-foot .buttonstyle{
+
+}
+.topstory .cards .card1 .answer-foot .createtime{
+    background: white;
+    display: inline-block;
+    float: right;
+}
+
+
 .topstory .globalwrite{
 }
 .topstory .globalwrite .g-size{

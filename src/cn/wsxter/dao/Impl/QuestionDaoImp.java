@@ -2,7 +2,6 @@ package cn.wsxter.dao.Impl;
 
 import cn.wsxter.dao.QuestionDao;
 
-import cn.wsxter.domain.PageBean;
 import cn.wsxter.domain.Question;
 import cn.wsxter.util.JDBCUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

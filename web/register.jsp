@@ -16,9 +16,9 @@
 </head>
 <body>
 <div class="regster">
-    <img src="image/register.jpeg" width="247" height="370">
+    <%--<img src="image/register.jpeg" width="247" height="370">--%>
     <form id="registerform" >
-        <div class="login-box">
+        <div class="regster-box">
             <h1>注册</h1>
             <div class="textbox"  >
                 <i>用户名：</i>
@@ -34,8 +34,9 @@
                 <input id="Email"  type="email" placeholder="email" name="email" value="">
             </div>
             <div class="textbox">
-                <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码" style="width: 120px;"/>
                 <img src="${pageContext.request.contextPath}/checkCodeServlet" height="32px" alt="" onclick="changeCheckCode(this)">
+                <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码" style="width: 120px;"/>
+
 
 
             </div>

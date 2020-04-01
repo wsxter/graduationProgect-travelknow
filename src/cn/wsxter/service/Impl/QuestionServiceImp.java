@@ -1,5 +1,6 @@
 package cn.wsxter.service.Impl;
 
+
 import cn.wsxter.dao.Impl.QuestionDaoImp;
 import cn.wsxter.dao.QuestionDao;
 import cn.wsxter.domain.PageBean;
@@ -12,8 +13,9 @@ public class QuestionServiceImp implements QuestionService {
     private QuestionDao questionDao = new QuestionDaoImp();
 
 
+
     @Override
-    public PageBean<Question> pageQuery(int place_id, int pageSize, int currentPage,String question_name) {
+    public PageBean<Question> pageQuery(int place_id, int pageSize, int currentPage, String question_name) {
         //已有 place_id 页面显示条数pagesize  当前页码currentPage
         //需要 private int totalCount;//总记录数
         //    private int totalPage;//总页数
@@ -36,6 +38,7 @@ public class QuestionServiceImp implements QuestionService {
         int start = (currentPage - 1 ) * pageSize;
         List<Question> byPage = questionDao.findByPage(place_id, start, pageSize,question_name);
         pb.setList(byPage);
+
         return pb;
 
     }

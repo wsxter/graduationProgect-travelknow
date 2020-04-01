@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>问题-回答</title>
     <link href="css/question-reply.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/getParameter.js"></script>
 </head>
 <body>
 <header class="Wrap backcolor">
@@ -61,7 +63,7 @@
 
     <div class="topstory">
 
-        <div class="cards">
+        <div class="cards" id="answer_card">
             <div class="card1 backcolor circlestyle">
                 <a href="#"><span><strong>许天翔</strong></span></a>的回答：
                     <div class="answer-introdu">
@@ -80,15 +82,15 @@
                             中展开学习任务，学生的时间和空间就相对比较大，横坐标
                             上学生的自主性也比较高，就会走到比较高的层级，这才是</p>
                     </div>
-                <div class="index-answer-foot">
-                    <button class="buttonstyle">赞同</button>
-                    <button class="buttonstyle">不赞同</button>
+                <div class="answer-foot">
+                    <button class="buttonstyle">赞同:<span>23</span></button>
                     <button class="buttonstyle">收藏</button>
+                    <div class="createtime" style="float: right;width: auto;">创建于：<span>2020.12.1</span></div>
 
                 </div>
 
                 </div>
-
+                    <div style="border: #333333">sdfzdfds</div>
 
             </div>
            <!-- <div class="card1 backcolor circlestyle" style="height: 116px">
@@ -191,5 +193,82 @@
 <div id="userSpan" style="float: right">我在这</div>
 <div id="exit" style="float: right"><a href="#">退出</a></div>
 
+<script>
+    function load(question_id,current_page){
+        $.get("/travelknow/place_list/answerPageQuery",{question_id:question_id,current_Page:current_page},function (pb) {
+
+            var lis = "";
+            lis +='<div class="pageNum">';
+            lis +='<ul id="pageLine" class="pageLine">';
+            var firstPage = '<a href="javascript:load('+question_id+',1)"><li>首页</li></a>';
+            var beforeNum = pb.currentPage - 1;
+            if (beforeNum <1){
+                beforeNum = 1
+            }
+            var beforePage = '<a href="javascript:load('+question_id+','+beforeNum+')"><li>上一页</li></a>';
+            var afterNum = pb.currentPage + 1;
+            if (afterNum > pb.totalPage){
+                afterNum = pb.totalPage
+            }
+
+            var afterPage = '<a href="javascript:load('+question_id+','+afterNum+')"><li>下一页</li></a>';
+
+
+            var lastPage = '<a href="javascript:load('+question_id+','+pb.totalPage+')"><li>末页</li></a>';
+
+            lis +=lastPage;
+            lis +=afterPage;
+            lis +=beforePage;
+            lis +=firstPage;
+
+            var place_lis = "";
+
+            for (var i = 0;i < pb.list.length;i++) {
+
+               /* {"totalCount":36,"totalPage":8,"currentPage":1,"pageSize":5,"
+               list":[{"answer_id":1,"user_id":7,"question_id":3,"
+               answer_content":"其实我觉得旅游之前要","photo":"xxx",
+               "comment_num":24,"create_time":"2020-03-14 00:00:00.0"}
+                */
+                var data = pb.list[i];
+
+
+                    var li = '<div class="card1 backcolor circlestyle">\n' +
+                        '                <a href="#"><span><strong>待处理</strong></span></a>的回答：\n' +
+                        '                    <div class="answer-introdu">\n' +
+                        '                        <p>'+data.answer_content+'</p>\n' +
+                        '                    </div>\n' +
+                        '                <div class="answer-foot">\n' +
+                        '                    <button class="buttonstyle">赞同:<span>'+data.comment_num+'</span></button>\n' +
+                        '                    <button class="buttonstyle">收藏</button>\n' +
+                        '                    <div class="createtime" style="float: right;width: auto;">创建于：<span>'+data.create_time+'</span></div>\n' +
+                        '\n' +
+                        '                </div>\n' +
+                        '\n' +
+                        '                </div>';
+
+
+                place_lis += li;
+
+            }
+            place_lis +=lis;
+            $("#answer_card").html(place_lis);
+
+            window.scrollTo(0,0);
+
+        },"json");
+    }
+    $(function () {
+        //切割传入的place_id
+        /* var search = location.search;
+         var  place_id = search.split("=")[1];*/
+        var question_id = getParameter("question_id");
+
+        load(question_id,1);
+
+
+
+    });
+</script>
 </body>
 </html>

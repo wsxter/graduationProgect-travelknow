@@ -1,7 +1,5 @@
 package cn.wsxter.dao;
 
-import cn.wsxter.domain.Answer;
-import cn.wsxter.domain.PageBean;
 import cn.wsxter.domain.Question;
 
 import java.util.List;

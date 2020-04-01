@@ -18,4 +18,12 @@ public class CategoryDaoImp implements CategoryDao {
         String sql = "select * from place";
         return  template.query(sql, new BeanPropertyRowMapper<place>(place.class));
     }
+
+    @Override
+    public place findOne(int place_id) {
+        String sql = "select place_name from place where place_id = ? ";
+        place p = template.queryForObject(sql,new BeanPropertyRowMapper<place>(place.class),place_id);
+        return p;
+
+    }
 }

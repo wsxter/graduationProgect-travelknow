@@ -1,5 +1,7 @@
 package cn.wsxter.domain;
 
+import java.util.Date;
+
 public class Question {
     private int question_id;
     private int user_id;
@@ -9,7 +11,7 @@ public class Question {
     private int opicId;
     private int attend_num;
     private int answer_num;
-    private String create_time;
+    private Date create_time;
 
 
     public int getQuestion_id() {
@@ -76,13 +78,14 @@ public class Question {
         this.answer_num = answer_num;
     }
 
-    public String getCreate_time() {
+    public Date getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(String create_time) {
+    public void setCreate_time(Date create_time) {
         this.create_time = create_time;
     }
+
     @Override
     public String toString() {
         return "question{" +
