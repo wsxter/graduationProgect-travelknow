@@ -19,4 +19,9 @@ public class CategoryServiceImp implements CategoryService {
     public place findOne(int opicId) {
         return dao.findOne(opicId);
     }
+
+    @Override
+    public List<place> updateOne(String place_name) {
+        return  dao.inserOne(place_name);
+    }
 }

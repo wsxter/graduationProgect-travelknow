@@ -26,4 +26,14 @@ public class CategoryDaoImp implements CategoryDao {
         return p;
 
     }
+
+    @Override
+    public List<place> inserOne(String place_name) {
+        String sql = "insert into place (place_name)  VALUES( ? )";
+        template.update(sql,place_name);
+        String sql1 = "select place_id from place where place_name = ? ";
+        List<place> query = template.query(sql1,new BeanPropertyRowMapper<place>(place.class),place_name);
+        return query;
+
+    }
 }

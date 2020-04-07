@@ -9,4 +9,5 @@ public interface AnswerDao {
     public  int findTotalCount(int question_id);
     //limt start ，pageSize，  place_id
     public List<Answer> findByPage(int question_id,int start,int pageSize);
+    public  List<Answer> findNewest(int start, int pageSize);
 }

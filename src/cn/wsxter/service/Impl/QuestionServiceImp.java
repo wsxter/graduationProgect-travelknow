@@ -43,6 +43,31 @@ public class QuestionServiceImp implements QuestionService {
 
     }
 
+    @Override
+    public PageBean<Question> newestpageQuery(int pageSize, int currentPage) {
+        PageBean<Question> pb = new PageBean<Question>();
+
+        //总记录数
+        int totalCount = questionDao.totalcount();
+        pb.setTotalCount(totalCount);
+        pb.setTotalPage(totalCount%pageSize == 0 ? totalCount/pageSize : totalCount/pageSize + 1 );
+        //当前页码 currentPage
+        pb.setCurrentPage(currentPage);
+        //每页显示条数
+        pb.setPageSize(pageSize);
+        //数据集合
+        //l=开始页数
+        int start = (currentPage - 1 ) * pageSize;
+        List<Question> byPage = questionDao.findNewest(start, pageSize);
+        pb.setList(byPage);
+
+        return pb;
+    }
+
+    @Override
+    public Question findOne(int question_id) {
+        return questionDao.findOne(question_id);
+    }
 
 
 }

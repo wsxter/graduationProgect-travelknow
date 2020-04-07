@@ -167,7 +167,9 @@
     </div>
     <div id="userSpan" style="float: right">我在这</div>
     <div id="exit" style="float: right"><a href="#">退出</a></div>
+
 </main>
+<footer id="footer"></footer>
 
 <script src="js/include.js"></script>
 <script>
@@ -195,6 +197,54 @@
            $("#categoryId").html(lis);
         },"json");
 
+        $("#newest").click(function () {
+            $.get("/travelknow/place_list/newestPageQuery",{current_Page:current_page},function (pb) {
+
+                var lis = "";
+                lis +='<div class="pageNum">';
+                lis +='<ul id="pageLine" class="pageLine">';
+                var firstPage = '<a href="javascript:load(1)"><li>首页</li></a>';
+                var beforeNum = pb.currentPage - 1;
+                if (beforeNum <1){
+                    beforeNum = 1
+                }
+                var beforePage = '<a href="javascript:load('+beforeNum+')"><li>上一页</li></a>';
+                var afterNum = pb.currentPage + 1;
+                if (afterNum > pb.totalPage){
+                    afterNum = pb.totalPage
+                }
+
+                var afterPage = '<a href="javascript:load('+afterNum+')"><li>下一页</li></a>';
+
+
+                var lastPage = '<a href="javascript:load('+pb.totalPage+')"><li>末页</li></a>';
+
+                lis +=lastPage;
+                lis +=afterPage;
+                lis +=beforePage;
+                lis +=firstPage;
+
+                var place_lis = "";
+
+                for (var i = 0;i < pb.list.length;i++) {
+
+
+                    var data = pb.list[i];
+
+
+                    var li = '';
+
+
+                    place_lis += li;
+
+                }
+                place_lis +=lis;
+                $("#cards").html(place_lis);
+
+                window.scrollTo(0,0);
+
+            },"json");
+        });
 
     })
 </script>

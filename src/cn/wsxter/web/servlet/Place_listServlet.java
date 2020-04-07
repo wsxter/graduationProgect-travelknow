@@ -1,22 +1,26 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.domain.Answer;
-import cn.wsxter.domain.PageBean;
-import cn.wsxter.domain.Question;
+import cn.wsxter.domain.*;
+
 import cn.wsxter.service.Impl.AnswerServiceImp;
 import cn.wsxter.service.AnswerService;
+
 import cn.wsxter.service.Impl.QuestionServiceImp;
 import cn.wsxter.service.QuestionService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
+
 
 @WebServlet("/place_list/*")
 public class Place_listServlet extends BaseServlet {
+
     //分页查询
     public void quesPageQuery(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -86,6 +90,18 @@ public class Place_listServlet extends BaseServlet {
         String json = Mapper.writeValueAsString(pageJson);
         response.getWriter().write(json);
         // Mapper.writeValue(response.getOutputStream(),pageJson);
+
+
+    }
+
+    public void newestPageQuery(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String currentPageStr = request.getParameter("currentPage");
+        int currentPage = 0;//当前页码
+        if (currentPageStr != null&&currentPageStr.length() > 0){
+            currentPage = Integer.parseInt(currentPageStr);
+        }else {
+            currentPage = 1;
+        }
 
 
     }

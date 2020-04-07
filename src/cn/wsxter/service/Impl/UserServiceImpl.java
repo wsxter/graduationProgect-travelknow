@@ -29,5 +29,10 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Override
+    public Customer finduserbyid(int user_id) {
+        return dao.findbuUserid(user_id);
+    }
+
 
 }

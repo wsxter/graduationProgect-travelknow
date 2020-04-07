@@ -21,4 +21,12 @@ public class AnswerDaoImp implements AnswerDao {
         String sql = "select * from answer where question_id = ? limit ? , ?";
         return template.query(sql,new BeanPropertyRowMapper<Answer>(Answer.class),question_id,start,pageSize);
     }
+
+    @Override
+    public List<Answer> findNewest(int start, int pageSize) {
+        String sql = "select * from question order by create_time desc limit ? , ? ";
+
+        List<Answer> query = template.query(sql, new BeanPropertyRowMapper<Answer>(Answer.class),start,pageSize);
+        return query;
+    }
 }

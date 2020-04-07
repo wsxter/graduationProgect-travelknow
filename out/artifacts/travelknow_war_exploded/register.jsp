@@ -34,7 +34,7 @@
                 <input id="Email"  type="email" placeholder="email" name="email" value="">
             </div>
             <div class="textbox">
-                <img src="${pageContext.request.contextPath}/checkCodeServlet" height="32px" alt="" onclick="changeCheckCode(this)">
+                <img src="/travelknow/checkCodeServlet" height="32px" alt="" onclick="changeCheckCode(this)">
                 <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码" style="width: 120px;"/>
 
 
@@ -50,7 +50,7 @@
 <script type="text/javascript">
     //图片点击事件
     function changeCheckCode(img) {
-        img.src="${pageContext.request.contextPath}/checkCodeServlet?"+new Date().getTime();
+        img.src="/travelknow/checkCodeServlet?"+new Date().getTime();
     }
 </script>
 <script type="text/javascript">

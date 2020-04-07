@@ -6,10 +6,12 @@
     <link href="css/question-reply.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/getParameter.js"></script>
+    <script src="js/wangEditor.min.js"></script>
+    <script src="js/include.js"></script>
 </head>
 <body>
-<header class="Wrap backcolor">
-    <div class="header-inner">
+<header class="Wrap backcolor" id="header">
+    <!--<div class="header-inner">
         <h1>旅游知道</h1>
 
         <ul>
@@ -25,128 +27,28 @@
 
 
 
-    </div>
+    </div>-->
 </header>
 <nav class="circlestyle backcolor">
-    <div class="sponsor">
-        <div class="initiator">
-            <a href="#"><div class="sponsor-test">
-                <p><img src="image/01.jpg" width="30px" height="30px" style="margin-top: 5px">
-                    <span><strong>wsxter</strong></span>发起的提问</p>
-            </div>
-            </a>
-        </div>
+    <div id="ques">
+    <!--<div class="sponsor">
+ class="ques-type">承德</span>
 
-    </div>
-    <h2><strong>旅游要知道哪些内容？</strong></h2>
-        <!--<div class="index-answer-inimage">
-            <img src="image/01.jpg" width="150" height="70">
-        </div>-->
-        <div class="question_content">
-            <span>真正要达到“学”的层级，课堂必须在第三个层级
-                “问题解决与应用”和第四个层级“思维迁移要达到“学”的层级，课堂必须在第三个层级
-                “问题解决与应用”和第四个层级“思维要达到“学”的层级，课堂必须在第三个层级
-
-
-                理想状态</span>
-        </div>
-    <div class="index-question-foot">
-        <button class="buttonstyle">关注问题</button>
-        <button class="buttonstyle">写回答</button>
-        <button class="buttonstyle">评论</button>
-        <span class="ques-type">承德</span>
-
+    </div>-->
     </div>
 </nav>
 
 <main>
-
     <div class="topstory">
-
-        <div class="cards" id="answer_card">
-            <div class="card1 backcolor circlestyle">
-                <a href="#"><span><strong>许天翔</strong></span></a>的回答：
-                    <div class="answer-introdu">
-                        <p>真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            ，就会走到比较高的层级，这才是层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            理想状态。真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是</p>
-                    </div>
-                <div class="answer-foot">
-                    <button class="buttonstyle">赞同:<span>23</span></button>
-                    <button class="buttonstyle">收藏</button>
-                    <div class="createtime" style="float: right;width: auto;">创建于：<span>2020.12.1</span></div>
-
-                </div>
-
-                </div>
-                    <div style="border: #333333">sdfzdfds</div>
-
-            </div>
-           <!-- <div class="card1 backcolor circlestyle" style="height: 116px">
-                <a href="#"><h2><strong>旅游要知道哪些内容？</strong></h2></a>
-                <a href="#"><div class="index-answer">
-
-                    <div class="index-answer-introdu2">
-                        <p>真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            理想状态。真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            理想状态</p>
-                    </div>
-
-                </div></a>
-                <div class="index-answer-foot">
-                    <button class="buttonstyle">赞同</button>
-                    <button class="buttonstyle">不赞同</button>
-                    <button class="buttonstyle">评论</button>
-                    <button class="buttonstyle">收藏</button>
-
-                </div>
-
-            </div>-->
-            <!--<div class="pageNum">
-                <ul id="pageLine">
-                    <li><a href="">首页</a></li>
-                    <li class="threeword"><a href="#">上一页</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(1,8)">1</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(2,8)">2</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(3,8)">3</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(4,8)">4</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(5,8)">5</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(6,8)">6</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(7,8)">7</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(8,8)">8</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(9,8)">9</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(10,8)">10</a></li>
-                    <li class="threeword"><a href="javascript:;">下一页</a></li>
-                    <li class="threeword"><a href="javascript:;">末页</a></li>
-                </ul>
-            </div>-->
-
-
-        <aside>
+        <aside style="width: 320px;float: right" >
             <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
                 <div class="msg" style="color: red">推荐阅读</div>
                 <a href="#"><div class="place_lable">避暑山庄一日游</div></a>
                 <a href="#"><div class="place_lable">科尔沁草原有狼出没吗？</div></a>
                 <a href="#"><div class="place_lable">葫芦岛有什么好玩的项目？</div></a>
                 <a href="#"><div class="place_lable">暑假到啦，又什么好的去处啊啊？</div></a>
-                <a href="#"><div class="place_lable">小白攻略，纯纯的干货！！</div></a>
+                <a href="#"><div class="place_lable">小
+                    白攻略，纯纯的干货！！</div></a>
 
 
             </div>
@@ -186,14 +88,83 @@
                 </p>
             </div>
         </aside>
+
+        <div id="replyid" class="reply circlestyle backcolor" >
+                    <div id="WangEdite" class="circlestyle" style="width: 690px;display: inline-block">
+
+                    </div>
+
+                    <div style="width: 690px;display: inline-block" >
+                        <button id="submit" class="btn btn-default" style="margin-left: 620px;display: inline-block">发布文章</button>
+                    </div>
+        </div>
+
+        <div class="cards" id="answer_card">
+            <!--<div class="card1 backcolor circlestyle">
+                <a href="#"><span><strong>许天翔</strong></span></a>的回答：
+                    <div class="answer-introdu">
+
+                </div>-->
+
+
+            </div>
+           <!-- <div class="card1 backcolor circlestyle" style="height: 116px">
+                <a href="#"><h2><strong>旅游要知道哪些内容？</strong></h2></a>
+                <a href="#"><div class="index-answer">
+
+                    <div class="index-answer-introdu2">
+                        <p>真正
+                            理想状态</p>
+                    </div>
+
+                </div></a>
+
+            </div>-->
+
+
+
+
     </div>
 
 </main>
 
 <div id="userSpan" style="float: right">我在这</div>
 <div id="exit" style="float: right"><a href="#">退出</a></div>
-
+<footer id="footer"></footer>
 <script>
+    var E = window.wangEditor;
+    var editor = new E('#WangEdite');
+    editor.customConfig.uploadImgShowBase64 = true ;
+
+    // 使用 base64 保存图片
+    editor.customConfig.menus = [
+        'head',
+        'bold',
+        'italic',
+        'underline',
+        'emoticon',  // 表情
+        'image',// 插入图片
+        'undo',  // 撤销
+        'redo'  // 重复
+    ];
+    editor.create();     //创建富文本编辑器
+
+    //点击提交命令，将数据提交到后台
+    $("#submit").click(function (){
+        var content = editor.txt.html();     //获取富文本数据
+        $.post("/travelknow/uploadServlet",{content:content},function(data){
+            Alert(data);
+        },"text");
+
+
+    });
+
+</script>
+<script>
+    function writepage() {
+        $("#replyid").css("display","inline-block");
+
+    }
     function load(question_id,current_page){
         $.get("/travelknow/place_list/answerPageQuery",{question_id:question_id,current_Page:current_page},function (pb) {
 
@@ -263,6 +234,37 @@
         /* var search = location.search;
          var  place_id = search.split("=")[1];*/
         var question_id = getParameter("question_id");
+
+        $.get("/travelknow/questionReplyServlet/questionQuery",{question_id:question_id},function (data) {
+
+
+            var li = '<div class="sponsor">\n' +
+                '        <div class="initiator">\n' +
+                '            <a href="#"><div class="sponsor-test">\n' +
+                '                <p><img src="image/01.jpg" style="width: 30px;height: 30px;">\n' +
+                '                    <span><strong>'+data.customer.username+'</strong></span>发起的提问</p>\n' +
+                '            </div>\n' +
+                '            </a>\n' +
+                '        </div>\n' +
+                '\n' +
+                '    </div>\n' +
+                '    <h2><strong>'+data.question.question_name+'</strong></h2>\n' +
+                '        <!--<div class="index-answer-inimage">\n' +
+                '            <img src="image/01.jpg" width="150" height="70">\n' +
+                '        </div>-->\n' +
+                '        <div class="question_content">\n' +
+                '            <span>'+data.question.ques_describle+'</span>\n' +
+                '        </div>\n' +
+                '    <div class="index-question-foot">\n' +
+                '        <button class="buttonstyle">关注问题</button>\n' +
+                '        <button class="buttonstyle" onclick="writepage()">写回答</button>\n' +
+                '        <button class="buttonstyle">评论</button>\n' +
+                '        <span class="ques-type">'+data.place.place_name+'</span>\n' +
+                '\n' +
+                '    </div>';
+            $("#ques").html(li);
+            
+        });
 
         load(question_id,1);
 

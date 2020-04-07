@@ -26,7 +26,7 @@ public class QuestionDaoImp implements QuestionDao {
             stringBuffer.append(" and opicId = ? ");
             parm.add(place_id);
         }
-        if (question_name != null&& question_name.length()>0)
+        if (question_name != null&& question_name.length()>0&&!"null".equals(question_name))
         {
             stringBuffer.append(" and question_name like ? ");
             parm.add("%"+question_name+"%");
@@ -49,7 +49,7 @@ public class QuestionDaoImp implements QuestionDao {
             stringBuffer.append(" and opicId = ? ");
             parm.add(place_id);
         }
-        if (question_name != null&& question_name.length()>0)
+        if (question_name != null&& question_name.length()>0&&!"null".equals(question_name))
         {
             stringBuffer.append(" and question_name like ? ");
             parm.add("%"+question_name+"%");
@@ -59,12 +59,28 @@ public class QuestionDaoImp implements QuestionDao {
         parm.add(pageSize);
         sql = stringBuffer.toString();
 
-
-
-
         List<Question> query = template.query(sql, new BeanPropertyRowMapper<Question>(Question.class),parm.toArray());
         System.out.println(query);
         return query;
+    }
+
+    @Override
+    public List<Question> findNewest(int start, int pageSize) {
+        String sql = "select * from question order by create_time desc limit ? , ? ";
+
+        List<Question> query = template.query(sql, new BeanPropertyRowMapper<Question>(Question.class),start,pageSize);
+        return query;
+    }
+    public int totalcount(){
+        String sql = "select count(*) from question";
+        return template.queryForObject(sql,Integer.class);
+    }
+
+    @Override
+    public Question findOne(int question_id) {
+        String sql = "select * from question where question_id = ? ";
+        Question question = template.queryForObject(sql, new BeanPropertyRowMapper<Question>(Question.class), question_id);
+        return question;
     }
 }
 

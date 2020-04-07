@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游图片</title>
+    <link rel="stylesheet" type="text/css" href="css/travelimage.css">
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<header class="Wrap backcolor" id="header">
+
+</header>
+
+<main>
+    <div class="story">
+        <ul class="toplist">
+           <li> <a href="#" >最热</a></li>
+           <li> <a href="#" >最新</a></li>
+           <li id="upload" style="float: right"> <a href="#" >上传图片</a></li>
+        </ul>
+    <div class="imageCard circlestyle">
+        <img src="image/13.jpg" >
+        <span class="desc">世界那么大，我想去看看</span>
+        <a href="#"><div class="sponsor-test">
+            <p><img class="circlestyle" src="image/01.jpg" >
+                <span>wsxter</span>
+            </p>
+        </div>
+        </a>
+        <a href="#"> <span class="click circlestyle">点赞</span></a>
+    </div>
+    </div>
+
+</main>
+<footer id="footer"></footer>
+
+<script src="js/include.js"></script>
+
+<script>
+    $(function () {
+
+
+            $.get("/travelknow/place_list/imagePageQuery",{current_Page:current_page},function (pb) {
+
+                var lis = "";
+                lis +='<div class="pageNum">';
+                lis +='<ul id="pageLine" class="pageLine">';
+                var firstPage = '<a href="javascript:load(1)"><li>首页</li></a>';
+                var beforeNum = pb.currentPage - 1;
+                if (beforeNum <1){
+                    beforeNum = 1
+                }
+                var beforePage = '<a href="javascript:load('+beforeNum+')"><li>上一页</li></a>';
+                var afterNum = pb.currentPage + 1;
+                if (afterNum > pb.totalPage){
+                    afterNum = pb.totalPage
+                }
+
+                var afterPage = '<a href="javascript:load('+afterNum+')"><li>下一页</li></a>';
+
+
+                var lastPage = '<a href="javascript:load('+pb.totalPage+')"><li>末页</li></a>';
+
+                lis +=lastPage;
+                lis +=afterPage;
+                lis +=beforePage;
+                lis +=firstPage;
+
+                var place_lis = "";
+
+                for (var i = 0;i < pb.list.length;i++) {
+
+
+                    var data = pb.list[i];
+
+
+                    var li = '<div class="imageCard circlestyle">\n' +
+                        '        <img src="image/13.jpg" >\n' +
+                        '        <span class="desc">世界那么大，我想去看看</span>\n' +
+                        '        <a href="#"><div class="sponsor-test">\n' +
+                        '            <p><img class="circlestyle" src="image/01.jpg" >\n' +
+                        '                <span>wsxter</span>\n' +
+                        '            </p>\n' +
+                        '        </div>\n' +
+                        '        </a>\n' +
+                        '        <a href="#"> <span class="click circlestyle">点赞</span></a>\n' +
+                        '    </div>';
+
+
+                    place_lis += li;
+
+                }
+                place_lis +=lis;
+                $("#cards").html(place_lis);
+
+                window.scrollTo(0,0);
+
+            },"json");
+
+    })
+</script>
+</body>
+</html>

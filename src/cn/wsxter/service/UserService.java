@@ -6,6 +6,7 @@ public interface UserService {
     Customer login(Customer customer);
 
    boolean  addUser(Customer customer);
+   public  Customer finduserbyid(int user_id);
 
 
 }
