@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>问题-回答</title>
     <link href="css/question-reply.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/general.css" type="text/css">
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/getParameter.js"></script>
     <script src="js/wangEditor.min.js"></script>
     <script src="js/include.js"></script>
+    <script src="js/question-reply.js"></script>
 </head>
 <body>
 <header class="Wrap backcolor" id="header">
@@ -24,106 +26,41 @@
             <button >提交</button>
         </div>
         <a class="userzone" href="#" style="width: 34px; height: 34px"><img class="usericon circlestyle" src="image/01.jpg" width="34" height="34"></a>
-
-
-
     </div>-->
 </header>
-<nav class="circlestyle backcolor">
-    <div id="ques">
+<nav class="circlestyle backcolor1">
+    <div id="ques" >
     <!--<div class="sponsor">
  class="ques-type">承德</span>
-
     </div>-->
     </div>
 </nav>
-
 <main>
     <div class="topstory">
-        <aside style="width: 320px;float: right" >
-            <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
-                <div class="msg" style="color: red">推荐阅读</div>
-                <a href="#"><div class="place_lable">避暑山庄一日游</div></a>
-                <a href="#"><div class="place_lable">科尔沁草原有狼出没吗？</div></a>
-                <a href="#"><div class="place_lable">葫芦岛有什么好玩的项目？</div></a>
-                <a href="#"><div class="place_lable">暑假到啦，又什么好的去处啊啊？</div></a>
-                <a href="#"><div class="place_lable">小
-                    白攻略，纯纯的干货！！</div></a>
-
-
-            </div>
-            <div class="globalwrite">
-                <div class="globalwrite-reply g-size backcolor circlestyle">
-                    <a href="#" class="reply-link"><strong>解决问题</strong></a>
-
-                </div>
-                <div class="globalwrite-question g-size backcolor circlestyle globalwrite-reply">
-                    <a href="#" class="reply-link"><strong>提出问题</strong></a>
-                </div>
-                <div class="globalwrite-idea g-size backcolor circlestyle globalwrite-reply">
-                    <a href="#" class="reply-link"><strong>发表图文</strong></a>
-                </div>
-            </div>
-
-            <div class="user-message backcolor circlestyle">
-                <div class="user-collect-ques">
-                    <span class="collect-queslabel"><strong>我的关注</strong></span>
-                    <span class="collect-ques-num span-text"><strong>0</strong></span>
-                </div>
-                <div class="user-attention-ques">
-                    <span class="attention-queslabel"><strong>我的收藏</strong></span>
-                    <span class="attention-ques-num span-text"><strong>0</strong></span>
-                </div>
-            </div>
-            <div class="scenery-picture-lable circlestyle backcolor">
-                <img  class="circlestyle scenery-picture" src="image/register.jpeg">
-            </div>
-            <div class="aboutus ">
-                <h2>联系我们</h2>
-                <p>呼和浩特市和林格尔县内蒙古师范大学东区1号宿舍楼<br />
-                    电话：086-15612497250<br />
-                    微信：583307987<br />
-                    QQ：583307987<br />
-                    Email：xutian583307987@gmail.com
-                </p>
-            </div>
+        <aside id="aside" style="width: 320px;float: right" >
         </aside>
-
         <div id="replyid" class="reply circlestyle backcolor" >
                     <div id="WangEdite" class="circlestyle" style="width: 690px;display: inline-block">
-
                     </div>
-
                     <div style="width: 690px;display: inline-block" >
                         <button id="submit" class="btn btn-default" style="margin-left: 620px;display: inline-block">发布文章</button>
                     </div>
         </div>
-
         <div class="cards" id="answer_card">
             <!--<div class="card1 backcolor circlestyle">
                 <a href="#"><span><strong>许天翔</strong></span></a>的回答：
                     <div class="answer-introdu">
-
                 </div>-->
-
-
             </div>
            <!-- <div class="card1 backcolor circlestyle" style="height: 116px">
                 <a href="#"><h2><strong>旅游要知道哪些内容？</strong></h2></a>
                 <a href="#"><div class="index-answer">
-
                     <div class="index-answer-introdu2">
                         <p>真正
                             理想状态</p>
                     </div>
-
                 </div></a>
-
             </div>-->
-
-
-
-
     </div>
 
 </main>
@@ -131,146 +68,6 @@
 <div id="userSpan" style="float: right">我在这</div>
 <div id="exit" style="float: right"><a href="#">退出</a></div>
 <footer id="footer"></footer>
-<script>
-    var E = window.wangEditor;
-    var editor = new E('#WangEdite');
-    editor.customConfig.uploadImgShowBase64 = true ;
 
-    // 使用 base64 保存图片
-    editor.customConfig.menus = [
-        'head',
-        'bold',
-        'italic',
-        'underline',
-        'emoticon',  // 表情
-        'image',// 插入图片
-        'undo',  // 撤销
-        'redo'  // 重复
-    ];
-    editor.create();     //创建富文本编辑器
-
-    //点击提交命令，将数据提交到后台
-    $("#submit").click(function (){
-        var content = editor.txt.html();     //获取富文本数据
-        $.post("/travelknow/uploadServlet",{content:content},function(data){
-            Alert(data);
-        },"text");
-
-
-    });
-
-</script>
-<script>
-    function writepage() {
-        $("#replyid").css("display","inline-block");
-
-    }
-    function load(question_id,current_page){
-        $.get("/travelknow/place_list/answerPageQuery",{question_id:question_id,current_Page:current_page},function (pb) {
-
-            var lis = "";
-            lis +='<div class="pageNum">';
-            lis +='<ul id="pageLine" class="pageLine">';
-            var firstPage = '<a href="javascript:load('+question_id+',1)"><li>首页</li></a>';
-            var beforeNum = pb.currentPage - 1;
-            if (beforeNum <1){
-                beforeNum = 1
-            }
-            var beforePage = '<a href="javascript:load('+question_id+','+beforeNum+')"><li>上一页</li></a>';
-            var afterNum = pb.currentPage + 1;
-            if (afterNum > pb.totalPage){
-                afterNum = pb.totalPage
-            }
-
-            var afterPage = '<a href="javascript:load('+question_id+','+afterNum+')"><li>下一页</li></a>';
-
-
-            var lastPage = '<a href="javascript:load('+question_id+','+pb.totalPage+')"><li>末页</li></a>';
-
-            lis +=lastPage;
-            lis +=afterPage;
-            lis +=beforePage;
-            lis +=firstPage;
-
-            var place_lis = "";
-
-            for (var i = 0;i < pb.list.length;i++) {
-
-               /* {"totalCount":36,"totalPage":8,"currentPage":1,"pageSize":5,"
-               list":[{"answer_id":1,"user_id":7,"question_id":3,"
-               answer_content":"其实我觉得旅游之前要","photo":"xxx",
-               "comment_num":24,"create_time":"2020-03-14 00:00:00.0"}
-                */
-                var data = pb.list[i];
-
-
-                    var li = '<div class="card1 backcolor circlestyle">\n' +
-                        '                <a href="#"><span><strong>待处理</strong></span></a>的回答：\n' +
-                        '                    <div class="answer-introdu">\n' +
-                        '                        <p>'+data.answer_content+'</p>\n' +
-                        '                    </div>\n' +
-                        '                <div class="answer-foot">\n' +
-                        '                    <button class="buttonstyle">赞同:<span>'+data.comment_num+'</span></button>\n' +
-                        '                    <button class="buttonstyle">收藏</button>\n' +
-                        '                    <div class="createtime" style="float: right;width: auto;">创建于：<span>'+data.create_time+'</span></div>\n' +
-                        '\n' +
-                        '                </div>\n' +
-                        '\n' +
-                        '                </div>';
-
-
-                place_lis += li;
-
-            }
-            place_lis +=lis;
-            $("#answer_card").html(place_lis);
-
-            window.scrollTo(0,0);
-
-        },"json");
-    }
-    $(function () {
-        //切割传入的place_id
-        /* var search = location.search;
-         var  place_id = search.split("=")[1];*/
-        var question_id = getParameter("question_id");
-
-        $.get("/travelknow/questionReplyServlet/questionQuery",{question_id:question_id},function (data) {
-
-
-            var li = '<div class="sponsor">\n' +
-                '        <div class="initiator">\n' +
-                '            <a href="#"><div class="sponsor-test">\n' +
-                '                <p><img src="image/01.jpg" style="width: 30px;height: 30px;">\n' +
-                '                    <span><strong>'+data.customer.username+'</strong></span>发起的提问</p>\n' +
-                '            </div>\n' +
-                '            </a>\n' +
-                '        </div>\n' +
-                '\n' +
-                '    </div>\n' +
-                '    <h2><strong>'+data.question.question_name+'</strong></h2>\n' +
-                '        <!--<div class="index-answer-inimage">\n' +
-                '            <img src="image/01.jpg" width="150" height="70">\n' +
-                '        </div>-->\n' +
-                '        <div class="question_content">\n' +
-                '            <span>'+data.question.ques_describle+'</span>\n' +
-                '        </div>\n' +
-                '    <div class="index-question-foot">\n' +
-                '        <button class="buttonstyle">关注问题</button>\n' +
-                '        <button class="buttonstyle" onclick="writepage()">写回答</button>\n' +
-                '        <button class="buttonstyle">评论</button>\n' +
-                '        <span class="ques-type">'+data.place.place_name+'</span>\n' +
-                '\n' +
-                '    </div>';
-            $("#ques").html(li);
-            
-        });
-
-        load(question_id,1);
-
-
-
-    });
-</script>
 </body>
 </html>

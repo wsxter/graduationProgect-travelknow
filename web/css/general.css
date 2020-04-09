@@ -1,0 +1,52 @@
+/* CSS Document */
+html, body, ul, li, ol, p, h1, h2, h3, h4, h5, h6, form,input,img { margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2,h3,h4,h5,h6{
+    font-size: 100%;
+    font-weight: normal;
+}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f40; }
+body{ font-size:15px;font-family: Tahoma;background: rgba(2,2,3,0.06)}
+.clearfix:after{ content:""; display:block; clear:both;}
+.buttonstyle{
+    margin-right: 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+}
+.circlestyle{
+    border-radius: 5px;
+    /* box-shadow: -2px 2px 0px #cccccc;*/
+}
+.backcolor1{
+    background: darkseagreen;
+}
+.backcolor{
+    background: white;
+}
+.backcolor2{
+    background: wheat;
+}
+.backcolor3{
+    background: pink;
+
+}
+.backcolor4{
+    background-color: #2F66DE
+}
+.backcolor5{
+    background-color:  #ED4524;
+}
+.backcolor6{
+    background-color: #D6C89C;
+}
+.backcolor7{
+    background-color:#b1a6af
+}
+.backcolor8{
+    background-color: #b19f9e;
+}
+.backcolor9{
+    background: #ff4400;
+}

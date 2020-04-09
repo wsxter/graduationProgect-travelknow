@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.List;
 
 
 @WebServlet("/place_list/*")
@@ -62,7 +63,7 @@ public class Place_listServlet extends BaseServlet {
     public void answerPageQuery(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //接受
-        String currentPageStr = request.getParameter("currentPage");
+        String currentPageStr = request.getParameter("current_Page");
         String pageSizeStr = request.getParameter("pageSize");
         String question_idStr = request.getParameter("question_id");
 
@@ -102,7 +103,28 @@ public class Place_listServlet extends BaseServlet {
         }else {
             currentPage = 1;
         }
+        int pageSize = 5;
 
+
+    }
+    public void quesfindone(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String questionId = request.getParameter("question_id");
+        QuestionService questionService = new QuestionServiceImp();
+        Question one = questionService.findOne(Integer.parseInt(questionId));
+        response.setContentType("application/json;charset=utf-8");
+        ObjectMapper Mapper = new ObjectMapper();
+        String json = Mapper.writeValueAsString(one);
+        response.getWriter().write(json);
+
+    }
+    public void find_hot(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        QuestionService questionService = new QuestionServiceImp();
+        List<Question> hot = questionService.find_hot();
+        ObjectMapper Mapper = new ObjectMapper();
+        response.setContentType("application/json;charset:utf-8");
+        Mapper.writeValue(response.getOutputStream(),hot);
 
     }
 

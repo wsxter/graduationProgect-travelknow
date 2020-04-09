@@ -4,6 +4,7 @@ import cn.wsxter.dao.QuestionDao;
 
 import cn.wsxter.domain.Question;
 import cn.wsxter.util.JDBCUtils;
+import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -81,6 +82,14 @@ public class QuestionDaoImp implements QuestionDao {
         String sql = "select * from question where question_id = ? ";
         Question question = template.queryForObject(sql, new BeanPropertyRowMapper<Question>(Question.class), question_id);
         return question;
+    }
+
+    @Override
+    public List<Question> find_hot() {
+        String sql = "select * from question order by answer_num desc limit 0 , 4 ";
+        List<Question> query = template.query(sql, new BeanPropertyRowMapper<Question>(Question.class));
+        return query;
+
     }
 }
 

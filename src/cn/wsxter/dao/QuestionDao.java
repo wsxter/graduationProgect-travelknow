@@ -13,4 +13,6 @@ public interface QuestionDao {
     public  List<Question> findNewest(int start, int pageSize);
     public  int totalcount();
     public  Question findOne(int question_id);
+
+    List<Question> find_hot();
 }

@@ -1,37 +1,13 @@
-/* CSS Document */
-html, body, ul, li, ol, p, h1, h2, h3, h4, h5, h6, form,input,img { margin:0; padding:0;}
-li{ list-style:none;}
-h1,h2,h3,h4,h5,h6{
-    font-size: 100%;
-    font-weight: normal;
-}
-a{color:#333;text-decoration:none;}
-a:hover{color:#f40; }
-body{ font-size:18px;font-family: 幼圆;background: rgba(2,2,3,0.06)}
-.clearfix:after{ content:""; display:block; clear:both;}
-.buttonstyle{
-    margin-right: 25px;
-    border-radius: 5px;
-    border: none;
-    font-size: 15px;
-}
-.circlestyle{
-    border-radius: 5px;
-    /* box-shadow: -2px 2px 0px #cccccc;*/
-}
-.backcolor{
-    background: white;
-}
 
 /*CSS初始化结束*/
-.Wrap{
+/*.Wrap{
     height: 52px;
     margin-bottom: 10px;
     border-bottom: #3e4a40 solid 2px;
     padding-top: 6px;
 }
 .Wrap h1{
-    font-family: 幼圆;
+    font-family: Tahoma;
     font-size: 30px;
     line-height: 40px;
     text-align: center;
@@ -90,7 +66,7 @@ header .header-inner .usericon{
     margin-right: 10px;
     margin-top: 8px;
     float: right;
-}
+}*/
 .topstory{
     width: 1020px;
     margin: 0px auto;
@@ -98,7 +74,7 @@ header .header-inner .usericon{
 }
 .topstory .cards{
     width: 694px;
-    height: 1200px;
+    height: auto;
     float: left;
 
 }
@@ -106,6 +82,7 @@ header .header-inner .usericon{
     margin-bottom: 20px;
     padding-bottom: 5px;
     padding-left: 5px;
+    margin-top: 5px;
 
 }
 .topstory .cards .card1 .answer-introdu{
@@ -128,6 +105,7 @@ header .header-inner .usericon{
     float: right;
 }
 
+/*
 
 .topstory .globalwrite{
 }
@@ -208,8 +186,9 @@ header .header-inner .usericon{
     padding-left: 10px;
 
 }
+*/
 
-
+/*
 .topstory .hotLabe{
     margin-bottom: 20px;
     padding: 5px;
@@ -220,7 +199,7 @@ header .header-inner .usericon{
     margin: 3px;
     padding: 5px;
     background: #cccccc;
-}
+}*/
 .topstory .cards .ques-type{
 
     float: right;
@@ -276,7 +255,7 @@ nav .index-question-foot{
 }
 nav .index-question-foot .ques-type{
     float: right;
-    background: darkseagreen;
+    /*background: darkseagreen;*/
 }
 main .reply-const{
     width: 1020px;

@@ -1,10 +1,13 @@
 package cn.wsxter.service.Impl;
 
 
+import cn.wsxter.dao.CategoryDao;
+import cn.wsxter.dao.Impl.CategoryDaoImp;
 import cn.wsxter.dao.Impl.QuestionDaoImp;
+import cn.wsxter.dao.Impl.UserDaoImpl;
 import cn.wsxter.dao.QuestionDao;
-import cn.wsxter.domain.PageBean;
-import cn.wsxter.domain.Question;
+import cn.wsxter.dao.UserDao;
+import cn.wsxter.domain.*;
 import cn.wsxter.service.QuestionService;
 
 import java.util.List;
@@ -67,6 +70,34 @@ public class QuestionServiceImp implements QuestionService {
     @Override
     public Question findOne(int question_id) {
         return questionDao.findOne(question_id);
+    }
+
+    @Override
+    public indexPageBean questionQuery(int question_id) {
+        Question one = questionDao.findOne(question_id);
+        indexPageBean indexPageBean = new indexPageBean();
+        indexPageBean.setQuestion(one);
+        UserDao userDao = new UserDaoImpl();
+        Customer customer = userDao.findbuUserid(one.getUser_id());
+        indexPageBean.setUsername(customer.getUsername());
+        CategoryDao categoryDao = new CategoryDaoImp();
+        place one1 = categoryDao.findOne(one.getOpicId());
+        indexPageBean.setPlace_name(one1.getPlace_name());
+       /* Answer answer = answerDao.answer_query(answer_id);
+        indexPageBean indexPageBean = new indexPageBean();
+        indexPageBean.setAnswer(answer);
+        Customer customer = userDao.findbuUserid(answer.getUser_id());
+        indexPageBean.setUsername(customer.getUsername());
+
+        QuestionDao questionDao = new QuestionDaoImp();
+        Question one = questionDao.findOne(answer.getQuestion_id());
+        indexPageBean.setQuestion_name(one.getQuestion_name());*/
+        return indexPageBean;
+    }
+
+    @Override
+    public List<Question> find_hot() {
+        return questionDao.find_hot();
     }
 
 

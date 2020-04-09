@@ -5,6 +5,7 @@
     <title>登录/注册</title>
     <link href="css/home.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/home.js"></script>
 </head>
 
 <body>
@@ -43,35 +44,6 @@
 
     <!--底部版权结构结束-->
 
-<script >
-    $(function () {
-        $.get("login.html",function (data) {
-            $("#login-box1").html(data);
-        });
-        $.get("register.jsp",function (data) {
-            $("#register-box1").html(data);
-        });
-        $("#loginli").click(function () {
-
-            $(document.getElementById("login-box1")).css("display","block");
-            $(document.getElementById("register-box1")).css("display","none");
-
-        });
-        $("#registerli").click(function () {
-
-            $(document.getElementById("login-box1")).css("display","none");
-            $(document.getElementById("register-box1")).css("display","block");
-
-        });
-
-    });
-
-
-    function registerPlay() {
-        var loginbox = document.getElementById("login-box1");
-        loginbox.css("display","block");
-    }
-</script>
 
 </body>
 </html>

@@ -5,140 +5,44 @@
     <title>知道*首页</title>
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/pagination.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/general.css" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
+<!--头部导航-->
 <header class="Wrap backcolor" id="header">
-    <!--<div class="header-inner">
-        <h1>旅游知道</h1>
 
-        <ul>
-            <a href="#" onclick=""><li>推荐</li></a>
-            <a href="#"><li>我的关注</li></a>
-            <a href="#"><li>美图</li></a>
-        </ul>
-        <div class="searchlable">
-            <input type="text" placeholder="你的问题？" value="">
-            <button >提交</button>
-        </div>
-        <a class="userzone" href="#" style="width: 34px; height: 34px"><img class="usericon circlestyle" src="image/01.jpg" width="34" height="34"></a>
-
-
-
-
-    </div>-->
 </header>
 <main>
     <div class="topstory">
-        <div class="cards">
-            <div class="card1 backcolor circlestyle">
-                <a href="#"><h2><strong>旅游要知道哪些内容？</strong></h2></a>
-                <a href="#"> <div class="index-answer">
-                    <div class="index-answer-inimage">
-                        <img src="image/01.jpg" width="190" height="105">
-                    </div>
-                    <div class="index-answer-introdu">
-                        <span style="display: inline-block"><strong>wsxter:</strong></span>
-                        <p>真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            理想状态。真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            理想状态</p>
-                    </div>
+        <div id="cards" class="cards">
 
-                </div></a>
-                <div class="index-answer-foot">
-                    <button class="buttonstyle">赞同</button>
-                    <button class="buttonstyle">不赞同</button>
-                    <button class="buttonstyle">评论</button>
-                    <button class="buttonstyle">收藏</button>
 
-                </div>
-
-            </div>
-            <div class="card1 backcolor circlestyle" style="height: 116px">
-                <a href="#"><h2><strong>旅游要知道哪些内容？</strong></h2></a>
-                <a href="#"><div class="index-answer">
-
-                    <div class="index-answer-introdu2">
-                        <p>真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            理想状态。真正要达到“学”的层级，课堂必须在第三个层级
-                            “问题解决与应用”和第四个层级“思维迁移与创造”
-                            中展开学习任务，学生的时间和空间就相对比较大，横坐标
-                            上学生的自主性也比较高，就会走到比较高的层级，这才是一个
-                            理想状态</p>
-                    </div>
-
-                </div></a>
-                <div class="index-answer-foot">
-                    <button class="buttonstyle">赞同</button>
-                    <button class="buttonstyle">不赞同</button>
-                    <button class="buttonstyle">评论</button>
-                    <button class="buttonstyle">收藏</button>
-
-                </div>
-
-            </div>
-            <div class="pageNum">
-                <ul id="pageLine">
-                    <li><a href="">首页</a></li>
-                    <li class="threeword"><a href="#">上一页</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(1,8)">1</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(2,8)">2</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(3,8)">3</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(4,8)">4</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(5,8)">5</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(6,8)">6</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(7,8)">7</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(8,8)">8</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(9,8)">9</a></li>
-                    <li><a href="javascript:;" onclick="getPageData(10,8)">10</a></li>
-                    <li class="threeword"><a href="javascript:;">下一页</a></li>
-                    <li class="threeword"><a href="javascript:;">末页</a></li>
-                </ul>
-            </div>
 
         </div>
-        <aside>
+
+
+        <aside1>
 
             <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
-              <!--  <div class="msg" style="color: red">热门标签</div>
-                <div class="place_lable"><a href="#">避暑山庄</a></div>
-                <div class="place_lable"><a href="#">科尔沁草原</a></div>
-                <div class="place_lable"><a href="#">葫芦岛</a></div>
-                <div class="place_lable"><a href="#">承德</a></div>
-                <div class="place_lable"><a href="#">避暑山庄</a></div>
-                <div class="place_lable"><a href="#">科尔沁草原</a></div>
-                <div class="place_lable"><a href="#">科尔沁草原</a></div>
-                <div class="place_lable"><a href="#">葫芦岛</a></div>
-                <div class="place_lable"><a href="#">承德</a></div>
-                <div class="place_lable"><a href="#">避暑山庄</a></div>
-                <div class="place_lable"><a href="#">科尔沁草原</a></div>
-                <div class="place_lable"><a href="#">葫芦岛</a></div>
-                <div class="place_lable"><a href="#">承德</a></div>
--->
+                <!--<div class="msg circlestyle" style="color: red">热门标签</div>-->
+
             </div>
             <div class="globalwrite">
-                <div class="globalwrite-reply g-size backcolor circlestyle">
+                <div class="globalwrite-reply g-size backcolor8 circlestyle">
                     <a href="#" class="reply-link"><strong>解决问题</strong></a>
 
                 </div>
-                <div class="globalwrite-question g-size backcolor circlestyle globalwrite-reply">
+                <div class="globalwrite-question g-size backcolor8 circlestyle globalwrite-reply">
                     <a href="#" class="reply-link"><strong>提出问题</strong></a>
                 </div>
-                <div class="globalwrite-idea g-size backcolor circlestyle globalwrite-reply">
+                <div class="globalwrite-idea g-size backcolor8 circlestyle globalwrite-reply">
                     <a href="#" class="reply-link"><strong>发表图文</strong></a>
                 </div>
             </div>
 
-            <div class="user-message backcolor circlestyle">
+            <div class="user-message  circlestyle">
                 <div class="user-collect-ques">
                     <span class="collect-queslabel"><strong>我的关注</strong></span>
                     <span class="collect-ques-num span-text"><strong>0</strong></span>
@@ -162,91 +66,16 @@
             </div>
 
 
-        </aside>
+        </aside1>
 
     </div>
-    <div id="userSpan" style="float: right">我在这</div>
+    <div id="userpan" style="float: right">我在这</div>
     <div id="exit" style="float: right"><a href="#">退出</a></div>
 
 </main>
 <footer id="footer"></footer>
 
 <script src="js/include.js"></script>
-<script>
-    $(function () {
-        $.get("/travelknow/user/findUser",{},function (data) {
-            //获取登录用户数据
-            if(data.flag){
-                $("#userSpan").html(data.data);
-                var  userzone = document.getElementById("userzone");
-                userzone.herf = "userzone.html";
-            }else {
-                window.location.href("ErrorMsg.html");
-            }
-        },"json");
-        $("#exit").click(function () {
-            location.replace("/travelknow/user/exit");
-        })
 
-        $.get("/travelknow/category/findAll",{},function (data) {
-            var lis = '<div class="msg" style="color: red">热门标签</div>';
-            for (var i = 0 ;i <data.length; i++) {
-                var li = '<div class="place_lable"><a href="place_list.html?place_id='+data[i].place_id+'" onclick="tagSearch(data[i].place_id)" >'+data[i].place_name+'</a></div>';
-                lis += li;
-            }
-           $("#categoryId").html(lis);
-        },"json");
-
-        $("#newest").click(function () {
-            $.get("/travelknow/place_list/newestPageQuery",{current_Page:current_page},function (pb) {
-
-                var lis = "";
-                lis +='<div class="pageNum">';
-                lis +='<ul id="pageLine" class="pageLine">';
-                var firstPage = '<a href="javascript:load(1)"><li>首页</li></a>';
-                var beforeNum = pb.currentPage - 1;
-                if (beforeNum <1){
-                    beforeNum = 1
-                }
-                var beforePage = '<a href="javascript:load('+beforeNum+')"><li>上一页</li></a>';
-                var afterNum = pb.currentPage + 1;
-                if (afterNum > pb.totalPage){
-                    afterNum = pb.totalPage
-                }
-
-                var afterPage = '<a href="javascript:load('+afterNum+')"><li>下一页</li></a>';
-
-
-                var lastPage = '<a href="javascript:load('+pb.totalPage+')"><li>末页</li></a>';
-
-                lis +=lastPage;
-                lis +=afterPage;
-                lis +=beforePage;
-                lis +=firstPage;
-
-                var place_lis = "";
-
-                for (var i = 0;i < pb.list.length;i++) {
-
-
-                    var data = pb.list[i];
-
-
-                    var li = '';
-
-
-                    place_lis += li;
-
-                }
-                place_lis +=lis;
-                $("#cards").html(place_lis);
-
-                window.scrollTo(0,0);
-
-            },"json");
-        });
-
-    })
-</script>
 </body>
 </html>

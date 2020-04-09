@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>分类列表</title>
     <link href="css/place_list.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/general.css" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/getParameter.js"></script>
+    <script src="js/place_list.js"></script>
 </head>
 <body>
 <header class="Wrap backcolor" id="header">
@@ -26,65 +28,9 @@
 </header>
 <main>
     <div class="topstory">
-
         <div  id="cards" class="cards">
-
-
-
         </div>
-
-
-
-
-        <aside>
-
-            <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
-                  <div class="msg" style="color: red">推荐阅读</div>
-                <a href="#"><div class="place_lable">避暑山庄一日游</div></a>
-                <a href="#"><div class="place_lable">科尔沁草原有狼出没吗？</div></a>
-                <a href="#"><div class="place_lable">葫芦岛有什么好玩的项目？</div></a>
-                <a href="#"><div class="place_lable">暑假到啦，又什么好的去处啊啊？</div></a>
-                <a href="#"><div class="place_lable">小白攻略，纯纯的干货！！</div></a>
-
-
-            </div>
-            <div class="globalwrite">
-                <div class="globalwrite-reply g-size backcolor circlestyle">
-                    <a href="#" class="reply-link"><strong>解决问题</strong></a>
-
-                </div>
-                <div class="globalwrite-question g-size backcolor circlestyle globalwrite-reply">
-                    <a href="#" class="reply-link"><strong>提出问题</strong></a>
-                </div>
-                <div class="globalwrite-idea g-size backcolor circlestyle globalwrite-reply">
-                    <a href="#" class="reply-link"><strong>发表图文</strong></a>
-                </div>
-            </div>
-
-            <div class="user-message backcolor circlestyle">
-                <div class="user-collect-ques">
-                    <span class="collect-queslabel"><strong>我的关注</strong></span>
-                    <span class="collect-ques-num span-text"><strong>0</strong></span>
-                </div>
-                <div class="user-attention-ques">
-                    <span class="attention-queslabel"><strong>我的收藏</strong></span>
-                    <span class="attention-ques-num span-text"><strong>0</strong></span>
-                </div>
-            </div>
-            <div class="scenery-picture-lable circlestyle backcolor">
-                <img  class="circlestyle scenery-picture" src="image/register.jpeg">
-            </div>
-            <div class="aboutus ">
-                <h2>联系我们</h2>
-                <p>呼和浩特市和林格尔县内蒙古师范大学东区1号宿舍楼<br />
-                    电话：086-15612497250<br />
-                    微信：583307987<br />
-                    QQ：583307987<br />
-                    Email：xutian583307987@gmail.com
-                </p>
-            </div>
-
-
+        <aside id="aside">
         </aside>
 
     <div id="userSpan" style="float: right">我在这</div>
@@ -94,138 +40,7 @@
 <div id="footer"></div>
 
 <script src="js/include.js"></script>
-<script>
-    function load(place_id,current_page,question_name){
-        $.get("/travelknow/place_list/quesPageQuery",{place_id:place_id,current_Page:current_page,question_name:question_name},function (pb) {
 
-
-          /*  //创建分页按钮
-            var page_lis = "";
-            var firstPage = ' <a href=""><li>首页</li></a>';
-            var beforePage = '<a href=""><li>上一页</li></a>';
-            var lastPage = ' <a href=""><li>首页</li></a>';
-            var afterPage = '<a href=""><li>上一页</li></a>';
-            page_lis +=firstPage;
-            page_lis +=beforePage;
-            for (var i = 1;i<=pb.totalPage;i++ ){
-                var li = '<li><a href="">'+i+'</a></li>';
-                page_lis +=li;
-            }
-
-            page_lis +=lastPage;
-            page_lis +=afterPage;*/
-            var lis = "";
-            lis +='<div class="pageNum">';
-            lis +='<ul id="pageLine" class="pageLine">';
-            var firstPage = '<a href="javascript:load('+place_id+',1,\''+question_name+'\')"><li>首页</li></a>';
-            var beforeNum = pb.currentPage - 1;
-            if (beforeNum <1){
-                beforeNum = 1
-            }
-                var beforePage = '<a href="javascript:load('+place_id+','+beforeNum+',\''+question_name+'\')"><li>上一页</li></a>';
-            var afterNum = pb.currentPage + 1;
-            if (afterNum > pb.totalPage){
-                afterNum = pb.totalPage
-            }
-
-                var afterPage = '<a href="javascript:load('+place_id+','+afterNum+',\''+question_name+'\')"><li>下一页</li></a>';
-
-
-            var lastPage = ' <a href="javascript:load('+place_id+','+pb.totalPage+',\''+question_name+'\')"><li>末页</li></a>';
-
-            lis +=lastPage;
-            lis +=afterPage;
-            lis +=beforePage;
-            lis +=firstPage;
-
-
-
-
-
-
-
-            //数据展示
-            /* k"totalCount":8 有几条数据,"totalPage":有几页,"currentPage":1 当前,"pageSize":5页面大小,
-            "list":[{"question_id":6,"user_id":7,"
-            question_name":"小白求助！！","
-            ques_describle":"2017兴安岭和嫩江从",
-            "photo":"xxx","opicId":4,
-            "attend_num":23,
-            "answer_num":34,
-            "create_time":"2020-03-14 00:00:00.0"},*/
-            var place_lis = "";
-            for (var i = 0;i < pb.list.length;i++) {
-
-                var data = pb.list[i];
-                //标签功能：未实现
-               place_name = $.get("/travelknow/category/findOne",{opicId:data.opicId},function (name) {
-                    /*alert(data);*/
-
-                    return name;
-                });
-
-                 if(data.photo != null)
-                 {
-                 var li = '<div class="card1 backcolor circlestyle"  >\n' +
-                    '                <a href="question-reply.html?question_id='+ data.question_id + '"><h2><strong>' + data.question_name + '</strong></h2></a>\n' +
-                    '                <a href="#"> <div class="index-answer">\n' +
-                    '                    <div class="index-answer-inimage">\n' +
-                    '                        <img src="' + data.photo + '" width="170" height="80">\n' +
-                    '                    </div>\n' +
-                    '                    <div class="index-answer-introdu">\n' +
-                    '                        <p>' + data.ques_describle + '</p>\n' +
-                    '                    </div>\n' +
-                    '\n' +
-                    '                </div></a>\n' +
-                    '                <span class="ques-type"></span>\n' +
-                    '\n' +
-                    '\n' +
-                    '            </div>';
-            }
-                if(data.photo == null){
-                    var li ='<div class="card2 backcolor circlestyle" >\n' +
-                        '                <a href="question-reply.html?question_id='+data.question_id+'"><h2><strong>'+data.question_name+'</strong></h2></a>\n' +
-                        '\n' +
-                        '\n' +
-                        '                    <div class="index-answer-introdu2">\n' +
-                        '                        <p>'+data.ques_describle+'</p>\n' +
-                        '                    </div>\n' +
-                        '                </a>\n' +
-                        '\n' +
-                        '                <div class="ques-type"></div>\n' +
-                        '\n' +
-                        '            </div>';
-                }
-                place_lis += li;
-
-
-
-            }
-            place_lis +=lis;
-            $("#cards").html(place_lis);
-
-            window.scrollTo(0,0);
-
-        },"json");
-    }
-    $(function () {
-        //切割传入的place_id
-       /* var search = location.search;
-        var  place_id = search.split("=")[1];*/
-        var place_id = getParameter("place_id");
-        var question_name = getParameter("question_name");
-        if (question_name){
-            question_name = window.decodeURIComponent(question_name);
-        }
-
-
-        load(place_id,1,question_name);
-
-
-    });
-
-
-</script>
 
 
 

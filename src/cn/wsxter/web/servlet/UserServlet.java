@@ -129,8 +129,9 @@ public class UserServlet extends BaseServlet {
         }else{
             //已登录：falg==true
             resultInfo.setFlag(true);
-            resultInfo.setData(loginUser.getUsername());
+            resultInfo.setData(loginUser);
         }
+        response.setContentType("application/json;charset=utf-8");
         ObjectMapper Mapper = new ObjectMapper();
         String json = Mapper.writeValueAsString(resultInfo);
         response.getWriter().write(json);
@@ -139,5 +140,16 @@ public class UserServlet extends BaseServlet {
     public void exit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         request.getSession().invalidate();//销毁session
         response.sendRedirect(request.getContextPath()+"/home.html");//重定向
+    }
+    public void userfindone(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String questionId = request.getParameter("user_id");
+        UserService userService = new UserServiceImpl();
+        Customer one = userService.finduserbyid(Integer.parseInt(questionId));
+        response.setContentType("application/json;charset=utf-8");
+        ObjectMapper Mapper = new ObjectMapper();
+        String json = Mapper.writeValueAsString(one);
+        response.getWriter().write(json);
+
     }
 }

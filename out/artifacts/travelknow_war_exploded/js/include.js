@@ -5,4 +5,7 @@ $(function () {
     $.get("isfoot.html",function (re) {
         $("#footer").html(re);
     });
+    $.get("aside.html",function (re) {
+        $("#aside").html(re);
+    });
 });

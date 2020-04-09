@@ -29,4 +29,16 @@ public class AnswerDaoImp implements AnswerDao {
         List<Answer> query = template.query(sql, new BeanPropertyRowMapper<Answer>(Answer.class),start,pageSize);
         return query;
     }
+
+    @Override
+    public void updateAnswer(Answer answer) {
+        String sql = "insert into answer (user_id,question_id,answer_content) VALUES (?,?,?)";
+        template.update(sql,answer.getUser_id(),answer.getQuestion_id(),answer.getAnswer_content());
+    }
+
+    @Override
+    public Answer answer_query(int answer_id) {
+        String sql = " select * from answer where answer_id = ? ";
+        return template.queryForObject(sql,new BeanPropertyRowMapper<Answer>(Answer.class),answer_id);
+    }
 }

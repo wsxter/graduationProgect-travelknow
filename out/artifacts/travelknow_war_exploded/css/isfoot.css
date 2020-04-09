@@ -23,7 +23,7 @@ html, body {
 .footer {
     width: 100%;
     height: 90px;  /* 重点 */
-    margin-top: -90px; /* 重点 */
+    margin-top: 90px; /* 重点 */
     background: gray;
     clear: both;
     text-align: center;
