@@ -10,11 +10,13 @@ import cn.wsxter.dao.UserDao;
 import cn.wsxter.domain.*;
 import cn.wsxter.service.QuestionService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionServiceImp implements QuestionService {
     private QuestionDao questionDao = new QuestionDaoImp();
 
+    private CategoryDao categoryDao = new CategoryDaoImp();
 
 
     @Override
@@ -27,6 +29,7 @@ public class QuestionServiceImp implements QuestionService {
         //    private List<T> list;//页面上显示的数据集合
         PageBean<Question> pb = new PageBean<Question>();
 
+        List list = new ArrayList();
         //总记录数
         int totalCount = questionDao.findTotalCount(place_id,question_name);
         pb.setTotalCount(totalCount);
@@ -40,7 +43,12 @@ public class QuestionServiceImp implements QuestionService {
         //l=开始页数
         int start = (currentPage - 1 ) * pageSize;
         List<Question> byPage = questionDao.findByPage(place_id, start, pageSize,question_name);
+        for (Question good : byPage){
+            place one = categoryDao.findOne(good.getOpicId());
+            list.add(one.getPlace_name());
+        }
         pb.setList(byPage);
+        pb.setPlace_name(list);
 
         return pb;
 
@@ -98,6 +106,21 @@ public class QuestionServiceImp implements QuestionService {
     @Override
     public List<Question> find_hot() {
         return questionDao.find_hot();
+    }
+
+    @Override
+    public PageBean<Question> findbyname(String question_name) {
+        CategoryDao categoryDao = new CategoryDaoImp();
+        PageBean<Question> pageBean = new PageBean<>();
+        List<Question> findlikename = questionDao.findlikename(question_name);
+        List list = new ArrayList();
+        for (Question q : findlikename){
+            place one = categoryDao.findOne(q.getOpicId());
+            list.add(one.getPlace_name());
+        }
+        pageBean.setList(findlikename);
+        pageBean.setPlace_name(list);
+        return pageBean;
     }
 
 

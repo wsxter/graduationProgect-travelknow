@@ -22,11 +22,9 @@ import java.util.Map;
  */
 @WebServlet("/user/*")
 public class UserServlet extends BaseServlet {
-
     private  UserService service = new UserServiceImpl();
     //登录
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-
         //设置编码
         request.setCharacterEncoding("utf-8");
         ResultInfo resultInfo = new ResultInfo();
@@ -34,7 +32,6 @@ public class UserServlet extends BaseServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         System.out.println(username + password);
-
         Map<String, String[]> map = request.getParameterMap();
         //封装user对象
         Customer loginUser = new Customer();
@@ -44,36 +41,33 @@ public class UserServlet extends BaseServlet {
             e.printStackTrace();
         }
         //创建service层对象
-
         Customer user = service.login(loginUser);
         //判断user
         if (user == null){
             //登录失败，转发failservlet
             resultInfo.setFlag(false);
             resultInfo.setErrorMsg("用户名或密码错误");
-
         }else {
             //登录成功，存储数据、转发
-            resultInfo.setFlag(true);
-            request.getSession().setAttribute("loginUser",user);
-
+            if (user.getRoot() ==1) {
+                resultInfo.setFlag(true);
+                request.getSession().setAttribute("loginUser", user);
+            }else if (user.getRoot()==6){
+                resultInfo.setFlag(true);
+                resultInfo.setErrorMsg("管理员");
+                request.getSession().setAttribute("loginUser", user);
+            }
         }
-        ObjectMapper Mapper = new ObjectMapper();
 
+        ObjectMapper Mapper = new ObjectMapper();
         response.setContentType("application/json;charset=utf-8");
         Mapper.writeValue(response.getOutputStream(),resultInfo);
-
-
     }
-
-
     //注册
     public void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-
         //设置编码
         ResultInfo resultInfo = new ResultInfo();
         request.setCharacterEncoding("utf-8");
-
         //获取验证码信息
         String verifycode = request.getParameter("verifycode");
         //校验
@@ -150,6 +144,35 @@ public class UserServlet extends BaseServlet {
         ObjectMapper Mapper = new ObjectMapper();
         String json = Mapper.writeValueAsString(one);
         response.getWriter().write(json);
+
+    }
+    public void findusername(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String user_id = request.getParameter("user_id");
+        UserService userService = new UserServiceImpl();
+        String username = userService.finuserid(Integer.parseInt(user_id));
+        response.setContentType("application/json;charset=utf-8");
+        ObjectMapper Mapper = new ObjectMapper();
+        String json = Mapper.writeValueAsString(username);
+        response.getWriter().write(json);
+    }
+    public void deluser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String user_id = request.getParameter("user_id");
+        String status = request.getParameter("status");
+        UserService userService = new UserServiceImpl();
+         userService.deluser(Integer.parseInt(user_id),Integer.parseInt(status));
+
+    }
+    //更新用户数据
+    public void updateUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Customer loginUser =(Customer) request.getSession().getAttribute("loginUser");
+        request.setCharacterEncoding("utf-8");
+        String username = request.getParameter("username");
+        String sex = request.getParameter("sex");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String sign = request.getParameter("sign");
+        UserService userService = new UserServiceImpl();
+        userService.updateUser(username,Integer.parseInt(sex),password,email,sign,loginUser.getUser_id());
 
     }
 }

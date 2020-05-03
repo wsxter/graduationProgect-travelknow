@@ -102,7 +102,7 @@
 
     $(document).ready(function(){
         $("#registerform").submit(function(){
-            // if(checkEmail() && checkPassword() && checkUsername()){
+             if(checkEmail() && checkPassword() && checkUsername()){
 
 
             $.post("${pageContext.request.contextPath}/user/register",$("#registerform").serialize(),function(rest){
@@ -118,7 +118,7 @@
                 }
 
             });
-            // }
+            }
             return false;
         });
 

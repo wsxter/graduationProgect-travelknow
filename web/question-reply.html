@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>问题-回答</title>
-    <link href="css/question-reply.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/general.css" type="text/css">
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/getParameter.js"></script>
+    <link href="css/question-reply.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="js/wangEditor.min.js"></script>
-    <script src="js/include.js"></script>
     <script src="js/question-reply.js"></script>
+    <script src="js/getParameter.js"></script>
+
+    <script src="js/include.js"></script>
+
+
 </head>
 <body>
 <header class="Wrap backcolor" id="header">
@@ -45,6 +49,21 @@
                     <div style="width: 690px;display: inline-block" >
                         <button id="submit" class="btn btn-default" style="margin-left: 620px;display: inline-block">发布文章</button>
                     </div>
+        </div>
+        <div id="index-reply" class="cards" style="display: none">
+          <!--  <div class="card1 backcolor circlestyle">
+                               <a href="#"><span><strong>待处理</strong></span></a>的回答：
+                                  <div class="answer-introdu">
+                                           <p>'+data.answer_content+'</p>
+                                        </div>
+                                <div class="answer-foot">
+                                       <button class="buttonstyle">赞同:<span>'+data.comment_num+'</span></button>
+                                    <button class="buttonstyle">收藏</button>
+                                       <div class="createtime" style="float: right;width: auto;">创建于：<span>'+data.create_time+'</span></div>
+
+                               </div>
+
+                          </div>-->
         </div>
         <div class="cards" id="answer_card">
             <!--<div class="card1 backcolor circlestyle">

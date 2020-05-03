@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<div id="userAddQues" style="display: none">
+
+</div>
+<aside1>
+
+    <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
+        <!--<div class="msg circlestyle" style="color: red">热门标签</div>-->
+
+    </div>
+    <div class="globalwrite">
+        <div class="globalwrite-idea g-size backcolor8 circlestyle globalwrite-reply" id="exit">
+            <a href="#" class="reply-link"><strong>退出登录</strong></a>
+        </div>
+        <div class="globalwrite-reply g-size backcolor8 circlestyle  globalwrite-idea" id="jiejueques">
+            <a href="#" class="reply-link"><strong>解决问题</strong></a>
+
+        </div>
+        <div class="globalwrite-question g-size backcolor8 circlestyle globalwrite-reply">
+            <a href="#" class="reply-link" onclick="showAddQues()"><strong>提出问题</strong></a>
+        </div>
+
+    </div>
+
+    <div class="user-message  circlestyle">
+        <div class="user-collect-ques">
+            <span class="collect-queslabel"><strong>我的关注</strong></span>
+            <span  id="collect-ques-num" class="collect-ques-num span-text"><strong>0</strong></span>
+        </div>
+        <div class="user-attention-ques">
+            <span   class="attention-queslabel"><strong>我的收藏</strong></span>
+            <span  id="attention-ques-num" class="attention-ques-num span-text"><strong>0</strong></span>
+        </div>
+    </div>
+    <div class="scenery-picture-lable circlestyle backcolor">
+        <img  class="circlestyle scenery-picture" src="image/register.jpeg">
+    </div>
+    <div class="aboutus ">
+        <h2>联系我们</h2>
+        <p>呼和浩特市和林格尔县内蒙古师范大学东区1号宿舍楼<br />
+            电话：086-15612497250<br />
+            微信：583307987<br />
+            QQ：583307987<br />
+            Email：xutian583307987@gmail.com
+        </p>
+    </div>
+
+
+</aside1>
+</body>
+<script>
+    $(function () {
+        $("#exit").click(function () {
+            location.replace("/travelknow/user/exit");
+        })
+        $.get("userAddQues.html",function (re) {
+            $("#userAddQues").html(re);
+        });
+
+        $("#jiejueques").click(function () {
+            $.get("/travelknow/user/findUser",{},function(res){
+                //获取登录用户数据
+                if(res.flag){
+                    if (res.data.status == 1){
+                        window.location.href="/travelknow/write_answer.html"
+                    }
+                    else {
+                        alert("你已经被禁止发言");
+                    }
+
+
+                }
+            })
+
+        })
+
+        $.get("/travelknow/agreeoppose/comment_num", {}, function (res) {
+            $("#attention-ques-num").html(res);
+        })
+        $.get("/travelknow/collect/collect_num", {}, function (res) {
+            $("#collect-ques-num").html(res);
+        })
+
+        $.get("/travelknow/category/findAll",{},function (data) {
+            var lis = '<div class="msg circlestyle" >热门标签</div>';
+            for (var i = 0 ;i <data.length; i++) {
+                var li = '<div class="place_lable circlestyle"><a href="place_list.html?place_id='+data[i].place_id+'" onclick="tagSearch(data[i].place_id)" >'+data[i].place_name+'</a></div>';
+                lis += li;
+            }
+            $("#categoryId").html(lis);
+        },"json");
+
+    })
+    function showAddQues(){
+        $.get("/travelknow/user/findUser",{},function(res){
+            //获取登录用户数据
+            if(res.flag){
+                if (res.data.status == 1){
+                    $("#userAddQues").css("display","block");
+                }
+                else {
+                    alert("你已经被禁止发言");
+                }
+
+
+            }
+        })
+
+    }
+</script>
+</html>

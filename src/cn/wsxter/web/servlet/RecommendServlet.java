@@ -14,9 +14,9 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-@WebServlet("/recommendServlet")
-public class RecommendServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+@WebServlet("/recommend/*")
+public class RecommendServlet extends BaseServlet {
+    public void recommendQuery(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String currentPageStr = request.getParameter("current_Page");
         int currentPage = 0;//当前页码
         if (currentPageStr != null&&currentPageStr.length() > 0){
@@ -41,8 +41,4 @@ public class RecommendServlet extends HttpServlet {
 
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        this.doPost(request,response);
-    }
 }

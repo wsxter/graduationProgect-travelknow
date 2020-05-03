@@ -5,6 +5,7 @@ import cn.wsxter.dao.QuestionDao;
 import cn.wsxter.domain.Question;
 import cn.wsxter.util.JDBCUtils;
 import com.sun.org.apache.regexp.internal.RE;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -91,6 +92,46 @@ public class QuestionDaoImp implements QuestionDao {
         return query;
 
     }
+
+    @Override
+    public void addques(String ques_name, String ques_describle, Integer place_id, Integer user_id) {
+        String sql = "insert into question (question_name,user_id,ques_describle,opicId) VALUES (?,?,?,?)";
+        template.update(sql,ques_name,user_id,ques_describle,place_id);
+    }
+
+    @Override
+    public Question findbyname(String ques_name,int opicId) {
+        try {
+            String sql ="select * from question where question_name = ? and opicId = ? limit 0,1";
+
+            Question question = template.queryForObject(sql, new BeanPropertyRowMapper<Question>(Question.class), ques_name,opicId);
+            return question;
+        } catch (DataAccessException e) {
+            return null;
+        }
+    }
+
+    @Override
+    public int findTotalCountbyUserId(Integer user_id) {
+        String sql = "select count(*) from question where user_id = ? ";
+        return template.queryForObject(sql,Integer.class,user_id);
+    }
+
+    @Override
+    public List<Question> findByPageUser(Integer user_id, int start, int pageSize) {
+        String sql = "select * from question where user_id = ? limit ? , ? ";
+
+        List<Question> query = template.query(sql, new BeanPropertyRowMapper<Question>(Question.class),user_id,start,pageSize);
+        return query;
+    }
+
+    @Override
+    public List<Question> findlikename(String question_name) {
+        String sql = "select * from question where question_name like ? order by create_time limit 0,8";
+        List<Question> query = template.query(sql, new BeanPropertyRowMapper<Question>(Question.class), "%"+question_name+"%");
+        return  query;
+    }
+
 }
 
 

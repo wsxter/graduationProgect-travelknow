@@ -1,26 +1,26 @@
 package cn.wsxter.domain;
 
 public class Image {
-    private int img_id;
-    private  int user_id;
+    private Integer img_id;
+    private  Integer user_id;
     private String img_desc;
     private String photo;
-    private int img_place;
+    private Integer img_place;
     private String create_time;
 
-    public int getImg_id() {
+    public Integer getImg_id() {
         return img_id;
     }
 
-    public void setImg_id(int img_id) {
+    public void setImg_id(Integer img_id) {
         this.img_id = img_id;
     }
 
-    public int getUser_id() {
+    public Integer getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
 
@@ -40,11 +40,11 @@ public class Image {
         this.photo = photo;
     }
 
-    public int getImg_place() {
+    public Integer getImg_place() {
         return img_place;
     }
 
-    public void setImg_place(int img_place) {
+    public void setImg_place(Integer img_place) {
         this.img_place = img_place;
     }
 

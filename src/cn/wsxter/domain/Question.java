@@ -3,30 +3,38 @@ package cn.wsxter.domain;
 import java.util.Date;
 
 public class Question {
-    private int question_id;
-    private int user_id;
+    private Integer question_id;
+    private Integer user_id;
     private String question_name;
     private String ques_describle;
     private String photo;
-    private int opicId;
-    private int attend_num;
-    private int answer_num;
+    private Integer opicId;
+    private Integer attend_num;
+    private Integer answer_num;
     private Date create_time;
+    private Integer status;
 
+    public Integer getStatus() {
+        return status;
+    }
 
-    public int getQuestion_id() {
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public Integer getQuestion_id() {
         return question_id;
     }
 
-    public void setQuestion_id(int question_id) {
+    public void setQuestion_id(Integer question_id) {
         this.question_id = question_id;
     }
 
-    public int getUser_id() {
+    public Integer getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
 
@@ -54,27 +62,27 @@ public class Question {
         this.photo = photo;
     }
 
-    public int getOpicId() {
+    public Integer getOpicId() {
         return opicId;
     }
 
-    public void setOpicId(int opicId) {
+    public void setOpicId(Integer opicId) {
         this.opicId = opicId;
     }
 
-    public int getAttend_num() {
+    public Integer getAttend_num() {
         return attend_num;
     }
 
-    public void setAttend_num(int attend_num) {
+    public void setAttend_num(Integer attend_num) {
         this.attend_num = attend_num;
     }
 
-    public int getAnswer_num() {
+    public Integer getAnswer_num() {
         return answer_num;
     }
 
-    public void setAnswer_num(int answer_num) {
+    public void setAnswer_num(Integer answer_num) {
         this.answer_num = answer_num;
     }
 
@@ -88,16 +96,17 @@ public class Question {
 
     @Override
     public String toString() {
-        return "question{" +
+        return "Question{" +
                 "question_id=" + question_id +
                 ", user_id=" + user_id +
                 ", question_name='" + question_name + '\'' +
-                ", question_describle='" + ques_describle + '\'' +
+                ", ques_describle='" + ques_describle + '\'' +
                 ", photo='" + photo + '\'' +
                 ", opicId=" + opicId +
                 ", attend_num=" + attend_num +
                 ", answer_num=" + answer_num +
-                ", create_time='" + create_time + '\'' +
+                ", create_time=" + create_time +
+                ", status=" + status +
                 '}';
     }
 

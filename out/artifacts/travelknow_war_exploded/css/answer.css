@@ -1,0 +1,147 @@
+
+.topstory{
+    width: 1020px;
+    margin: 0px auto;
+    height: 800px;
+}
+.topstory .cards{
+    width: 694px;
+    height: auto;
+    float: left;
+
+}
+.topstory .cards .card1{
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-top: 5px;
+    min-height: 700px;
+
+}
+.topstory .cards .card1 .answer-introdu{
+    margin: 15px;
+    letter-spacing:3px;
+    text-indent:25px;
+    line-height: 30px;
+    font-family: Tahoma;
+
+}
+.topstory .cards .card1 .answer-foot{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.topstory .cards .card1 .answer-foot .buttonstyle{
+    padding: 5px;
+    margin-top: 5px;
+
+}
+.topstory .cards .card1 .answer-foot .createtime{
+    background: white;
+    display: inline-block;
+    float: right;
+}
+
+
+.topstory .cards .ques-type{
+
+    float: right;
+    background: darkseagreen;
+    margin: 5px;
+}
+
+nav {
+    width: 1010px;
+    margin: 10px auto;
+    padding: 10px;
+    height: auto;
+
+
+}
+nav .sponsor{
+    width: 260px;
+    height: 40px;
+
+
+
+}
+
+nav .sponsor .initiator{
+    line-height: 40px;
+    text-align: left;
+
+}
+nav .sponsor .initiator .sponsor-test{
+    padding-top: 5px;
+}
+nav .ques span{
+    line-height: 30px;
+}
+
+nav h2{
+    font-size: 22px;
+    /*margin-left: 20px;*/
+    height: 32px;
+    margin-top:7px ;
+}
+
+nav .question_content{
+    width: 650px;
+    height: 60px;
+
+}
+
+nav .index-question-foot{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+nav .index-question-foot .ques-type{
+    float: right;
+    /*background: darkseagreen;*/
+}
+main .reply-const{
+    width: 1020px;
+    margin: 0 auto;
+}
+main .reply-const p{
+    line-height: 30px;
+}
+.index-answer-foot{
+    padding-left: 400px;
+    margin-bottom: 20px;
+
+}
+.pageNum {
+    width: 650px;
+    overflow: hidden;
+    float: left;
+}
+
+
+.pageNum  li {
+    width: 60px;
+    height: 30px;
+    float: right;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    background: cadetblue;
+}
+
+.pageNum ul li a {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-size: 14px;
+}
+.topstory .reply{
+    width: 690px;
+    height: auto;
+
+    margin-top: 10px;
+    /*display: inline-block;*/
+    float: left;
+    margin-bottom: 10px;
+    display: none;
+
+}

@@ -13,4 +13,7 @@ public interface QuestionService {
     public  Question findOne(int question_id);
     public indexPageBean questionQuery(int question_id);
     public List<Question> find_hot();
+    public PageBean<Question> findbyname(String question_name);
+
+
 }

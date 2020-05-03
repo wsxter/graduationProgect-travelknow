@@ -39,13 +39,14 @@
     margin-top:7px ;
 }
 .topstory .cards .card1 .index-answer{
-   /* overflow: hidden;!**!*/
+    overflow: auto;/**/
     padding: 3px;
 }
 
 .topstory .cards .card1 .index-answer .index-answer-introdu{
     width: 610px;
 
+    height: 150px;
     float: left;
    /* padding-left: 20px;*/
     padding-right: 20px;

@@ -7,6 +7,9 @@
     <script src="js/jquery-1.11.0.min.js"></script>
 </head>
 <body>
+<div id="userAddQues" style="display: none">
+
+</div>
 <aside >
 
     <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
@@ -20,29 +23,30 @@
 
     </div>
     <div class="globalwrite">
-        <div class="globalwrite-reply g-size backcolor8 circlestyle">
+        <div class="globalwrite-idea g-size backcolor8 circlestyle globalwrite-reply" id="exit">
+            <a href="#" class="reply-link"><strong>退出登录</strong></a>
+        </div>
+        <div class="globalwrite-reply g-size backcolor8 circlestyle globalwrite-idea " id="jiejueques">
             <a href="#" class="reply-link"><strong>解决问题</strong></a>
 
         </div>
         <div class="globalwrite-question g-size backcolor8 circlestyle globalwrite-reply">
-            <a href="#" class="reply-link"><strong>提出问题</strong></a>
+            <a href="#" class="reply-link" onclick="showAddQues()"><strong>提出问题</strong></a>
         </div>
-        <div class="globalwrite-idea g-size backcolor8 circlestyle globalwrite-reply">
-            <a href="#" class="reply-link"><strong>发表图文</strong></a>
-        </div>
+
     </div>
 
     <div class="user-message backcolor circlestyle">
         <div class="user-collect-ques">
             <span class="collect-queslabel"><strong>我的关注</strong></span>
-            <span class="collect-ques-num span-text"><strong>0</strong></span>
+            <span id="collect-ques-num" class="collect-ques-num span-text"><strong>0</strong></span>
         </div>
         <div class="user-attention-ques">
             <span class="attention-queslabel"><strong>我的收藏</strong></span>
-            <span class="attention-ques-num span-text"><strong>0</strong></span>
+            <span id="attention-ques-num" class="attention-ques-num span-text"><strong>0</strong></span>
         </div>
     </div>
-    <div class="scenery-picture-lable circlestyle backcolor">
+    <div  id="popimg" class="scenery-picture-lable circlestyle backcolor">
         <img  class="circlestyle scenery-picture" src="image/register.jpeg">
     </div>
     <div class="aboutus ">
@@ -56,22 +60,71 @@
     </div>
 
 <script>
-    function find_hot(){
-        $.get("/travelknow/place_list/find_hot",{},function (pb) {
+    function find_hot() {
+        $("#exit").click(function () {
+
+            location.replace("/travelknow/user/exit");
+        })
+
+        $("#jiejueques").click(function () {
+            $.get("/travelknow/user/findUser",{},function(res){
+                //获取登录用户数据
+                if(res.flag){
+                    if (res.data.status == 1){
+                        window.location.href = "/travelknow/write_answer.html"
+                    }
+                    else {
+                        alert("你已经被禁止发言");
+                    }
+
+
+                }
+            })
+
+        })
+        $.get("/travelknow/place_list/find_hot", {}, function (pb) {
             var place_lis = '<div class="msg circlestyle" >热门标签</div>';
-            for (var i = 0;i < pb.length;i++) {
+            for (var i = 0; i < pb.length; i++) {
 
                 var data = pb[i];
-                var li = '<a href="/travelknow/question-reply.html?question_id='+data.question_id+'"><div class="place_lable circlestyle">'+data.question_name+'</div></a>';
-                place_lis +=li;
+                var li = '<a href="/travelknow/question-reply.html?question_id=' + data.question_id + '"><div class="place_lable circlestyle">' + data.question_name + '</div></a>';
+                place_lis += li;
             }
             $("#categoryId").html(place_lis)
         });
     }
+    function showAddQues(){
+        $.get("/travelknow/user/findUser",{},function(res){
+            //获取登录用户数据
+            if(res.flag){
+                if (res.data.status == 1){
+                    $("#userAddQues").css("display","block");
+                }
+                else {
+                    alert("你已经被禁止发言");
+                }
 
+
+            }
+        })
+
+    }
     $(function () {
+
         find_hot();
+
+        $.get("userAddQues.html",function (re) {
+            $("#userAddQues").html(re);
+        });
+        $.get("/travelknow/agreeoppose/comment_num", {}, function (res) {
+                $("#attention-ques-num").html(res);
+        })
+        $.get("/travelknow/collect/collect_num", {}, function (res) {
+            $("#collect-ques-num").html(res);
+        })
+
     })
+
 
 
 </script>

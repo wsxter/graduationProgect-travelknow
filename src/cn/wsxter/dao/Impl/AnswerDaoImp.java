@@ -32,13 +32,38 @@ public class AnswerDaoImp implements AnswerDao {
 
     @Override
     public void updateAnswer(Answer answer) {
-        String sql = "insert into answer (user_id,question_id,answer_content) VALUES (?,?,?)";
-        template.update(sql,answer.getUser_id(),answer.getQuestion_id(),answer.getAnswer_content());
+        if (answer.getQuestion_id() != null) {
+            String sql = "insert into answer (user_id,question_id,answer_content) VALUES (?,?,?)";
+            template.update(sql, answer.getUser_id(), answer.getQuestion_id(), answer.getAnswer_content());
+        }else {
+            String sql = "insert into answer (user_id,answer_content) VALUES (? ,?)";
+            template.update(sql, answer.getUser_id(), answer.getAnswer_content());
+        }
     }
 
     @Override
     public Answer answer_query(int answer_id) {
         String sql = " select * from answer where answer_id = ? ";
         return template.queryForObject(sql,new BeanPropertyRowMapper<Answer>(Answer.class),answer_id);
+    }
+
+    @Override
+    public int addComment(int parseInt) {
+        String sql = "update answer set comment_num = comment_num + 1 where answer_id = ? ";
+        template.update(sql,parseInt);
+        String sql1 = "select comment_num from answer where answer_id = ? ";
+        return template.queryForObject(sql1,Integer.class,parseInt);
+    }
+
+    @Override
+    public int findTotalCountbyUserId(Integer user_id) {
+        String sql = "select count(*) from answer where user_id = ?";
+        return template.queryForObject(sql,Integer.class,user_id);
+    }
+
+    @Override
+    public List<Answer> findByPageUser(Integer user_id, int start, int pageSize) {
+        String sql = "select * from answer where user_id = ? limit ? , ?";
+        return template.query(sql,new BeanPropertyRowMapper<Answer>(Answer.class),user_id,start,pageSize);
     }
 }

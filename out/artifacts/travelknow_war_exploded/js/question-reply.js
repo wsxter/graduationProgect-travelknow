@@ -5,6 +5,8 @@ function writepage() {
 function load(question_id,current_page){
     $.get("/travelknow/place_list/answerPageQuery",{question_id:question_id,current_Page:current_page},function (pb) {
 
+
+
         var lis = "";
         lis +='<div class="pageNum">';
         lis +='<ul id="pageLine" class="pageLine">';
@@ -41,19 +43,22 @@ function load(question_id,current_page){
             var data = pb.list[i];
 
 
-            var li = '<div class="card1 backcolor circlestyle">\n' +
-                '                <a href="#"><span><strong>待处理</strong></span></a>的回答：\n' +
+
+
+
+
+
+            var li = '<a href="/travelknow/answer.html?question_id='+data.question_id+'&answer_id='+data.answer_id+'"><div class="card1 backcolor7 circlestyle">\n' +
+                '                <span><strong>'+pb.place_name[i]+'</strong></span>的回答：\n' +
                 '                    <div class="answer-introdu">\n' +
                 '                        <p>'+data.answer_content+'</p>\n' +
                 '                    </div>\n' +
                 '                <div class="answer-foot">\n' +
-                '                    <button class="buttonstyle">赞同:<span>'+data.comment_num+'</span></button>\n' +
-                '                    <button class="buttonstyle">收藏</button>\n' +
                 '                    <div class="createtime" style="float: right;width: auto;">创建于：<span>'+data.create_time+'</span></div>\n' +
                 '\n' +
                 '                </div>\n' +
                 '\n' +
-                '                </div>';
+                '                </div></a> ';
 
 
             place_lis += li;
@@ -83,8 +88,13 @@ $(function () {
     /* var search = location.search;
      var  place_id = search.split("=")[1];*/
     var question_id = getParameter("question_id");
+    var  answer_id = getParameter("answer_id");
+    if(answer_id){
+        loadindex_reply(answer_id);
+    }
 
     $.get("/travelknow/questionReplyServlet/questionQuery",{question_id:question_id},function (data) {
+
 
 
         var li = '<div class="sponsor ">\n' +
@@ -105,9 +115,8 @@ $(function () {
             '            <span>'+data.question.ques_describle+'</span>\n' +
             '        </div>\n' +
             '    <div class="index-question-foot">\n' +
-            '        <button class="buttonstyle backcolor4 circlestyle">关注问题</button>\n' +
+            '        <button id="atte" class="buttonstyle backcolor4 circlestyle" onclick="attendques('+data.question.question_id+')">关注问题</button>\n' +
             '        <button class="buttonstyle backcolor5 circlestyle" onclick="writepage()">写回答</button>\n' +
-            '        <button class="buttonstyle backcolor6 circlestyle">关注</button>\n' +
             '        <div class="backcolor2 circlestyle" style="padding: 5px;margin-top: 5px;display: inline-block;float: right;"><span class="ques-type circlestyle">'+data.place.place_name+'</span></div>\n' +
             '\n' +
             '    </div>';
@@ -147,18 +156,55 @@ $(function () {
             //获取登录用户数据
             if(res.flag){
                 var question_id = getParameter("question_id");
-                $.post("/travelknow/answerServlet",{content:content,question_id:question_id,},function(data){
+                $.post("/travelknow/answer/submit_answer",{content:content,question_id:question_id},function(data){
                     Alert(data.flag);
-                },"text");
+                },"json");
             }else {
                 alert(res.flag);
                 window.location.href("ErrorMsg.html");
             }
         })
 
-
-
     });
+    $.get("/travelknow/attend/attendQuery",{question_id:question_id},function (re) {
+        if (re.flag) {
+            $("#atte").html("已关注");
+        }else {
+            $("#atte").html("关注问题");
+        }
+    })
 
 
-});
+})
+function attendques(question_id) {
+    $.post("/travelknow/attend/attendques",{question_id:question_id},function (re) {
+        if (re.flag) {
+            $("#atte").html("已关注");
+        }else {
+            $("#atte").html("关注问题");
+        }
+    })
+
+}
+function loadindex_reply(answer_id) {
+    $.get("/travelknow/answer/findbyAnswerId",{answer_id:answer_id},function (data) {
+
+
+
+        var li = '<div class="card1 backcolor7 circlestyle">\n' +
+            '                               <a href="#"><span><strong></strong></span></a>的回答：\n' +
+            '                                  <div class="answer-introdu">\n' +
+            '                                           <p>'+data.answer_content+'</p>\n' +
+            '                                        </div>\n' +
+            '                                <div class="answer-foot">\n' +
+            '                                       <button class="buttonstyle backcolor4">赞同:<span>'+data.comment_num+'</span></button>\n' +
+            '                                    <button class="buttonstyle backcolor6">收藏</button>\n' +
+            '                                       <div class="createtime" style="float: right;width: auto;">创建于：<span>'+data.create_time+'</span></div>\n' +
+            '\n' +
+            '                               </div>\n' +
+            '\n' +
+            '                          </div>';
+        $("#index-reply").html(li);
+        $("#index-reply").css("display","block");
+    })
+}

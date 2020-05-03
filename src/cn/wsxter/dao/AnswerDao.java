@@ -13,4 +13,10 @@ public interface AnswerDao {
 
     void updateAnswer(Answer answer);
     Answer answer_query(int answer_id);
+
+    int addComment(int parseInt);
+
+    int findTotalCountbyUserId(Integer user_id);
+
+    List<Answer> findByPageUser(Integer user_id, int start, int pageSize);
 }

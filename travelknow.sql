@@ -2,7 +2,8 @@
 SQLyog Ultimate v10.00 Beta1
 MySQL - 5.6.22-log : Database - travelknow
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -33,7 +34,7 @@ CREATE TABLE `account` (
 
 insert  into `account`(`ID`,`UID`,`MONEY`) values (1,41,1000),(2,45,1000),(3,41,2000);
 
-/*Table structure for table `agreeoppose` */
+/*Table structure for table `Agreeoppose` */
 
 DROP TABLE IF EXISTS `agreeoppose`;
 
@@ -47,7 +48,7 @@ CREATE TABLE `agreeoppose` (
   CONSTRAINT `agreeoppose_ibfk_2` FOREIGN KEY (`answer_id`) REFERENCES `answer` (`answer_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `agreeoppose` */
+/*Data for the table `Agreeoppose` */
 
 /*Table structure for table `answer` */
 

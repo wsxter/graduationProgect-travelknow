@@ -3,28 +3,46 @@ package cn.wsxter.domain;
 import java.util.Date;
 
 public class Customer {
-    private int user_id;
+    private Integer user_id;
     private  String username;
     private  String password;
     private  String email;
     private  String autograph;
-    private int role;
-    private Date create_time;
+    private Integer role;
+    private Integer status;
+    private Integer root;
+    private String create_time;
 
-    public void setRole(int role) {
+    public Integer getRoot() {
+        return root;
+    }
+
+    public void setRoot(Integer root) {
+        this.root = root;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public void setRole(Integer role) {
         this.role = role;
     }
 
-    public int getRole() {
+    public Integer getRole() {
 
         return role;
     }
 
-    public int getUser_id() {
+    public Integer getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(int user_id) {
+    public void setUser_id(Integer user_id) {
         this.user_id = user_id;
     }
 
@@ -61,11 +79,11 @@ public class Customer {
     }
 
 
-    public Date getCreate_time() {
+    public String getCreate_time() {
         return create_time;
     }
 
-    public void setCreate_time(Date create_time) {
+    public void setCreate_time(String create_time) {
         this.create_time = create_time;
     }
 
@@ -78,6 +96,8 @@ public class Customer {
                 ", email='" + email + '\'' +
                 ", autograph='" + autograph + '\'' +
                 ", role=" + role +
+                ", status=" + status +
+                ", root=" + root +
                 ", create_time='" + create_time + '\'' +
                 '}';
     }

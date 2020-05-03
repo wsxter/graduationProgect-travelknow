@@ -13,16 +13,17 @@
     display: inline;
 }
 .Wrap ul{
-    width: 250px;
+    width: 230px;
     height: 35px;
     display: inline-block;
 }
 .Wrap ul li{
     line-height: 30px;
     font-size: 16px;
-    padding: 0px 5.5px;
+    padding: 0px 10px;
     display: inline-block;
     text-align: center;
+
     margin: 0 5px;
 
 }

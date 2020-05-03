@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/wangEditor.js"></script>
+   <style>
+       /*div{
+           border: #333333 solid 2px;
+           float: left;
+       }*/
+
+   </style>
+</head>
+<body>
+
+<div class="backcolor" style="width: 500px;height: auto;position: absolute;left: 35%;top:25%; padding: 5px;">
+    <span>问题：</span><input id="addques" class="circlestyle " style="width: 300px;height: 20px"><br>
+    <span>问题描述：</span><div id="WangEditer" class="circlestyle" style="width: 500px;">
+    </div>
+    <div style="width: 500px;display: inline-block" >
+        <span>地点：</span><input id="palce_name" class="circlestyle " style="width: 150px;height: 20px"><br>
+        <button id="submit" class="btn btn-default" style="margin-left: 400px;display: inline-block">提出问题</button>
+    </div>
+
+</div>
+
+<script>
+    var E = window.wangEditor;
+    var editor = new E('#WangEditer');
+  /*  editor.customConfig.uploadImgShowBase64 = true ;*/
+
+    // 使用 base64 保存图片
+    editor.customConfig.menus = [
+
+
+    ];
+    editor.create();     //创建富文本编辑器
+
+    //点击提交命令，将数据提交到后台
+    $("#submit").click(function (){
+
+        var content = editor.txt.html();//获取富文本数据
+                var answer_ques = $("#addques").val();
+
+                var answer_place = $("#palce_name").val();
+                $.post("/travelknow/fques/uesraddques",{content:content,question_name:answer_ques,place_name:answer_place},function(data){
+
+                },"json");
+
+                alert("问题已经提出，待审核通过后显示");
+                $("#addques").val("");
+                $("#palce_name").val("");
+                editor.txt.clear();
+                $("#userAddQues").css("display","none");
+
+
+
+    });
+</script>
+
+</body>
+</html>

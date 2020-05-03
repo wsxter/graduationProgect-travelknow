@@ -89,7 +89,7 @@ function load(place_id,current_page,question_name){
             }
             if(data.photo == null){
                 var li ='<div class="card2 backcolor1 circlestyle" xmlns="http://www.w3.org/1999/html">\n' +
-                    '                <div class="backcolor1 circlestyle" style="display:inline-block; margin: 5px;"><a href="question-reply.html?question_id='+data.question_id+'" ><h2 ><strong>'+data.question_name+'</strong></h2></a></div>\n' +
+                    '                <div class="backcolor9 circlestyle" style="display:inline-block; margin: 5px;"><a href="question-reply.html?question_id='+data.question_id+'" ><h2 ><strong>'+data.question_name+'</strong></h2></a></div>\n' +
                     '\n' +
                     '\n' +
                     '                   <a href="question-reply.html?question_id='+data.question_id+'" <div class="index-answer-introdu2">\n' +

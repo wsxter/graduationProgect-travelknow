@@ -1,14 +1,14 @@
 package cn.wsxter.domain;
 
 public class place {
-    private int place_id;
+    private Integer place_id;
     private String place_name;
 
-    public int getPlace_id() {
+    public Integer getPlace_id() {
         return place_id;
     }
 
-    public void setPlace_id(int place_id) {
+    public void setPlace_id(Integer place_id) {
         this.place_id = place_id;
     }
 

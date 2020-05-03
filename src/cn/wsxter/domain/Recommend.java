@@ -1,16 +1,16 @@
 package cn.wsxter.domain;
 
 public class Recommend {
-    private int id;
+    private Integer id;
     private Integer answer_id;
     private Integer question_id;
     private String create_time;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

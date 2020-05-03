@@ -1,6 +1,8 @@
 package cn.wsxter.dao;
 
+import cn.wsxter.domain.Answer;
 import cn.wsxter.domain.Question;
+import cn.wsxter.domain.place;
 
 import java.util.List;
 
@@ -15,4 +17,14 @@ public interface QuestionDao {
     public  Question findOne(int question_id);
 
     List<Question> find_hot();
+
+    void addques(String ques_name, String ques_describle, Integer place_id, Integer user_id);
+
+    Question findbyname(String ques_name,int opicId);
+
+    int findTotalCountbyUserId(Integer user_id);
+
+    List<Question> findByPageUser(Integer user_id, int start, int pageSize);
+
+    List<Question> findlikename(String question_name);
 }

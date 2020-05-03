@@ -5,6 +5,12 @@ $(function () {
     $.get("register.jsp",function (data) {
         $("#register-box1").html(data);
     });
+
+
+        $(document.getElementById("login-box1")).css("display","block");
+        $(document.getElementById("register-box1")).css("display","none");
+
+
     $("#loginli").click(function () {
 
         $(document.getElementById("login-box1")).css("display","block");

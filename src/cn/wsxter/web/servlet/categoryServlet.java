@@ -28,8 +28,8 @@ public class categoryServlet<list> extends BaseServlet {
     }
     public void findOne(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String opicId = request.getParameter("opicId");
-        int opic = new Integer(opicId);
-        place place = categoryServiceImp.findOne(opic);
+
+        place place = categoryServiceImp.findOne(Integer.parseInt(opicId));
 
         ObjectMapper Mapper = new ObjectMapper();
         response.setContentType("application/json;charset:utf-8");

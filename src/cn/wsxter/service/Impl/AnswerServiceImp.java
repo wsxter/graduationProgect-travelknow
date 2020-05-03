@@ -9,6 +9,7 @@ import cn.wsxter.dao.UserDao;
 import cn.wsxter.domain.*;
 import cn.wsxter.service.AnswerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnswerServiceImp implements AnswerService {
@@ -27,12 +28,20 @@ public class AnswerServiceImp implements AnswerService {
         int totalCount = answerDao.findTotalCount(question_id);
         pb.setTotalCount(totalCount);
 
+        List li = new ArrayList();
         int start = (currentPage - 1 ) * pageSize;
         List<Answer> list = answerDao.findByPage(question_id,start,pageSize);
+        for (Answer answer : list){
+            String s = userDao.findbyUserid(answer.getUser_id());
+            li.add(s);
+        }
         pb.setList(list);
+        pb.setPlace_name(li);
 
         int totalPage = totalCount % pageSize == 0 ? totalCount /pageSize : (totalCount / pageSize) + 1;
         pb.setTotalPage(totalPage);
+
+
         return pb;
     }
 
@@ -54,5 +63,15 @@ public class AnswerServiceImp implements AnswerService {
         Question one = questionDao.findOne(answer.getQuestion_id());
         indexPageBean.setQuestion_name(one.getQuestion_name());
         return indexPageBean;
+    }
+
+    @Override
+    public Answer finbyAnswerId(int answer_id) {
+        return answerDao.answer_query(answer_id);
+    }
+
+    @Override
+    public int addComment(int parseInt) {
+        return answerDao.addComment(parseInt);
     }
 }

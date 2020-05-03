@@ -1,76 +1,10 @@
 
-/*CSS初始化结束*/
-/*.Wrap{
-    height: 52px;
-    margin-bottom: 10px;
-    border-bottom: #3e4a40 solid 2px;
-    padding-top: 6px;
-}
-.Wrap h1{
-    font-family: Tahoma;
-    font-size: 30px;
-    line-height: 40px;
-    text-align: center;
-    display: inline;
-}
-.Wrap ul{
-    width: 250px;
-    height: 35px;
-    display: inline-block;
-}
-.Wrap ul li{
-    height: 30px;
-    font-size: 16px;
-    padding: 0px 13.5px;
-    display: inline-block;
-    text-align: center;
-}
-.Wrap ul li a{
-    margin: 0 auto;
-}
-.Wrap ul li a:hover{
-    background:pink;  border-radius:4px;
-    text-decoration:none;
-}
-header .header-inner{
-    width: 1020px;
-    height: 50px;
-    margin: 0 auto;
-}
-.Wrap .header-inner .searchlable{
-    width: 400px;
-    height: 35px;
-    display: inline-block;
-    margin-left: 10px;
-    padding-left: 100px;
-}
-.Wrap .searchlable input{
-    width: 325px;
-    height: 34px;
-    margin: 0 auto;
-    margin-left: 10px;
-    border: #3e4a40 solid 1px;
-    border-radius: 10px;
-}
 
-.Wrap .searchlable  button{
-    width: 45px;
-    height: 34px;
-    border: #3e4a40 solid 1px;
-    color: #237332;
-    border-radius: 5px;
-    box-shadow: -2px 2px 0px #cccccc;
-}
-header .header-inner .usericon{
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: 8px;
-    float: right;
-}*/
 .topstory{
     width: 1020px;
     margin: 0px auto;
     height: 800px;
+
 }
 .topstory .cards{
     width: 694px;
@@ -83,6 +17,7 @@ header .header-inner .usericon{
     padding-bottom: 5px;
     padding-left: 5px;
     margin-top: 5px;
+    height: 150px;
 
 }
 .topstory .cards .card1 .answer-introdu{
@@ -91,6 +26,8 @@ header .header-inner .usericon{
     text-indent:25px;
     line-height: 30px;
     font-family: 微软雅黑;
+    overflow: hidden;
+    height: 100px;
 
 }
 .topstory .cards .card1 .answer-foot{
@@ -105,101 +42,7 @@ header .header-inner .usericon{
     float: right;
 }
 
-/*
 
-.topstory .globalwrite{
-}
-.topstory .globalwrite .g-size{
-    width: 94px;
-    height:40px;
-    display: inline-block;
-    float: right;
-}
-.topstory .globalwrite .globalwrite-question{
-    margin-right: 10px;
-}
-.topstory .globalwrite .globalwrite-reply{
-
-}
-.topstory .globalwrite .globalwrite-reply{
-    width: 94px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-}
-.topstory .globalwrite .globalwrite-idea{
-    margin-right: 10px;
-}
-.topstory .user-message{
-    width:260px;
-    height: 175px;
-    display: inline-block;
-    float: right;
-    margin-top: 10px;
-    padding: 0px 20px;
-
-}
-.topstory .user-message .user-collect-ques{
-    height: 40px;
-    line-height: 40px;
-    text-align: left ;
-    float: right;
-    margin-left: 20px;
-    border-bottom:rgba(2,2,3,0.06)  solid 2px;
-    width: 260px;
-
-}
-.topstory .user-message .user-attention-ques{
-    height: 40px;
-    line-height: 40px;
-    text-align: left ;
-    float: right;
-    margin-left: 20px;
-    border-bottom:rgba(2,2,3,0.06)  solid 2px;
-    width: 260px;
-
-}
-.topstory .user-message .span-text{
-    float: right;
-}
-.topstory .scenery-picture-lable{
-    width: 300px;
-    height: 400px;
-    float: right;
-    margin-top: 10px;
-
-
-}
-.topstory .scenery-picture-lable .scenery-picture {
-    width: 300px;
-    height: 400px;
-
-}
-.topstory .aboutus{
-    width: 290px;
-    height: 200px;
-    display: inline-block;
-    float: right;
-
-    margin-top: 10px;
-    line-height:30px;
-    padding-left: 10px;
-
-}
-*/
-
-/*
-.topstory .hotLabe{
-    margin-bottom: 20px;
-    padding: 5px;
-    width: 290px;
-}
-.topstory .hotLabe .place_lable{
-
-    margin: 3px;
-    padding: 5px;
-    background: #cccccc;
-}*/
 .topstory .cards .ques-type{
 
     float: right;

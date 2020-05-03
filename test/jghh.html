@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../web/js/jquery-1.11.0.min.js">
+    </script>
+    <script src="../web/js/wangEditor.min.js"></script>
+</head>
+<body>
+<div id="WangEdite" class="backcolor circlestyle" style="width: 690px;">
+</div>
+
+<script>
+    $(function () {
+        var E = window.wangEditor;
+        var editor = new E('#WangEdite');
+        editor.customConfig.uploadImgShowBase64 = true;
+
+// 使用 base64 保存图片
+        editor.customConfig.menus = [
+            'head',
+            'bold',
+            'italic',
+            'underline',
+            'emoticon',  // 表情
+            'image',// 插入图片
+            'undo',  // 撤销
+            'redo'  // 重复
+        ];
+
+        editor.create();     //创建富文本编辑器
+    })
+</script>
+</body>
+</html>
