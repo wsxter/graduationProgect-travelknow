@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wsxter.dao.CategoryDao">
+    <select id="findall" resultType="place">
+        select * from place order by create_time desc limit 0,15
+    </select>
+    <select id="findby" parameterType="place" resultType="place">
+        select * from place
+        <where>
+            <if test="place_id != null">
+                and place_id = #{place_id}
+            </if>
+            <if test="place_name != null ">
+                and place_name = #{place_name}
+            </if>
+        </where>
+    </select>
+    <insert id="inserOne" parameterType="place">
+        <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="place_id">
+            SELECT LAST_INSERT_ID() AS place_id
+        </selectKey>
+        insert into place (place_name)  VALUES( #{place_name})
+    </insert>
+
+
+</mapper>

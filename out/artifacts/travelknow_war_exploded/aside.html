@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/aside.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<div id="userAddQues" style="display: none">
+
+</div>
+<aside >
+
+    <div class="hotLabe user-message backcolor circlestyle" id="categoryId">
+        <!--<div class="msg circlestyle" >热门标签</div>
+        <a href="#"><div class="place_lable circlestyle">避暑山庄一日游</div></a>
+        <a href="#"><div class="place_lable">科尔沁草原有狼出没吗？</div></a>
+        <a href="#"><div class="place_lable">葫芦岛有什么好玩的项目？</div></a>
+        <a href="#"><div class="place_lable">暑假到啦，又什么好的去处啊啊？</div></a>
+        <a href="#"><div class="place_lable">小白攻略，纯纯的干货！！</div></a>-->
+
+
+    </div>
+    <div class="globalwrite">
+        <div class="globalwrite-idea g-size backcolor8 circlestyle globalwrite-reply" id="exit">
+            <a href="#" class="reply-link"><strong>退出登录</strong></a>
+        </div>
+        <div class="globalwrite-reply g-size backcolor8 circlestyle globalwrite-idea " id="jiejueques">
+            <a href="#" class="reply-link"><strong>解决问题</strong></a>
+
+        </div>
+        <div class="globalwrite-question g-size backcolor8 circlestyle globalwrite-reply">
+            <a href="#" class="reply-link" onclick="showAddQues()"><strong>提出问题</strong></a>
+        </div>
+
+    </div>
+
+    <div class="user-message backcolor circlestyle">
+        <div class="user-collect-ques">
+            <span class="collect-queslabel"><strong>我的关注</strong></span>
+            <span id="collect-ques-num" class="collect-ques-num span-text"><strong>0</strong></span>
+        </div>
+        <div class="user-attention-ques">
+            <span class="attention-queslabel"><strong>我的收藏</strong></span>
+            <span id="attention-ques-num" class="attention-ques-num span-text"><strong>0</strong></span>
+        </div>
+    </div>
+    <div  id="popimg" class="scenery-picture-lable circlestyle backcolor">
+        <img  class="circlestyle scenery-picture" src="image/register.jpeg">
+    </div>
+    <div class="aboutus ">
+        <h2>联系我们</h2>
+        <p>呼和浩特市和林格尔县内蒙古师范大学东区1号宿舍楼<br />
+            电话：086-15612497250<br />
+            微信：583307987<br />
+            QQ：583307987<br />
+            Email：xutian583307987@gmail.com
+        </p>
+    </div>
+
+<script>
+    function find_hot() {
+        $("#exit").click(function () {
+
+            location.replace("/travelknow/user/exit");
+        })
+
+        $("#jiejueques").click(function () {
+            $.get("/travelknow/user/findUser",{},function(res){
+                //获取登录用户数据
+                if(res.flag){
+                    if (res.data.status == 1){
+                        window.location.href = "/travelknow/write_answer.html"
+                    }
+                    else {
+                        alert("你已经被禁止发言");
+                    }
+
+
+                }
+            })
+
+        })
+        $.get("/travelknow/place_list/find_hot", {}, function (pb) {
+            var place_lis = '<div class="msg circlestyle" >热门问题</div>';
+            for (var i = 0; i < pb.length; i++) {
+
+                var data = pb[i];
+                var li = '<a href="/travelknow/question-reply.html?question_id=' + data.question_id + '"><div class="place_lable circlestyle">' + data.question_name + '</div></a>';
+                place_lis += li;
+            }
+            $("#categoryId").html(place_lis)
+        });
+    }
+    function showAddQues(){
+        $.get("/travelknow/user/findUser",{},function(res){
+            //获取登录用户数据
+            if(res.flag){
+                if (res.data.status == 1){
+                    $("#userAddQues").css("display","block");
+                }
+                else {
+                    alert("你已经被禁止发言");
+                }
+
+
+            }
+        })
+
+    }
+    $(function () {
+
+        find_hot();
+
+        $.get("userAddQues.html",function (re) {
+            $("#userAddQues").html(re);
+        });
+        $.get("/travelknow/agreeoppose/comment_num", {}, function (res) {
+                $("#attention-ques-num").html(res);
+        })
+        $.get("/travelknow/collect/collect_num", {}, function (res) {
+            $("#collect-ques-num").html(res);
+        })
+
+    })
+
+
+
+</script>
+</aside>
+</body>
+</html>

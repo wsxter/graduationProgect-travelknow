@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改个人信息</title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/include.js"></script>
+</head>
+<body>
+<header class="Wrap backcolor" id="header">
+    <!-- <div class="header-inner">
+         <h1>旅游知道</h1>
+
+         <ul>
+             <li><a href="about.html">推荐</a></li>
+             <li><a href="about.html">关注</a></li>
+             <li><a href="news.html">等待回答</a></li>
+         </ul>
+         <div class="searchlable">
+             <input type="text" placeholder="你的问题？" value="">
+             <button >提交</button>
+         </div>
+         <a class="userzone" href="userzone.html" style="width: 34px; height: 34px"><img class="usericon circlestyle" src="image/01.jpg" width="34" height="34"></a>
+     </div>-->
+</header>
+<form id="registerform"  method="post" style="display: none">
+    <div class="regster-box">
+
+        <div class="textbox"  >
+            <i>用户名：</i>
+            <input id="Username" type="text" placeholder="英文，至少5位" name="username" value=""><br>
+
+        </div>
+        <div>
+            <i>性别：</i>
+            <input  id="male" type="radio" name="sex" value="male">男
+            <input id="female" type="radio" name="sex" value="female">女
+        </div>
+        <div class="textbox">
+            <i>密码：</i>
+            <input id="Password"  type="password" placeholder="不得于8位" name="password" value="">
+        </div>
+        <div class="textbox">
+            <i>邮箱：</i>
+            <input id="Email"  type="email" placeholder="email" name="email" value="">
+        </div>
+        <div class="textbox">
+            <i>个人签名：</i>
+            <input id="signature" type="text"  name="username" value=""><br>
+
+
+        </div>
+        <input class="btu" type="submit"  name="" value="注册">
+    </div>
+
+</form>
+<script>
+
+    /*document.getElementById("Username").value=i;*/
+    document.getElementById("male").checked="true";
+    $.get("/travelknow/user/findUser",{},function(res){
+        var username = res.data.username;
+        document.getElementById("Username").value=username;
+        if (res.data.role == 1) {
+            document.getElementById("male").checked="true";
+        }else {
+            document.getElementById("female").checked="true";
+        }
+        var password = res.data.password;
+        document.getElementById("Password").value=password;
+        var email = res.data.email;
+        document.getElementById("Email").value=email;
+        var sign = res.data.autograph;
+        document.getElementById("sign").value=sign;
+
+
+        $("#signature").html(res.data.autograph);
+
+    })
+</script>
+
+
+</body>
+</html>

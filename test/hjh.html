@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../web/js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+
+        <div class="tk1_content" id="registerDiv" style="width:750px;">
+            <form id="imageForm" class="bs-docs-example form-horizontal" method="post"  enctype="multipart/form-data">
+                <input type="hidden" name="method" value="saveConferencesImage">
+                <input type="hidden" id="imageId" name="imageId" value="-1">
+                <table style="width:750px">
+                    <tr height="50px">
+                        <td align="right" width="150px" >
+                            图片名称
+                        </td>
+                        <td>
+                            <input id="imageName" class="form-control" name="desc" type="text" style="margin-left:40px;display:inline-block;height:34px;"/>
+                        </td>
+                    </tr>
+                    <tr height="50px">
+                        <td align="right" width="150px" >
+                            上传图片
+                        </td>
+                        <td>
+                            <input id="imageFile"  name="imageFile" type="file" style="margin-left:40px;display:inline-block;height:34px;"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div style="border-top: 1px solid rgba(0, 0, 0, 0.1);text-align: center;">
+            <input id="saveBtn" type="button" class="button" value="添　加" style="border-radius:0;width:260px;height:40px;margin:auto 50px;margin:20px; background: #263552 !important;color: #ffffff !important;"/>
+        </div>
+
+
+<script>
+    $(function(){
+        $("#saveBtn").click(function(){
+            var imageName = $("#imageName").val();
+            var imageFile = $("#imageFile").val();
+            if(imageName == '' || imageName.length == 0){
+                alert("请输入图片名称");
+                return;
+            }if(imageFile == '' || imageFile.length == 0){
+                alert("请选择要上传的图片");
+                return;
+            }
+            var formData = new FormData();
+            formData.append("imagePath", $("#imageFile")[0].files[0]);
+            $.ajax({
+                url:"/travelknow/place_list/imagePageQuery",
+                type:"post",
+                data:formData,
+                dataType:"json",
+                // 告诉jQuery不要去处理发送的数据
+                processData: false,
+                // 告诉jQuery不要去设置Content-Type请求头
+                contentType: false,
+                beforeSend: function () {
+                    console.log("正在进行，请稍候");
+                },
+                success:function(data){
+                    if(data.state == 0){
+                        alert(data.msg)
+                    }else{
+                        $("#imageForm").submit();
+                    }
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>
+<form id="imageupload"  enctype="multipart/form-data" >
+    <input type="text" name="desc">
+    <input type="file" name="photo">
+    <input type="text" name="place">
+    <input type="submit" value="上传">
+</form>
+
+<script>
+
+    $(function () {
+        $("#imageupload").submit(function () {
+            $.post("/travelknow/place_list/imagePageQuery",$("#imageupload").serialize(),function (data) {
+                alert(data.flag);
+            });
+        })
+    })
+
+</script>

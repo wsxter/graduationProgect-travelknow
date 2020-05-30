@@ -7,74 +7,89 @@ h1,h2,h3,h4,h5,h6{
     font-weight: normal;
 }
 a{color:#333;text-decoration:none;}
-a:hover{color:#f40; text-decoration:underline;}
-body{ font-size:14px;}
+a:hover{color:#f40; }
+body{ font-size:15px;font-family: Tahoma;}
 .clearfix:after{ content:""; display:block; clear:both;}
-/*CSS初始化结束*/
-.picture{
-    background:url("../../../旅游知道/travelknow/web/image/index.jpg") no-repeat;
-    background-size:cover;
+.buttonstyle{
+    margin-right: 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
 }
-.picture .Wrap{
-    height: 100px;
-    margin: 0 auto;
+.circlestyle{
+    border-radius: 5px;
+    /* box-shadow: -2px 2px 0px #cccccc;*/
+}
+body{
+    background: url("../image/270_140916154708_1.jpg")  ;
+   /* background-size:100% 100%;*/
+    width : 100%;
+    height: 100%;
+    overflow: auto;
+
 
 }
-.picture .Wrap h1{
-    font-family: 幼圆;
+header{
+    height: 100px;
+    margin: 0 auto;
+}
+header h1{
+    font-family: Tahoma;
     font-size: 30px;
     width: 600px;
     height: 25px;
-    background: aqua;
+
     padding: 25px;
     float:left;
-
 }
-.Wrap ul{
+header ul{
 
     width: 500px;
     height: 30px;
     float: right;
-    background: aliceblue;
+
     margin-top:30px;
 }
-.Wrap ul li{
+header ul li{
     float: left;
     line-height:32px;
-    background: #ff4400;
+
 }
-.Wrap ul li a{
+header ul li a{
     width:105px;
     height:30px;
-    font-size:16px;
+    font-size:18px;
     color:#000;
     display:block;
     text-align:center;
 }
-.Wrap ul li a:hover{
+header ul li a:hover{
     background:pink; color:#fff; border-radius:4px;
     text-decoration:none;
 }
 /*主体开始*/
 .bigtext{
     padding-top: 150px;
+    height: 550px;
 }
 .bigtext .logotest{
 
-    width: 600px;
-    height: 100px;
-    background: antiquewhite;
+    width: 1080px;
+    height: 200px;
+
+
 
 }
 .bigtext .logotest span{
     font-family: 华文楷体;
-    font-size: 50px;
+    font-size: 70px;
     margin-top: 20px;
 }
 .bigtext .logotest p{
     font-family: 华文楷体;
-    font-size: 30px;
+    font-size: 45px;
     margin-left: 80px;
+    display: block;
 }
 .bigtext .loginbutton{
     margin-top: 20px;
@@ -89,7 +104,7 @@ body{ font-size:14px;}
     color:#000;
     display: inline-block;
     text-align:center;
-    background: #ff4400;
+    /*background: #ff4400;*/
     margin: 0 15px;
     border: aliceblue solid 2px;
 }
@@ -98,11 +113,11 @@ body{ font-size:14px;}
     border-radius:4px;
     text-decoration:none;
 }
-.banquan{
+.banquan p{
     background: white;
-    width: 150px;
-    margin-left: 700px;
-    margin-top: 310px;
+
+    text-align: center;
+    display: inline-block;
 
 
 }

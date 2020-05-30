@@ -1,0 +1,71 @@
+
+.Wrap{
+    height: 52px;
+    margin-bottom: 10px;
+    border-bottom: #3e4a40 solid 2px;
+    padding-top: 6px;
+}
+.Wrap h1{
+    font-family: Tahoma;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    display: inline;
+}
+.Wrap ul{
+    width: 230px;
+    height: 35px;
+    display: inline-block;
+}
+.Wrap ul li{
+    line-height: 30px;
+    font-size: 16px;
+    padding: 0px 10px;
+    display: inline-block;
+    text-align: center;
+
+    margin: 0 5px;
+
+}
+.Wrap ul li a{
+
+}
+.Wrap ul li a:hover{
+      border-radius:4px;
+    text-decoration:none;
+}
+header .header-inner{
+    width: 1020px;
+    height: 50px;
+    margin: 0 auto;
+}
+.Wrap .header-inner .searchlable{
+    width: 400px;
+    height: 35px;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 100px;
+}
+.Wrap .searchlable input{
+    width: 325px;
+    height: 34px;
+    margin: 0 auto;
+    margin-left: 10px;
+    border: #3e4a40 solid 2px;
+    border-radius: 10px;
+}
+
+.Wrap .searchlable  button{
+    width: 45px;
+    height: 34px;
+    border: #3e4a40 solid 1px;
+    color: #237332;
+    border-radius: 5px;
+    box-shadow: -2px 2px 0px #cccccc;
+}
+header .header-inner .usericon{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+    float: right;
+}

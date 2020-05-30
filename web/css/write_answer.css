@@ -1,0 +1,43 @@
+.w-e-text-container{
+    height: 690px !important;
+}
+.topstory{
+    width: 1020px;
+    margin: 0px auto;
+    height: 800px;
+}
+.answer-box{
+    padding: 5px;
+
+
+
+    border: black solid 1px;
+    width: 690px;
+}
+.answer-box .answer-ques{
+
+    line-height: 35px;
+}
+.answer-box .answer-place{
+
+    line-height: 35px;
+
+    font-size: 20px;
+}
+.answer-box ul{
+    border: black solid 1px;
+
+    display: inline-block;
+
+
+}
+.answer-box ul li{
+    float: left;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background: green;
+    border-radius: 3px;
+
+
+}

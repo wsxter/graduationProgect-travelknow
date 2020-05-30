@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%; /* 重点 */
+}
+/*body > .wrap {
+    height: auto;
+    min-height: 100%; !* 重点 *!
+}
+.main {
+    padding-bottom: 150px;
+}
+.header {
+    background: #ffc543;
+    height: 60px;
+}
+.content {
+    background: red;
+    !*height: 1000px;*!
+}*/
+.footer {
+    width: 100%;
+    height: 90px;  /* 重点 */
+    margin-top: 90px; /* 重点 */
+    background: gray;
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 25px;
+}
+
+/*.clearfix:after，
+.clearfix:before {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+*/

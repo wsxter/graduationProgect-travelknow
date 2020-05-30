@@ -16,9 +16,9 @@
 </head>
 <body>
 <div class="regster">
-    <img src="image/register.jpeg" width="247" height="370">
+    <%--<img src="image/register.jpeg" width="247" height="370">--%>
     <form id="registerform" >
-        <div class="login-box">
+        <div class="regster-box">
             <h1>注册</h1>
             <div class="textbox"  >
                 <i>用户名：</i>
@@ -34,8 +34,9 @@
                 <input id="Email"  type="email" placeholder="email" name="email" value="">
             </div>
             <div class="textbox">
+                <img src="/travelknow/checkCodeServlet" height="32px" alt="" onclick="changeCheckCode(this)">
                 <input type="text" name="verifycode" class="form-control" id="verifycode" placeholder="请输入验证码" style="width: 120px;"/>
-                <img src="${pageContext.request.contextPath}/checkCodeServlet" height="32px" alt="" onclick="changeCheckCode(this)">
+
 
 
             </div>
@@ -49,7 +50,7 @@
 <script type="text/javascript">
     //图片点击事件
     function changeCheckCode(img) {
-        img.src="${pageContext.request.contextPath}/checkCodeServlet?"+new Date().getTime();
+        img.src="/travelknow/checkCodeServlet?"+new Date().getTime();
     }
 </script>
 <script type="text/javascript">
@@ -101,10 +102,10 @@
 
     $(document).ready(function(){
         $("#registerform").submit(function(){
-            // if(checkEmail() && checkPassword() && checkUsername()){
+             if(checkEmail() && checkPassword() && checkUsername()){
 
 
-            $.post("${pageContext.request.contextPath}/userRegisterServlet",$("#registerform").serialize(),function(rest){
+            $.post("${pageContext.request.contextPath}/user/register",$("#registerform").serialize(),function(rest){
                 console.log(rest);
                 if (rest.flag){
                     //注册成功
@@ -112,12 +113,12 @@
                 }else {
                     //注册失败
                     alert(rest.errorMsg);
-                    location.replace("${pageContext.request.contextPath}/register.html");
+                    location.replace("${pageContext.request.contextPath}/register.jsp");
 
                 }
 
             });
-            // }
+            }
             return false;
         });
 

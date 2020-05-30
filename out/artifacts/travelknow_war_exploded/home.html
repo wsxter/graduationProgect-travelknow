@@ -1,20 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html >
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>登录/注册</title>
     <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/home.js"></script>
 </head>
 
 <body>
 <!--头部结构开始-->
-<div class="picture">
+
     <header class="wrap">
         <h1>旅游知道</h1>
         <ul>
-            <li><a href="about.html">首页</a></li>
-            <li><a href="news.html">登录</a></li>
-            <li><a href="contact.html">注册</a></li>
+            <li><a href="index.html">首页</a></li>
+            <li  ><a href="#">故障反馈</a></li>
+            <li ><a href="#">关于我们</a></li>
         </ul>
     </header>
     <!--头部结构结束-->
@@ -27,17 +29,21 @@
 
         </div>
         <div class="loginbutton">
-            <strong> <a class="#" href="#">注册</a></strong>
-            <strong><a class="#" href="#">登录</a></strong>
+            <strong> <a class="#" id="registerli" href="#">注册</a></strong>
+            <strong><a class="#"  id="loginli"  href="#">登录</a></strong>
         </div>
-    </div>
 
+    </div>
+<div id="login-box1" style="display: none"></div>
+<div id="register-box1" style="display: none;"></div>
 
     <!--主体结束-->
     <!--底部版权结构开始-->
-    <p class="banquan">@设计来源：<a href="#">Wsxter</a></p>
+
+        <span class="banquan" style="  text-align: center; display: block">@设计来源：<a href="#">Wsxter</a></span>
+
+
     <!--底部版权结构结束-->
-</div>
 
 
 </body>

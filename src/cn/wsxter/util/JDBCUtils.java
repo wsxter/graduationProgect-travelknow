@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.LinkedList;
 import java.util.Properties;
 
 public class JDBCUtils {
@@ -18,9 +19,12 @@ public class JDBCUtils {
         try {
             //1.加载配置文件
             Properties pro = new Properties();
+
             //使用ClassLoader加载配置文件，获取字节输入流
             InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream("druid.properties");
             pro.load(is);
+
+            LinkedList<Object> objects = new LinkedList<>();
 
 
             //2.初始化连接池对象

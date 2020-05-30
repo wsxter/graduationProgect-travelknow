@@ -6,28 +6,481 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1e42f73-3ff3-40e0-af1e-b5e2183125e7" name="Default" comment="" />
+    <list default="true" id="a1e42f73-3ff3-40e0-af1e-b5e2183125e7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/Filter/loginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/Filter/loginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/dao/Impl/AnswerDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/dao/Impl/AnswerDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/dao/Impl/CategoryDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/dao/Impl/CategoryDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/dao/Impl/FADaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/dao/Impl/FADaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/domain/place.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/domain/place.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/AgreeopposeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/AgreeopposeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/AnswerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/AnswerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/AttendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/AttendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/CollectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/CollectService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/FAService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/FAService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/FQService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/FQService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/ImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/AgreeopposeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/AgreeopposeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/AnswerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/AnswerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/AttendServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/AttendServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/CategoryServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/CategoryServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/CollectServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/CollectServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/FAServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/FAServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/FQServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/FQServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/ImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/ImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/QuestionServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/QuestionServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/RecommendServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/RecommendServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/userZoneServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/Impl/userZoneServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/QuestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/RecommendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/RecommendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/userZoneService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/service/userZoneService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/util/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/util/JDBCUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/AgreeopposeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/AgreeopposeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/AnswerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/AnswerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/AttendServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/AttendServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/BaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/BaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/CollectServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/CollectServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/FalsequesServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/FalsequesServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/FanswerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/FanswerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/Place_listServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/Place_listServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/RecommendServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/RecommendServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/UploadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/UploadServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/categoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/categoryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/questionReplyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/questionReplyServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/userZoneServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/WEB-INF/classes/cn/wsxter/web/servlet/userZoneServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/answer.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/answer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/aside.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/aside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/aside1.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/aside1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/place_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/place_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/question-reply.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/css/question-reply.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/errormsg.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/errormsg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/image/back.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/image/back.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/place_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/place_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/question-reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/question-reply.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/userzone.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/userzone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/write_answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/js/write_answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/place_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/place_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/question-reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/question-reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/travelimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/travelimage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/userAddQues.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/userAddQues.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/userzone.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/userzone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/write_answer.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/travelknow_war_exploded/write_answer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/Filter/loginFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/Filter/loginFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/dao/Impl/AnswerDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/dao/Impl/AnswerDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/dao/Impl/CategoryDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/dao/Impl/CategoryDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/dao/Impl/FADaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/dao/Impl/FADaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/domain/place.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/domain/place.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/AgreeopposeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/AgreeopposeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/AnswerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/AnswerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/AttendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/AttendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/CollectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/CollectService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/FAService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/FAService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/FQService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/FQService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/ImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/ImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/AgreeopposeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/AgreeopposeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/AnswerServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/AnswerServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/AttendServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/AttendServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/CategoryServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/CategoryServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/CollectServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/CollectServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/FAServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/FAServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/FQServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/FQServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/ImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/ImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/QuestionServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/QuestionServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/RecommendServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/RecommendServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/userZoneServiceImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/Impl/userZoneServiceImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/QuestionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/QuestionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/RecommendService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/RecommendService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/userZoneService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/service/userZoneService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/util/JDBCUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/util/JDBCUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/AgreeopposeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/AgreeopposeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/AnswerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/AnswerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/AttendServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/AttendServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/BaseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/BaseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/CollectServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/CollectServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/FalsequesServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/FalsequesServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/FanswerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/FanswerServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/Place_listServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/Place_listServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/RecommendServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/RecommendServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/UploadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/UploadServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/categoryServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/categoryServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/questionReplyServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/questionReplyServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/userZoneServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/travelknow/cn/wsxter/web/servlet/userZoneServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/Filter/loginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Filter/loginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AnswerDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AnswerDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/CategoryDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/CategoryDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/FADaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/FADaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/domain/place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/domain/place.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/AgreeopposeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/AgreeopposeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/AnswerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/AnswerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/AttendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/AttendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/CollectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/CollectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/FAService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/FAService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/FQService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/FQService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/AgreeopposeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/AgreeopposeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/AnswerServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/AnswerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/AttendServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/AttendServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/CategoryServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/CategoryServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/CollectServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/CollectServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/FAServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/FAServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/FQServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/FQServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/ImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/QuestionServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/QuestionServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/RecommendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/RecommendServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/Impl/userZoneServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/Impl/userZoneServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/QuestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/QuestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/RecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/RecommendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/service/userZoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/Service/userZoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/util/JDBCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/util/JDBCUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AgreeopposeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AgreeopposeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AnswerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AnswerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AttendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AttendServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/BaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/BaseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/CollectServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/CollectServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/FalsequesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/FalsequesServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/FanswerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/FanswerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/Place_listServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/Place_listServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/RecommendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/RecommendServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/UploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/UploadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/categoryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/categoryServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/questionReplyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/questionReplyServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/userZoneServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/wsxter/web/servlet/userZoneServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/answer.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/answer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/aside.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/aside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/aside1.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/aside1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/pagination.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/pagination.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/place_list.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/place_list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/question-reply.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/question-reply.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/errormsg.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/errormsg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/image/back.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/image/back.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/place_list.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/place_list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/question-reply.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/question-reply.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/userzone.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/userzone.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/write_answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/write_answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/place_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/place_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/question-reply.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/question-reply.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/travelimage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/travelimage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userAddQues.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/userAddQues.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/userzone.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/userzone.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/write_answer.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/write_answer.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="696044012">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="69" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="12" />
+          <entry key="project.open.time.10" value="10" />
+          <entry key="project.open.time.11" value="13" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.2" value="6" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.8" value="7" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="71" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="asp" value="1" />
+          <entry key="class" value="2" />
+          <entry key="css" value="148" />
+          <entry key="html" value="265" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="696" />
+          <entry key="jpg" value="1" />
+          <entry key="js" value="133" />
+          <entry key="jsp" value="15" />
+          <entry key="properties" value="8" />
+          <entry key="sql" value="1" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="ASP" value="1" />
+          <entry key="CLASS" value="2" />
+          <entry key="CSS" value="148" />
+          <entry key="HTML" value="265" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="696" />
+          <entry key="JSP" value="15" />
+          <entry key="JavaScript" value="133" />
+          <entry key="Properties" value="8" />
+          <entry key="SQL" value="1" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="2335" />
+          <entry key="dummy" value="22" />
+          <entry key="ft" value="2" />
+          <entry key="html" value="10179" />
+          <entry key="java" value="14877" />
+          <entry key="js" value="5626" />
+          <entry key="jsp" value="145" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="2336" />
+          <entry key="HTML" value="10180" />
+          <entry key="JAVA" value="14877" />
+          <entry key="JSP" value="145" />
+          <entry key="JavaScript" value="5624" />
+          <entry key="PLAIN_TEXT" value="22" />
+          <entry key="VTL" value="2" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/FQDaoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/QuestionDaoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2261">
+              <caret line="129" column="102" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/wsxter/util/JDBCUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/druid.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/AttendServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/ArgeeopposeDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AgreeopposeDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="25" column="73" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AttendDaoImp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="46" column="86" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/aside.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="931">
+              <caret line="49" column="74" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
+        <option value="Jsp File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&gt;</find>
+      <find>place_idStr</find>
+      <find>is</find>
+      <find>none</find>
+      <find>users</find>
+      <find>newes</find>
+      <find>font</find>
+      <find>aside</find>
+      <find>curr</find>
+      <find>wri</find>
+      <find>int</find>
+      <find>hover</find>
+      <find>.</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>question_id</replace>
+      <replace>aside1</replace>
+      <replace>I</replace>
+      <replace>Integer</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/cn/wsxter/service/Impl/FAServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/CheckCodeServlet.java" />
+        <option value="D:/Program Files/apache-maven-3.6.3/conf/settings.xml" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/service/FQService.java" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/dao/FQDao.java" />
+        <option value="$PROJECT_DIR$/test/test.html" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/FQDaoImp.java" />
+        <option value="$PROJECT_DIR$/test/jghh.html" />
+        <option value="$PROJECT_DIR$/web/css/write_answer.css" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/UserServlet.java" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AnswerServlet.java" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/FanswerServlet.java" />
+        <option value="$PROJECT_DIR$/web/js/index.js" />
+        <option value="$PROJECT_DIR$/web/js/place_list.js" />
+        <option value="$PROJECT_DIR$/web/css/place_list.css" />
+        <option value="$PROJECT_DIR$/web/js/register.js" />
+        <option value="$PROJECT_DIR$/web/js/userzone.js" />
+        <option value="$PROJECT_DIR$/web/userzone.html" />
+        <option value="$PROJECT_DIR$/web/write_answer.html" />
+        <option value="$PROJECT_DIR$/web/place_list.html" />
+        <option value="$PROJECT_DIR$/web/css/question-reply.css" />
+        <option value="$PROJECT_DIR$/web/errormsg.html" />
+        <option value="$PROJECT_DIR$/web/css/general.css" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/Filter/loginFilter.java" />
+        <option value="$PROJECT_DIR$/web/js/answer.js" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/header.html" />
+        <option value="$PROJECT_DIR$/web/css/pagination.css" />
+        <option value="$PROJECT_DIR$/web/answer.html" />
+        <option value="$PROJECT_DIR$/web/admin.html" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/BaseServlet.java" />
+        <option value="$PROJECT_DIR$/web/userAddQues.html" />
+        <option value="$PROJECT_DIR$/web/js/write_answer.js" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/domain/place.java" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/service/Impl/FQServiceImp.java" />
+        <option value="$PROJECT_DIR$/web/aside.html" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AnswerDaoImp.java" />
+        <option value="$PROJECT_DIR$/web/question-reply.html" />
+        <option value="$PROJECT_DIR$/web/js/question-reply.js" />
+        <option value="$PROJECT_DIR$/web/css/aside.css" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/FalsequesServlet.java" />
+        <option value="$PROJECT_DIR$/web/js/admin.js" />
+        <option value="$PROJECT_DIR$/web/css/index.css" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/CategoryDaoImp.java" />
+        <option value="$PROJECT_DIR$/web/travelimage.html" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/UploadServlet.java" />
+        <option value="$PROJECT_DIR$/web/aside1.html" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/dao/Impl/FADaoImp.java" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/util/JDBCUtils.java" />
+        <option value="$PROJECT_DIR$/src/cn/wsxter/web/servlet/AttendServlet.java" />
+        <option value="$PROJECT_DIR$/src/druid.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -36,8 +489,72 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1053" />
+    <option name="width" value="876" />
+    <option name="height" value="1053" />
+  </component>
   <component name="ProjectId" id="1ZUAEnRqWyJnXMjd35PCTKGAa1Y" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="true" />
+      <showMembers ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
+      <abbreviatePackageNames ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="travelknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travelknow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travelknow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="travelknow" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="travelknow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -47,35 +564,50 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589975215019" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+    <property name="js.last.introduce.type" value="VAR" />
+    <property name="last_opened_file_path" value="D:/xutianxiang/源代码/travelknow" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\travelknow\web" />
-      <recent name="D:\travelknow\web\WEB-INF\lib" />
       <recent name="D:\travelknow\web\js" />
+      <recent name="D:\travelknow\web\WEB-INF\lib" />
+      <recent name="D:\travelknow\web" />
+      <recent name="D:\travelknow\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\travelknow\src" />
       <recent name="D:\travelknow\web" />
+      <recent name="D:\travelknow\test" />
+      <recent name="D:\travelknow\web\css" />
+      <recent name="D:\travelknow\src" />
       <recent name="D:\travelknow\web\WEB-INF" />
-      <recent name="D:\travelknow" />
-      <recent name="D:\travelknow\web\WEB-INF\lib" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.31">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -84,17 +616,15 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/travelknow/register.html">
+    <configuration name="register.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:8080/travelknow/register.html">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -106,7 +636,6 @@
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/travelknow" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
-      <option name="UPDATING_POLICY" value="update-resources" />
       <deployment>
         <artifact name="travelknow:war exploded">
           <settings>
@@ -115,13 +644,14 @@
         </artifact>
       </deployment>
       <server-settings>
+        <option name="AJP_PORT" value="1039" />
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_31_travelknow_2" />
       </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="13402" />
       </RunnerSettings>
@@ -177,18 +707,18 @@
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.register.html" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.31" />
+      <item itemvalue="JavaScript Debug.register.html" />
     </list>
     <recent_temporary>
       <list>
@@ -205,11 +735,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="运行" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -241,12 +766,175 @@
       <workItem from="1585008915737" duration="13779000" />
       <workItem from="1585024863009" duration="798000" />
       <workItem from="1585029043449" duration="5700000" />
-      <workItem from="1585035475068" duration="6124000" />
+      <workItem from="1585035475068" duration="7662000" />
+      <workItem from="1585105911165" duration="4108000" />
+      <workItem from="1585121975369" duration="278000" />
+      <workItem from="1585122267438" duration="9912000" />
+      <workItem from="1585193758572" duration="12306000" />
+      <workItem from="1585278717085" duration="6144000" />
+      <workItem from="1585301002211" duration="6153000" />
+      <workItem from="1585308699925" duration="2319000" />
+      <workItem from="1585366092021" duration="15019000" />
+      <workItem from="1585453579948" duration="28586000" />
+      <workItem from="1585534480954" duration="9000" />
+      <workItem from="1585552345335" duration="12718000" />
+      <workItem from="1585570264364" duration="915000" />
+      <workItem from="1585620270246" duration="25000" />
+      <workItem from="1585620703286" duration="43000" />
+      <workItem from="1585624303189" duration="209000" />
+      <workItem from="1585631593258" duration="14943000" />
+      <workItem from="1585724518571" duration="15140000" />
+      <workItem from="1585795919561" duration="5683000" />
+      <workItem from="1585876592487" duration="5716000" />
+      <workItem from="1585990076684" duration="41000" />
+      <workItem from="1586153277254" duration="20338000" />
+      <workItem from="1586181586322" duration="362000" />
+      <workItem from="1586222828267" duration="20423000" />
+      <workItem from="1586252796720" duration="7134000" />
+      <workItem from="1586261959864" duration="2728000" />
+      <workItem from="1586316976260" duration="2108000" />
+      <workItem from="1586319137630" duration="31028000" />
+      <workItem from="1586355234765" duration="137000" />
+      <workItem from="1586391819382" duration="21462000" />
+      <workItem from="1586413548726" duration="13138000" />
+      <workItem from="1586430042807" duration="1783000" />
+      <workItem from="1586432453931" duration="1920000" />
+      <workItem from="1586479067328" duration="34705000" />
+      <workItem from="1586603643999" duration="6522000" />
+      <workItem from="1586613344576" duration="2170000" />
+      <workItem from="1586650667358" duration="32045000" />
+      <workItem from="1586684644656" duration="20223000" />
+      <workItem from="1586749556764" duration="1366000" />
+      <workItem from="1586756786959" duration="1220000" />
+      <workItem from="1586767631998" duration="4562000" />
+      <workItem from="1586916612346" duration="36399000" />
+      <workItem from="1587001715968" duration="35757000" />
+      <workItem from="1587087072425" duration="8639000" />
+      <workItem from="1587174599118" duration="50000" />
+      <workItem from="1587176280895" duration="1439000" />
+      <workItem from="1587270150179" duration="12337000" />
+      <workItem from="1587359164320" duration="13000" />
+      <workItem from="1587542757584" duration="626000" />
+      <workItem from="1587544397051" duration="1813000" />
+      <workItem from="1587605584121" duration="63000" />
+      <workItem from="1587615091571" duration="251000" />
+      <workItem from="1587615351898" duration="11957000" />
+      <workItem from="1587649863898" duration="624000" />
+      <workItem from="1587651039230" duration="2969000" />
+      <workItem from="1587778373720" duration="6948000" />
+      <workItem from="1587870273356" duration="1019000" />
+      <workItem from="1588142790817" duration="1262000" />
+      <workItem from="1588310999000" duration="1250000" />
+      <workItem from="1588383088131" duration="11000" />
+      <workItem from="1588491791725" duration="710000" />
+      <workItem from="1588572791018" duration="1712000" />
+      <workItem from="1588652894256" duration="3117000" />
+      <workItem from="1588746082132" duration="1212000" />
+      <workItem from="1588820515566" duration="34000" />
+      <workItem from="1588863340715" duration="35000" />
+      <workItem from="1589097011404" duration="9342000" />
+      <workItem from="1589158627771" duration="3646000" />
+      <workItem from="1589173903280" duration="6000" />
+      <workItem from="1589187198321" duration="614000" />
+      <workItem from="1589273228449" duration="19000" />
+      <workItem from="1589349132697" duration="7019000" />
+      <workItem from="1589382184738" duration="1857000" />
+      <workItem from="1589414089262" duration="4224000" />
+      <workItem from="1589516348179" duration="10352000" />
+      <workItem from="1589537043930" duration="7782000" />
+      <workItem from="1589584954222" duration="7599000" />
+      <workItem from="1589765780835" duration="9000" />
+      <workItem from="1589778145101" duration="7754000" />
+      <workItem from="1589804016696" duration="5889000" />
+      <workItem from="1589863454867" duration="2619000" />
+      <workItem from="1589957449376" duration="4485000" />
+      <workItem from="1590026474480" duration="1245000" />
+      <workItem from="1590055218677" duration="614000" />
+      <workItem from="1590143312938" duration="614000" />
+      <workItem from="1590452673177" duration="329000" />
+      <workItem from="1590668882074" duration="9000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="473171000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1563" height="855" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.88" visible="true" weight="0.20730896" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" sideWeight="0.12" side_tool="true" weight="0.23563589" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32751676" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49833888" weight="0.036111113" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49900332" weight="0.23236515" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016611" side_tool="true" weight="0.31258646" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.15629323" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.09767442" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6998617" visible="true" weight="0.16478406" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" sideWeight="0.30013832" side_tool="true" visible="true" weight="0.16478406" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32780084" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49833888" weight="0.15352698" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49900332" weight="0.25172892" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016611" side_tool="true" weight="0.31258646" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32823366" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32964602" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="WindowStateProjectService">
     <state x="467" y="28" width="627" height="783" key="#Tomcat_8.5.31" timestamp="1584883326799">
@@ -257,14 +945,14 @@
       <screen x="0" y="0" width="1549" height="840" />
     </state>
     <state x="367" y="78" key="#Tomcat_Server/0.0.1549.840@0.0.1549.840" timestamp="1584883309456" />
-    <state x="230" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585040319425">
+    <state x="322" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585563591219">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state x="230" y="76" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1549.840@0.0.1549.840" timestamp="1585040319425" />
-    <state x="882" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1584957339381">
+    <state x="322" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1549.840@0.0.1549.840" timestamp="1585563591219" />
+    <state x="882" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1585467009591">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state x="882" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1549.840@0.0.1549.840" timestamp="1584957339381" />
+    <state x="882" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1549.840@0.0.1549.840" timestamp="1585467009591" />
     <state x="367" y="79" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1584954324388">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
@@ -273,78 +961,82 @@
       <screen x="0" y="0" width="1549" height="840" />
     </state>
     <state x="403" y="361" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1549.840@0.0.1549.840" timestamp="1585031697493" />
-    <state x="555" y="160" key="FileChooserDialogImpl" timestamp="1585035486527">
+    <state x="526" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585305218673">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state x="555" y="160" key="FileChooserDialogImpl/0.0.1549.840@0.0.1549.840" timestamp="1585035486527" />
-    <state width="1033" height="122" key="GridCell.Tab.0.bottom" timestamp="1585041780951">
+    <state x="526" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1549.840@0.0.1549.840" timestamp="1585305218673" />
+    <state x="555" y="160" key="FileChooserDialogImpl" timestamp="1585122384752">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.0.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.0.center" timestamp="1585041780951">
+    <state x="555" y="160" key="FileChooserDialogImpl/0.0.1549.840@0.0.1549.840" timestamp="1585122384752" />
+    <state width="811" height="202" key="GridCell.Tab.0.bottom" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.0.center/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.0.left" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.0.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.0.center" timestamp="1585571531290">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.0.left/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.0.right" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.0.center/0.0.1549.840@0.0.1549.840" timestamp="1585571531290" />
+    <state width="811" height="202" key="GridCell.Tab.0.left" timestamp="1585571531290">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.0.right/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.1.bottom" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.0.left/0.0.1549.840@0.0.1549.840" timestamp="1585571531290" />
+    <state width="811" height="202" key="GridCell.Tab.0.right" timestamp="1585571531290">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.1.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.1.center" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.0.right/0.0.1549.840@0.0.1549.840" timestamp="1585571531290" />
+    <state width="811" height="202" key="GridCell.Tab.1.bottom" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.1.center/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.1.left" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.1.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.1.center" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.1.left/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.1.right" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.1.center/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.1.left" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.1.right/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.2.bottom" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.1.left/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.1.right" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.2.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.2.center" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.1.right/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.2.bottom" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.2.center/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.2.left" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.2.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.2.center" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.2.left/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="122" key="GridCell.Tab.2.right" timestamp="1585041780951">
+    <state width="811" height="202" key="GridCell.Tab.2.center/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.2.left" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="122" key="GridCell.Tab.2.right/0.0.1549.840@0.0.1549.840" timestamp="1585041780951" />
-    <state width="1033" height="176" key="GridCell.Tab.3.bottom" timestamp="1585034234877">
+    <state width="811" height="202" key="GridCell.Tab.2.left/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="811" height="202" key="GridCell.Tab.2.right" timestamp="1585571531291">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="176" key="GridCell.Tab.3.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585034234877" />
-    <state width="1033" height="176" key="GridCell.Tab.3.center" timestamp="1585034234877">
+    <state width="811" height="202" key="GridCell.Tab.2.right/0.0.1549.840@0.0.1549.840" timestamp="1585571531291" />
+    <state width="812" height="202" key="GridCell.Tab.3.bottom" timestamp="1585569658218">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="176" key="GridCell.Tab.3.center/0.0.1549.840@0.0.1549.840" timestamp="1585034234877" />
-    <state width="1033" height="176" key="GridCell.Tab.3.left" timestamp="1585034234877">
+    <state width="812" height="202" key="GridCell.Tab.3.bottom/0.0.1549.840@0.0.1549.840" timestamp="1585569658218" />
+    <state width="812" height="202" key="GridCell.Tab.3.center" timestamp="1585569658218">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="176" key="GridCell.Tab.3.left/0.0.1549.840@0.0.1549.840" timestamp="1585034234877" />
-    <state width="1033" height="176" key="GridCell.Tab.3.right" timestamp="1585034234877">
+    <state width="812" height="202" key="GridCell.Tab.3.center/0.0.1549.840@0.0.1549.840" timestamp="1585569658218" />
+    <state width="812" height="202" key="GridCell.Tab.3.left" timestamp="1585569658218">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state width="1033" height="176" key="GridCell.Tab.3.right/0.0.1549.840@0.0.1549.840" timestamp="1585034234877" />
-    <state x="284" y="63" key="SettingsEditor" timestamp="1584954242227">
+    <state width="812" height="202" key="GridCell.Tab.3.left/0.0.1549.840@0.0.1549.840" timestamp="1585569658218" />
+    <state width="812" height="202" key="GridCell.Tab.3.right" timestamp="1585569658218">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state x="284" y="63" key="SettingsEditor/0.0.1549.840@0.0.1549.840" timestamp="1584954242227" />
+    <state width="812" height="202" key="GridCell.Tab.3.right/0.0.1549.840@0.0.1549.840" timestamp="1585569658218" />
+    <state x="284" y="63" key="SettingsEditor" timestamp="1585123409431">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state x="284" y="63" key="SettingsEditor/0.0.1549.840@0.0.1549.840" timestamp="1585123409430" />
     <state x="486" y="244" key="com.intellij.ide.util.TipDialog" timestamp="1584883204086">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
@@ -357,26 +1049,400 @@
       <screen x="0" y="0" width="1549" height="840" />
     </state>
     <state x="220" y="61" key="new project wizard/0.0.1549.840@0.0.1549.840" timestamp="1585023978844" />
-    <state x="437" y="161" width="672" height="678" key="search.everywhere.popup" timestamp="1585025303677">
+    <state x="517" y="53" key="refactoring.ChangeSignatureDialog" timestamp="1585464479350">
       <screen x="0" y="0" width="1549" height="840" />
     </state>
-    <state x="437" y="161" width="672" height="678" key="search.everywhere.popup/0.0.1549.840@0.0.1549.840" timestamp="1585025303677" />
+    <state x="517" y="53" key="refactoring.ChangeSignatureDialog/0.0.1549.840@0.0.1549.840" timestamp="1585464479350" />
+    <state x="437" y="161" width="672" height="678" key="search.everywhere.popup" timestamp="1585553125544">
+      <screen x="0" y="0" width="1549" height="840" />
+    </state>
+    <state x="437" y="161" width="672" height="678" key="search.everywhere.popup/0.0.1549.840@0.0.1549.840" timestamp="1585553125544" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/UserRegisterServlet.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/cn/wsxter/Service/Impl/CollectServiceImp.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/UserRegisterServlet.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/src/cn/wsxter/Service/Impl/QuestionServiceImp.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/wsxter/Service/Impl/FQServiceImp.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/QuestionDaoImp.java</url>
+          <line>97</line>
+          <properties />
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/QuestionDaoImp.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/UploadServlet.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/categoryServlet.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/admin.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="48" selection-start-line="15" selection-start-column="7" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/RecommendServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/userAddQues.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/write_answer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/domain/Collect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/write_answer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/Service/Impl/QuestionServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/domain/place.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/Service/FQService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AnswerDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="38" column="58" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/question-reply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/question-reply.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="126" column="111" lean-forward="true" selection-start-line="126" selection-start-column="111" selection-end-line="126" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/aside.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/question-reply.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/userzone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-606" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1007">
+          <caret line="137" column="76" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/FQDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/FalsequesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="81" column="1" selection-start-line="81" selection-start-column="1" selection-end-line="81" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/BaseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/domain/falseques.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/Service/Impl/FQServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/Service/Impl/FAServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/UserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/travelimage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/UploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/categoryServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/travelknow.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/aside1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/CheckCodeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="38" column="72" selection-start-line="38" selection-start-column="72" selection-end-line="38" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/Filter/loginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/xutian.java" />
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/Place_listServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2033">
+          <caret line="127" column="51" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="97" column="126" selection-start-line="97" selection-start-column="115" selection-end-line="97" selection-end-column="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/CategoryDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="33" column="65" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/CollectDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="32" column="74" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/apache-tomcat-8.5.45/lib/servlet-api.jar!/javax/servlet/annotation/WebServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/FADaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="46" column="67" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/FQDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/QuestionDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="129" column="102" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/util/JDBCUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/web/servlet/AttendServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/ArgeeopposeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AgreeopposeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="73" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/wsxter/dao/Impl/AttendDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="46" column="86" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/aside.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="49" column="74" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/druid.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -408,7 +1474,6 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jQuery-2.0.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -432,12 +1497,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>travelknow</last-edited>
+          <last-edited>Web|travelknow</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -445,7 +1509,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>js</last-edited>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
