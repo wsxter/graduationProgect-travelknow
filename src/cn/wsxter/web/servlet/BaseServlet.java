@@ -22,6 +22,7 @@ public class BaseServlet extends HttpServlet {
 
         try {
             Method method = this.getClass().getMethod(methodName, HttpServletRequest.class, HttpServletResponse.class);
+            System.out.println(this);
             method.invoke(this,req,resp);
         } catch (NoSuchMethodException e) {
             e.printStackTrace();

@@ -1,16 +1,14 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.dao.Impl.QuestionDaoImp;
-import cn.wsxter.dao.QuestionDao;
 import cn.wsxter.domain.*;
 
-import cn.wsxter.service.Impl.AnswerServiceImp;
-import cn.wsxter.service.AnswerService;
+import cn.wsxter.Service.Impl.AnswerServiceImp;
+import cn.wsxter.Service.AnswerService;
 
-import cn.wsxter.service.Impl.QuestionServiceImp;
-import cn.wsxter.service.Impl.UserServiceImpl;
-import cn.wsxter.service.QuestionService;
-import cn.wsxter.service.UserService;
+import cn.wsxter.Service.Impl.QuestionServiceImp;
+import cn.wsxter.Service.Impl.UserServiceImpl;
+import cn.wsxter.Service.QuestionService;
+import cn.wsxter.Service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 

@@ -8,7 +8,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
-public class FADaoImp implements FADao {
+public class
+FADaoImp implements FADao {
     JdbcTemplate template = new JdbcTemplate(JDBCUtils.getDataSource());
     @Override
     public void addAnswer(falseanswer answer) {

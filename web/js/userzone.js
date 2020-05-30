@@ -61,7 +61,7 @@ $(function () {
 })
 function updateCustomer() {
     $.post("/travelknow/user/updateUser",$("#updatefotm").serialize(),function () {
-        alert("修改成功，重新登录已更新信息！");
+        alert("修改成功，重新登录已以更新信息！");
         window.location.href="/travelknow/home.html"
     })
 }

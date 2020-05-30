@@ -1,7 +1,16 @@
 function writepage() {
-    $("#replyid").css("display","inline-block");
-
+    $.get("/travelknow/user/findUser",{},function(res) {
+        //获取登录用户数据
+        if (res.flag) {
+            $("#replyid").css("display", "inline-block");
+        } else {
+            window.location.href = "errormsg.html";
+        }
+    });
 }
+
+
+
 function load(question_id,current_page){
     $.get("/travelknow/place_list/answerPageQuery",{question_id:question_id,current_Page:current_page},function (pb) {
 
@@ -88,43 +97,48 @@ $(function () {
     /* var search = location.search;
      var  place_id = search.split("=")[1];*/
     var question_id = getParameter("question_id");
-    var  answer_id = getParameter("answer_id");
-    if(answer_id){
+    var answer_id = getParameter("answer_id");
+    if (answer_id) {
         loadindex_reply(answer_id);
     }
 
-    $.get("/travelknow/questionReplyServlet/questionQuery",{question_id:question_id},function (data) {
-
+    $.get("/travelknow/questionReplyServlet/questionQuery", {question_id: question_id}, function (data) {
 
 
         var li = '<div class="sponsor ">\n' +
             '        <div class="initiator">\n' +
             '            <a href="#"><div class="sponsor-test">\n' +
             '                <p><img src="image/01.jpg" style="width: 30px;height: 30px;">\n' +
-            '                    <span><strong>'+data.customer.username+'</strong></span>发起的提问</p>\n' +
+            '                    <span><strong>' + data.customer.username + '</strong></span>发起的提问</p>\n' +
             '            </div>\n' +
             '            </a>\n' +
             '        </div>\n' +
             '\n' +
             '    </div>\n' +
-            '    <div class="backcolor9 circlestyle" style="display:inline-block; margin: 5px;"><h2><strong>'+data.question.question_name+'</strong></h2></div>\n' +
+            '    <div class="backcolor9 circlestyle" style="display:inline-block; margin: 5px;"><h2><strong>' + data.question.question_name + '</strong></h2></div>\n' +
             '        <!--<div class="index-answer-inimage">\n' +
             '            <img src="image/01.jpg" width="150" height="70">\n' +
             '        </div>-->\n' +
             '        <div class="question_content">\n' +
-            '            <span>'+data.question.ques_describle+'</span>\n' +
+            '            <span>' + data.question.ques_describle + '</span>\n' +
             '        </div>\n' +
             '    <div class="index-question-foot">\n' +
-            '        <button id="atte" class="buttonstyle backcolor4 circlestyle" onclick="attendques('+data.question.question_id+')">关注问题</button>\n' +
+            '        <button id="atte" class="buttonstyle backcolor4 circlestyle" onclick="attendques(' + data.question.question_id + ')">关注问题</button>\n' +
             '        <button class="buttonstyle backcolor5 circlestyle" onclick="writepage()">写回答</button>\n' +
-            '        <div class="backcolor2 circlestyle" style="padding: 5px;margin-top: 5px;display: inline-block;float: right;"><span class="ques-type circlestyle">'+data.place.place_name+'</span></div>\n' +
+            '        <div class="backcolor2 circlestyle" style="padding: 5px;margin-top: 5px;display: inline-block;float: right;"><span class="ques-type circlestyle">' + data.place.place_name + '</span></div>\n' +
             '\n' +
             '    </div>';
         $("#ques").html(li);
 
     });
+    $.get("/travelknow/user/findUser", {}, function (res) {
+        //获取登录用户数据
+        if (!res.flag) {
+            $("#atte").hide();
+        }
+    });
 
-    load(question_id,1);
+    load(question_id, 1);
     /* find_hot();*/
 
 
@@ -152,18 +166,23 @@ $(function () {
     $("#submit").click(function (){
         var content = editor.txt.html();//获取富文本数据
 
+
         $.get("/travelknow/user/findUser",{},function(res){
             //获取登录用户数据
             if(res.flag){
                 var question_id = getParameter("question_id");
                 $.post("/travelknow/answer/submit_answer",{content:content,question_id:question_id},function(data){
-                    Alert(data.flag);
+
                 },"json");
             }else {
-                alert(res.flag);
+
                 window.location.href("ErrorMsg.html");
             }
         })
+
+        $("#replyid").css("display","none");
+        editor.txt.clear();
+        alert("回答已经提交，等待审核");
 
     });
     $.get("/travelknow/attend/attendQuery",{question_id:question_id},function (re) {
@@ -177,6 +196,7 @@ $(function () {
 
 })
 function attendques(question_id) {
+
     $.post("/travelknow/attend/attendques",{question_id:question_id},function (re) {
         if (re.flag) {
             $("#atte").html("已关注");

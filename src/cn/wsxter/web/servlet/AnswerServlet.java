@@ -1,20 +1,18 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.dao.CategoryDao;
 import cn.wsxter.domain.*;
-import cn.wsxter.service.AnswerService;
-import cn.wsxter.service.CategoryService;
-import cn.wsxter.service.FAService;
-import cn.wsxter.service.Impl.AnswerServiceImp;
-import cn.wsxter.service.Impl.CategoryServiceImp;
-import cn.wsxter.service.Impl.FAServiceImp;
-import cn.wsxter.service.Impl.QuestionServiceImp;
-import cn.wsxter.service.QuestionService;
+import cn.wsxter.Service.AnswerService;
+import cn.wsxter.Service.CategoryService;
+import cn.wsxter.Service.FAService;
+import cn.wsxter.Service.Impl.AnswerServiceImp;
+import cn.wsxter.Service.Impl.CategoryServiceImp;
+import cn.wsxter.Service.Impl.FAServiceImp;
+import cn.wsxter.Service.Impl.QuestionServiceImp;
+import cn.wsxter.Service.QuestionService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

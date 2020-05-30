@@ -2,13 +2,12 @@ package cn.wsxter.web.servlet;
 
 import cn.wsxter.domain.Customer;
 import cn.wsxter.domain.PageBean;
-import cn.wsxter.service.Impl.userZoneServiceImp;
-import cn.wsxter.service.userZoneService;
+import cn.wsxter.Service.Impl.userZoneServiceImp;
+import cn.wsxter.Service.userZoneService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

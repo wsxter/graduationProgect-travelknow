@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="scenery-picture-lable circlestyle backcolor">
-        <img  class="circlestyle scenery-picture" src="image/register.jpeg">
+        <img  class="circlestyle scenery-picture" src="image/register.jpeg" >
     </div>
     <div class="aboutus ">
         <h2>联系我们</h2>
@@ -74,8 +74,8 @@
                     else {
                         alert("你已经被禁止发言");
                     }
-
-
+                }else {
+                    window.location.href ="errormsg.html";
                 }
             })
 
@@ -89,7 +89,7 @@
         })
 
         $.get("/travelknow/category/findAll",{},function (data) {
-            var lis = '<div class="msg circlestyle" >热门标签</div>';
+            var lis = '<div class="msg circlestyle" >分类</div>';
             for (var i = 0 ;i <data.length; i++) {
                 var li = '<div class="place_lable circlestyle"><a href="place_list.html?place_id='+data[i].place_id+'" onclick="tagSearch(data[i].place_id)" >'+data[i].place_name+'</a></div>';
                 lis += li;
@@ -108,9 +108,10 @@
                 else {
                     alert("你已经被禁止发言");
                 }
-
-
+            }else {
+                window.location.href ="errormsg.html";
             }
+
         })
 
     }

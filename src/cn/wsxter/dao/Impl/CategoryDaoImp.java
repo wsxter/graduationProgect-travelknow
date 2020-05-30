@@ -8,6 +8,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -16,7 +17,7 @@ public class CategoryDaoImp implements CategoryDao {
     @Override
     public List<place> findall() {
 
-        String sql = "select * from place limit 0,15";
+        String sql = "select * from place order by create_time desc limit 0,15";
         return  template.query(sql, new BeanPropertyRowMapper<place>(place.class));
     }
 
@@ -41,8 +42,10 @@ public class CategoryDaoImp implements CategoryDao {
     @Override
     public place findbyname(String place_name) {
         try {
-            String sql = "select * from place where place_name = ? ";
-            place  p = template.queryForObject(sql,new BeanPropertyRowMapper<place>(place.class),place_name);
+            List<place> list = new ArrayList<place>();
+            String sql = "select * from place where place_name like ? ";
+             list = template.query(sql,new BeanPropertyRowMapper<place>(place.class),place_name);
+             place p =  list.get(0);
             return p;
         } catch (DataAccessException e) {
             return null;

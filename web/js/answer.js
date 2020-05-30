@@ -1,5 +1,13 @@
 function writepage() {
-    $("#replyid").css("display","inline-block");
+
+    $.get("/travelknow/user/findUser",{},function(res) {
+        //获取登录用户数据
+        if (res.flag) {
+            $("#replyid").css("display", "inline-block");
+        } else {
+            window.location.href = "errormsg.html";
+        }
+    });
 
 }
 $(function () {

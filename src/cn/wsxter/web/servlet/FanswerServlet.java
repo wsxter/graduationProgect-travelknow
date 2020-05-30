@@ -2,13 +2,12 @@ package cn.wsxter.web.servlet;
 
 import cn.wsxter.domain.PageBean;
 import cn.wsxter.domain.falseanswer;
-import cn.wsxter.service.FAService;
-import cn.wsxter.service.Impl.FAServiceImp;
+import cn.wsxter.Service.FAService;
+import cn.wsxter.Service.Impl.FAServiceImp;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

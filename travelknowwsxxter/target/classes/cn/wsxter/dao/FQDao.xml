@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wsxter.dao.FQDao">
+    <select id="findTotalCount" resultType="int">
+        select count(*) from falseques
+    </select>
+    <select id="findByPage" parameterType="map" resultType="falseanswer">
+        select * from falseques limit #{star} , #{pageSize}
+    </select>
+    <update id="delAnswer" parameterType="Integer">
+       delete from falseques where ques_id = #{ques_id}
+    </update>
+    <select id="findbyid" resultType="falseques" parameterType="int">
+        select * from falseques where ques_id = #{ques_id} 
+    </select>
+    <insert id="userAddQues" parameterType="falseques">
+        insert into falseques(user_id,ques_name,ques_describle,place_name)
+        VALUES (#{user_id },#{ques_name},#{ques_describle},#{place_name})
+    </insert>
+</mapper>

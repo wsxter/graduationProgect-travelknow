@@ -135,7 +135,7 @@ function usermanage(current_Page) {
 
 
 function quesmanage(current_Page) {
-    $.get("/travelknow/fques/findques",{current_Page:current_Page,pageSize:10},function (pb) {
+    $.get("/travelknow/fques/findques",{current_Page:current_Page,pageSize:5},function (pb) {
 
         var lis = "";
 

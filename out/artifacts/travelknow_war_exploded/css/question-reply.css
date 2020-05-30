@@ -144,6 +144,12 @@ main .reply-const p{
     /*display: inline-block;*/
     float: left;
     margin-bottom: 10px;
-    display: none;
+   /* display: none;*/
 
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
 }

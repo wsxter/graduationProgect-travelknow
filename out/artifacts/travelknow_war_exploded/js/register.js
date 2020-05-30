@@ -1,6 +1,6 @@
 function checkUsername(){
     var username = $("#Username").val();
-    var reg_username = /^\w{5,20}$/;
+    var reg_username = /^\w{3,8}$/;
     var flag = reg_username.test(username);
     if(flag){
         $("#Username").css("color","white");

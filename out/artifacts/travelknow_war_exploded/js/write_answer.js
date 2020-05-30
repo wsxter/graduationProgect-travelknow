@@ -32,12 +32,16 @@ $(function () {
 
                 },"json");
                 alert("回答已经提交，待审核通过后显示");
-                window.location.href("index.html");
+
             }else {
                 alert(res.flag);
                 window.location.href("errormsg.html");
             }
         })
+        editor.txt.clear();
+        $("#answer-ques").val("");
+        $("#answer-quesdesc").val("");
+        $("#answer-place").val("");
 
     });
     $("#answer-ques").keydown(function(event){

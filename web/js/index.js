@@ -75,7 +75,7 @@ function load(current) {
                     '                <div class="backcolor2 circlestyle" style="float: right;padding: 5px;margin-top: 5px;">'+pb[i].place_name+'</div>\n' +
                     '                <div class="backcolor9 circlestyle" style="display:inline-block; margin: 5px;"><a href="/travelknow/question-reply.html?question_id='+pb[i].question.question_id+'" ><h2 ><strong>'+pb[i].question.question_name+'</strong></h2></a></div>\n' +
                     '                <a href="/travelknow/question-reply.html?question_id='+pb[i].question.question_id+'"><div  id="index_answer" class="index-answer circlestyle">\n' +
-                    '                    <div  class="index-answer-introdu introdu" >\n' +
+                    '                    <div  class="index-answer-introdu2 introdu" >\n' +
                     '                        <p><span class="backcolor3">'+pb[i].username+'的回答：</span>'+pb[i].question.ques_describle+'</p>\n' +
                     '                    </div>\n' +
                     '                </div></a>\n' +

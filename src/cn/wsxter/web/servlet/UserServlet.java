@@ -2,14 +2,13 @@ package cn.wsxter.web.servlet;
 
 import cn.wsxter.domain.Customer;
 import cn.wsxter.domain.ResultInfo;
-import cn.wsxter.service.Impl.UserServiceImpl;
-import cn.wsxter.service.UserService;
+import cn.wsxter.Service.Impl.UserServiceImpl;
+import cn.wsxter.Service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.beanutils.BeanUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;

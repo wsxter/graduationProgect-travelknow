@@ -1,13 +1,11 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.domain.Recommend;
-import cn.wsxter.service.Impl.RecommendServiceImpl;
-import cn.wsxter.service.RecommendService;
+import cn.wsxter.Service.Impl.RecommendServiceImpl;
+import cn.wsxter.Service.RecommendService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

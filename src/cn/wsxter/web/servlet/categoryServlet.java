@@ -1,14 +1,12 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.domain.ResultInfo;
 import cn.wsxter.domain.place;
-import cn.wsxter.service.CategoryService;
-import cn.wsxter.service.Impl.CategoryServiceImp;
+import cn.wsxter.Service.CategoryService;
+import cn.wsxter.Service.Impl.CategoryServiceImp;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

@@ -1,17 +1,10 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.domain.Customer;
-import cn.wsxter.domain.Image;
 import cn.wsxter.domain.ResultInfo;
-import cn.wsxter.service.ImageService;
-import cn.wsxter.service.Impl.ImageServiceImpl;
 import com.alibaba.fastjson.JSON;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.apache.commons.io.FilenameUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,6 +23,7 @@ import java.util.UUID;
         public class UploadServlet extends HttpServlet {
             public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
                 String savePath = this.getServletContext().getRealPath("/upload");
+                System.out.println(savePath);
                 savePath = savePath.replace("\\", "\\\\");
                 File file = new File(savePath);
                 //判断上传文件的保存目录是否存在

@@ -3,13 +3,12 @@ package cn.wsxter.web.servlet;
 import cn.wsxter.domain.Customer;
 import cn.wsxter.domain.PageBean;
 import cn.wsxter.domain.falseques;
-import cn.wsxter.service.FQService;
-import cn.wsxter.service.Impl.FQServiceImp;
+import cn.wsxter.Service.FQService;
+import cn.wsxter.Service.Impl.FQServiceImp;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -32,7 +31,7 @@ public class FalsequesServlet extends BaseServlet {
         if (pageSizeStr != null&&pageSizeStr.length() > 0){
             pageSize = Integer.parseInt(pageSizeStr);
         }else {
-            pageSize = 10;
+            pageSize = 6;
         }
         PageBean<falseques> ques = fqService.findQues(currentPage, pageSize);
         response.setContentType("application/json;charset=utf-8");
@@ -51,8 +50,9 @@ public class FalsequesServlet extends BaseServlet {
         fqService.addques(Integer.parseInt(ques_id));
     }
 
+    //用户添加问题
     public void  uesraddques(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        //获取输入内容
         falseques falseques = new falseques();
         String place_name = request.getParameter("place_name");
         String question_name = request.getParameter("question_name");
@@ -63,6 +63,7 @@ public class FalsequesServlet extends BaseServlet {
         falseques.setQues_name(question_name);
         falseques.setUser_id(loginUser.getUser_id());
         FQService fqService = new FQServiceImp();
+        //调用业务层处理
         fqService.userAddQues(falseques);
 
 

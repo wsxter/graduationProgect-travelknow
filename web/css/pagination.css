@@ -7,7 +7,7 @@
 .pageNum ul li {
     width: 60px;
     height: 40px;
-    float: left;
+    float: right;
     border: 1px solid #eee;
     margin-right: 10px;
     text-align: center;

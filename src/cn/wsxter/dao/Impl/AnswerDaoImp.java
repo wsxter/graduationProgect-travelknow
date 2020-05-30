@@ -34,7 +34,9 @@ public class AnswerDaoImp implements AnswerDao {
     public void updateAnswer(Answer answer) {
         if (answer.getQuestion_id() != null) {
             String sql = "insert into answer (user_id,question_id,answer_content) VALUES (?,?,?)";
+            String sql1 = "update question set answer_num = answer_num + 1 where question_id = ?  ";
             template.update(sql, answer.getUser_id(), answer.getQuestion_id(), answer.getAnswer_content());
+            template.update(sql1,answer.getQuestion_id());
         }else {
             String sql = "insert into answer (user_id,answer_content) VALUES (? ,?)";
             template.update(sql, answer.getUser_id(), answer.getAnswer_content());

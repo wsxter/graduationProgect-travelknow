@@ -1,27 +1,22 @@
 package cn.wsxter.web.servlet;
 
-import cn.wsxter.dao.Impl.QuestionDaoImp;
-import cn.wsxter.dao.QuestionDao;
 import cn.wsxter.domain.Customer;
 import cn.wsxter.domain.Question;
 import cn.wsxter.domain.place;
 import cn.wsxter.domain.quesreplypageBean;
-import cn.wsxter.service.CategoryService;
-import cn.wsxter.service.Impl.CategoryServiceImp;
-import cn.wsxter.service.Impl.QuestionServiceImp;
-import cn.wsxter.service.Impl.UserServiceImpl;
-import cn.wsxter.service.QuestionService;
-import cn.wsxter.service.UserService;
+import cn.wsxter.Service.CategoryService;
+import cn.wsxter.Service.Impl.CategoryServiceImp;
+import cn.wsxter.Service.Impl.QuestionServiceImp;
+import cn.wsxter.Service.Impl.UserServiceImpl;
+import cn.wsxter.Service.QuestionService;
+import cn.wsxter.Service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 @WebServlet("/questionReplyServlet/*")
 public class questionReplyServlet extends BaseServlet {

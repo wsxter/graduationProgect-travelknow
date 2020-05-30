@@ -110,9 +110,9 @@ header .header-inner .usericon{
 .topstory .cards .card1 .index-answer .index-answer-inimage img{
 }
 .topstory .cards .card1 .index-answer .index-answer-introdu{
-    width: 446px;
+  /*  width: 446px;*/
     height: 70px;
-    float: right;
+    float: left;
 
 }
 .topstory .cards .card2 .index-answer-introdu2{

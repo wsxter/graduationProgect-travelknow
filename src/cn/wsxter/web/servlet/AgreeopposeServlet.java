@@ -2,8 +2,8 @@ package cn.wsxter.web.servlet;
 
 import cn.wsxter.domain.Customer;
 import cn.wsxter.domain.ResultInfo;
-import cn.wsxter.service.AgreeopposeService;
-import cn.wsxter.service.Impl.AgreeopposeServiceImpl;
+import cn.wsxter.Service.AgreeopposeService;
+import cn.wsxter.Service.Impl.AgreeopposeServiceImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;

@@ -75,7 +75,7 @@ function load(place_id,current_page,question_name){
                     '                 <div class="backcolor9 circlestyle" style="display:inline-block; margin: 5px;"><a href="question-reply.html?question_id='+data.question_id+'" ><h2 ><strong>'+data.question_name+'</strong></h2></a></div>\n' +
                     '                <a href="question-reply.html?question_id='+data.question_id+'"> <div class="index-answer">\n' +
                     '                    <div class="index-answer-inimage">\n' +
-                    '                        <img src="' + data.photo + '" width="170" height="80">\n' +
+                    '                        <img src="' + data.photo + '" width="1" height="1">\n' +
                     '                    </div>\n' +
                     '                    <div class="index-answer-introdu">\n' +
                     '                        <p>' + data.ques_describle + '</p>\n' +
