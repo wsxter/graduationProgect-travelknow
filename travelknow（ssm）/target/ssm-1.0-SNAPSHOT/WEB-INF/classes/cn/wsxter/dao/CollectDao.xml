@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wsxter.dao.CollectDao">
+    <select id="findCollect" resultType="Integer" parameterType="map">
+        select count(*) from collect where answer_id = #{answer_id} and user_id = #{user_id}
+    </select>
+    <insert id="addCollect" parameterType="Collect">
+        insert into collect (answer_id,user_id,question_name,answer_content)
+        VALUES ( #{answer_id},#{user_id}, #{question_name} ,#{answer_content})
+    </insert>
+    <select id="collect_num" parameterType="Integer">
+        select count(*) from collect where user_id = #{user_id}
+    </select>
+    <select id="findByPageUser" parameterType="map" resultType="Collect">
+        select * from collect where user_id = #{user_name} limit #{star} , #{pageSize}
+    </select>
+
+</mapper>

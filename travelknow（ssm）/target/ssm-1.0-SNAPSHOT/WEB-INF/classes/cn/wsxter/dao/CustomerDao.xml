@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wsxter.dao.CustomerDao">
+<resultMap id="userQues" type="customer">
+    <collection property="questions" column="user_id" ofType="question" select="cn.wsxter.dao.questionDao.findbyId"></collection>
+</resultMap>
+
+<!--<resultMap id="userfindques" type="customer">
+    <association property="questions" column="user_id" select="com.wsxter.dao."></association>
+</resultMap>-->
+<!--配置查询所有-->
+<select id="findAll" resultType="customer">
+        select * from customer
+
+    </select>
+
+
+
+<select id="findAllAndQues" resultMap="userQues">
+        select * from customer
+</select>
+
+    <select id="findbyid" parameterType="INT" resultType="customer">
+        select * from customer where user_id = #{user_id}
+</select>
+</mapper>

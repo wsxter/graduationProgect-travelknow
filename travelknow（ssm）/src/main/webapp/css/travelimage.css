@@ -1,0 +1,114 @@
+/*<main>
+    <div class="imageCard">
+        <img src="image/13.jpg" >
+        <span>世界那么大，我想去看看</span>
+        <a href="#"><div class="sponsor-test">
+            <p><img src="image/01.jpg" width="30px" height="30px" style="margin-top: 5px">
+                <span>wsxter</span></p>
+        </div>
+        </a>
+    </div>
+</main>*/
+.circlestyle{
+    border-radius: 5px;
+    /* box-shadow: -2px 2px 0px #cccccc;*/
+}
+/*.clearfix:after{ content:""; display:block; clear:both;}:after{ content:""; display:block; clear:both;}*/
+.story{
+    width: 1020px;
+    height: auto;
+    float: left;
+    border: #3e4a40 solid 2px;
+    padding: 5px;
+}
+main{
+    width: 1020px;
+    height: auto;
+    padding: 5px;
+    border: #3e4a40;
+    margin: 0 auto;
+
+}
+main .imageCard{
+    width: 300px;
+    height:470px;
+    border: #237332;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 8px;
+
+    background: wheat; ;
+    padding: 10px;
+}
+main .imageCard img{
+    width: 300px;
+    height: 430px;
+}
+main .imageCard .desc{
+    font-size: 10px;
+    float: left;
+    width: 270px;
+    margin: 3px;
+
+
+}
+main .imageCard a{
+
+}
+main .imageCard .sponsor-test {
+    display: inline-block;
+
+}
+main .imageCard .sponsor-test img{
+
+    display: inline-block;
+    width: 20px;
+    height:20px;
+    float: left;
+
+}
+main .imageCard .sponsor-test span{
+    line-height: 24px;
+    font-size: 10px;
+    float: left;
+
+    margin: 3px;
+
+
+}
+main .imageCard .click{
+    line-height: 24px;
+    width: 30px;
+    height: 20px;
+    background: darkseagreen;
+    float: right;
+   /* padding-left: 3px;*/
+}
+.story ul{
+
+    width: 1020px;
+    height: 30px;
+    float: right;
+
+    margin-top:10px;
+}
+.story ul li{
+    float: left;
+    line-height:32px;
+    background: white;
+    margin-right: 5px;
+
+}
+.story ul li a{
+    width:105px;
+    height:30px;
+    font-size:18px;
+    color:#000;
+    display:block;
+    text-align:center;
+}
+.story  ul li a:hover{
+    background:pink; color:#fff; border-radius:4px;
+    text-decoration:none;
+}

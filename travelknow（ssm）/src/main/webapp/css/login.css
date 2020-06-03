@@ -1,0 +1,60 @@
+@import"https://cdn.bootcss.com/font-awesome/5.11.2/css/fontawesome.min.css";
+
+.login-box{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    color: white;
+    background: #6d94b6;
+    height: 350px;
+    padding: 10px;
+    border-radius: 5px;
+
+
+
+
+}
+.login-box h1{
+    float: left;
+    font-size: 40px;
+    border-bottom: solid 6px white;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid white;
+}
+.textbox i{
+    font-size: 18px;
+    width: 80px;
+    float: left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80px;
+    float: left;
+    margin: 0 10px;
+
+}
+.btu{
+    width: 100%;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 12px 0;
+}

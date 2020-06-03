@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wsxter.dao.QuestionDao">
+    <select id="finTotalCount" parameterType="map" resultType="int">
+        select count(*) from question
+        <where>
+            <if test="place_id != null">
+                 and  place_id = #{place_id}
+            </if>
+            <if test="question_name !=null and question_name.length() > 0 ">
+                 and  question_name like #{question_name}
+            </if>
+            <if test="user_id != null">
+                and user_id = #{user_id}
+            </if>
+        </where>
+    </select>
+    <select id="findNewest" parameterType="map" >
+        select * from question order by create_time desc limit #{star} , #{pageSize}
+    </select>
+    <select id="findByOneByNameByplace" parameterType="map" resultType="Question">
+        select * from question
+        <where>
+            <if test="question_name != null">
+                and question_name = #{question_name}
+            </if>
+            <if test="ques_name != null and opicId != 0 and opicId != null">
+                and  question_name = #{question_name} and opicId = #{opicId} limit 0,1
+            </if>
+
+        </where>
+    </select>
+    <insert id="addQues" parameterType="Question" >
+        insert into question (question_name,user_id,ques_describle,opicId)
+        VALUES (#{question_name},#{user_id},#{ques_describle},#{opicId})
+    </insert>
+    <select id="find_hot" resultType="Question">
+        select * from question order by answer_num desc limit 0 , 4
+    </select>
+    <select id="findByPage" parameterType="map" resultType="Question">
+        select  * from question
+        <where>
+            <if test="place_id != null">
+                and opicId = #{opicId}
+            </if>
+            <if test="question_name != null">
+                and  question_name = #{question_name}
+            </if>
+            <if test="user_id != null">
+                and user_id = #{user_id}
+            </if>
+            limit #{star}, #{pageSize}
+        </where>
+    </select>
+    <select id="findlikename" parameterType="String" resultType="Question">
+        select * from question where question_name like #{question_name} order by create_time limit 0,8
+    </select>
+
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wsxter.dao.UserDao">
+    <select id="finduser" resultType="Customer" parameterType="Customer">
+        select * from customer
+        <where>
+            <if test="user_id != null">
+                 and user_id = #{user_id}
+            </if>
+            <if test="username != null and username.length() >0 and password != null">
+                and username = #{username} and password = #{password}
+            </if>
+        </where>
+    </select>
+    <insert id="addUser" parameterType="Customer" >
+       insert into customer (username,password,email) VALUES (#{username},#{password},#{email})
+    </insert>
+    <select id="findTotalCount" resultType="int">
+        select count(*) from customer
+    </select>
+    <select id="findByPage" resultType="Customer" parameterType="map">
+        select * from customer limit #{star},#{pageSize}
+
+    </select>
+    <update id="deluser" parameterType="int">
+        update customer set status = 0 where user_id = #{xutianxaing}
+    </update>
+    <update id="gooduser" parameterType="int">
+        update customer set status = 1 where user_id = #{xutianxaing}
+    </update>
+    <update id="update" parameterType="Customer">
+        update customer set username = #{username} , password = #{password} , email = #{email} , autograph = #{autograph} , role = #{role} where user_id = #{user_id}
+    </update>
+
+</mapper>

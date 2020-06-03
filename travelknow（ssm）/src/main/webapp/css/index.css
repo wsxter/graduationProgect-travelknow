@@ -1,0 +1,219 @@
+
+.Wrap{
+    height: 52px;
+    margin-bottom: 10px;
+    border-bottom: #3e4a40 solid 2px;
+    padding-top: 6px;
+}
+
+.topstory{
+    width: 1020px;
+    margin: 0px auto;
+    height: 800px;
+}
+.topstory .cards{
+    width: 694px;
+   /* height: 1000px;*/
+    float: left;
+
+}
+
+
+
+
+
+
+
+.topstory .cards .card1{
+    width: 650px;
+    /*height: 186px;*/
+    margin-bottom: 10px;
+    padding: 20px;
+   /* padding-top: 10px;*/
+    margin-top: 10px;
+}
+
+.topstory .cards .card1 h2{
+    font-size: 18px;
+    /*margin-left: 20px;*/
+    height: 25px;
+    margin-top:7px ;
+}
+.topstory .cards .card1 .index-answer{
+    overflow: auto;/**/
+    padding: 3px;
+}
+
+.topstory .cards .card1 .index-answer .index-answer-introdu{
+    width: 610px;
+
+    height: 150px;
+    float: left;
+   /* padding-left: 20px;*/
+    padding-right: 20px;
+}
+.topstory .cards .card1 .index-answer .index-answer-introdu2{
+    width: 610px;
+
+    height: 60px;
+    float: left;
+    /* padding-left: 20px;*/
+    padding-right: 20px;
+}
+.topstory .cards .card1 .index-answer .index-answer-introdu p{
+    font-size: 15px;
+}
+.topstory .cards .card1 .index-answer-foot{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.topstory .cards .card1 .index-answer-foot .buttonstyle{
+    padding: 5px;
+    margin-top: 5px;
+   /* float: right;*/
+}
+
+
+
+
+
+
+.topstory .globalwrite{
+}
+.topstory .globalwrite .g-size{
+    width: 94px;
+    height:40px;
+    display: inline-block;
+    float: right;
+}
+.topstory .globalwrite .globalwrite-question{
+    margin-right: 10px;
+}
+.topstory .globalwrite .globalwrite-reply{
+
+}
+.topstory .globalwrite .globalwrite-reply{
+    width: 94px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.topstory .globalwrite .globalwrite-idea{
+    margin-right: 7px;
+}
+.topstory .user-message{
+    width:260px;
+    height: 175px;
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    padding: 0px 20px;
+    background-color:#a16e83 ;
+
+}
+.topstory .user-message .user-collect-ques{
+    height: 40px;
+    line-height: 40px;
+    text-align: left ;
+    float: right;
+    margin-left: 20px;
+    border-bottom:rgba(2,2,3,0.06)  solid 2px;
+    width: 260px;
+
+}
+.topstory .user-message .user-attention-ques{
+    height: 40px;
+    line-height: 40px;
+    text-align: left ;
+    float: right;
+    margin-left: 20px;
+    border-bottom:rgba(2,2,3,0.06)  solid 2px;
+    width: 260px;
+
+}
+.topstory .user-message .span-text{
+    float: right;
+}
+.topstory .scenery-picture-lable{
+    width: 300px;
+    height: 400px;
+    float: right;
+    margin-top: 10px;
+
+
+}
+.topstory .scenery-picture-lable .scenery-picture {
+    width: 300px;
+    height: 400px;
+
+}
+.topstory .aboutus{
+    width: 290px;
+    height: 400px;
+    display: inline-block;
+    float: right;
+
+    margin-top: 10px;
+    line-height:30px;
+    padding-left: 10px;
+
+}
+.topstory .hotLabe{
+    margin-bottom: 20px;
+    padding: 5px 4px;
+    width: 290px;
+    background-color:#a16e83 ;
+}
+.topstory .hotLabe .place_lable{
+    display: inline-block;
+    margin: 3px;
+    padding: 5px;
+    float: left;
+    background: #479761;
+}
+.topstory .hotLabe .msg{
+    line-height: 30px;
+    background-color: #cebc81;
+    padding-left: 5px;
+
+}
+.pageNum {
+    width: 650px;
+    overflow: hidden;
+    float: left;
+}
+
+
+.pageNum  li {
+    width: 60px;
+    height: 60px;
+    float: right;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    background: cadetblue;
+}
+
+.pageNum ul li a {
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

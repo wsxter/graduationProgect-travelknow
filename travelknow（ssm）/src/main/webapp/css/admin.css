@@ -1,0 +1,163 @@
+/*div {
+    border: #3e4a40 solid 1px;
+}
+li{
+    border: #3e4a40 solid 1px;
+}
+aside{
+    border: #3e4a40 solid 1px;
+}*/
+
+.Wrap{
+    height: 52px;
+    margin-bottom: 10px;
+    border-bottom: #3e4a40 solid 2px;
+    padding-top: 6px;
+}
+.Wrap h1{
+    font-family: Tahoma;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    display: inline;
+}
+.Wrap ul{
+    width: 230px;
+    height: 35px;
+    display: inline-block;
+}
+.Wrap ul li{
+    line-height: 30px;
+    font-size: 16px;
+    padding: 0px 5.5px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+
+}
+.Wrap ul li a{
+
+}
+.Wrap ul li a:hover{
+    border-radius:4px;
+    text-decoration:none;
+}
+header .header-inner{
+    width: 1020px;
+    height: 50px;
+    margin: 0 auto;
+}
+.Wrap .header-inner .searchlable{
+    width: 400px;
+    height: 35px;
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 100px;
+}
+.Wrap .searchlable input{
+    width: 325px;
+    height: 34px;
+    margin: 0 auto;
+    margin-left: 10px;
+    border: #3e4a40 solid 2px;
+    border-radius: 10px;
+}
+
+.Wrap .searchlable  button{
+    width: 45px;
+    height: 34px;
+    border: #3e4a40 solid 1px;
+    color: #237332;
+    border-radius: 5px;
+    box-shadow: -2px 2px 0px #cccccc;
+}
+header .header-inner .usericon{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+    float: right;
+}
+
+
+/*此处为分类和显示部分样式*/
+.mainFrame{
+    width: 1020px;
+    margin: 5px auto;
+    min-height: 720px;
+    display: block;
+    background: rgba(0,0,0,.1);
+}
+.mainFrame .category{
+    width: 10%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    padding: 5px;
+}
+.mainFrame .category ul{
+
+}
+.mainFrame .category ul li{
+
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    margin-top: 10px;
+;
+}
+.mainFrame .showCase{
+    width: 87%;
+    height: 100%;
+    display: inline-block;
+    float: right;
+    padding: 5px;
+}
+.mainFrame .showCase ul{
+    width: 100%;
+    height: auto;
+}
+.mainFrame .showCase ul li{
+    float: right;
+    margin-right: 60px;
+}
+.pageNum {
+    width: 650px;
+    overflow: hidden;
+    float: right;
+}
+
+
+.pageNum  li {
+    width: 60px;
+    height: 30px;
+    float: right;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 40px;
+    background: cadetblue;
+}
+
+.showquesmange{
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+.showquesmange .questionId{
+    width: 95%;
+    height: auto;
+    margin-bottom: 5px;
+
+}
+.showquesmange .questionId .ques_name{
+    font-size: 20px;
+}
+.showquesmange .questionId .ques_txt{
+
+}
+.showanswermanage .answerId .answer_content{
+    width: 690px;
+    height: auto;
+
+}
+
